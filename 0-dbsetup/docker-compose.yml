@@ -1,0 +1,21 @@
+  version: '3.8'
+  name: chinook
+  services:
+  #----------------------------------------------------------------------------
+  # MySQL Container
+  # https://hub.docker.com/_/mysql
+  # Commands:
+  #   mysql -u chinook -p Chinook
+  #----------------------------------------------------------------------------
+    mysql:
+      image: mysql:latest
+      environment:
+        MYSQL_USER: chinook
+        MYSQL_PASSWORD: chinook
+        MYSQL_ROOT_PASSWORD: chinook
+        MYSQL_DATABASE: Chinook
+      ports:
+        - "3306:3306"
+      volumes:
+        - ./data/Chinook_MySql.sql:/docker-entrypoint-initdb.d/Chinook_MySql.sql
+        - ./data/Chinook_MySql_AutoIncrementPKs.sql:/docker-entrypoint-initdb.d/Chinook_MySql_AutoIncrementPKs.sql
