@@ -1,0 +1,7 @@
+services:
+  blazegraph:
+    image: ghcr.io/blazegraph/database:latest
+    ports:
+      - "9999:9999"
+    environment:
+      - JAVA_OPTS=-Xmx1g
