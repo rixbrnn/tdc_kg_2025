@@ -1,0 +1,36 @@
+PREFIX :   <http://example.org/chinook#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Q2 (SPARQL solution)
+# If a customer buys track "The Trooper",
+# what other tracks are most often bought in the same invoices?
+# Show the top 10 "also bought" tracks.
+
+# Assumptions:
+# - :Track :name ?trackName
+# - :Invoice :hasLine :InvoiceLine
+# - :InvoiceLine :lineTrack :Track
+
+SELECT ?otherTrack ?otherTrackName (COUNT(*) AS ?coPurchaseCount)
+WHERE {
+  # Target track
+  ?trackX a :Track ;
+          :name "The Trooper" .
+
+  # Invoices that contain both the target track and some other track
+  ?inv :hasLine ?line1, ?line2 .
+
+  ?line1 :lineTrack ?trackX .
+  ?line2 :lineTrack ?otherTrack .
+
+  FILTER(?otherTrack != ?trackX)
+
+  ?otherTrack :name ?otherTrackName .
+}
+GROUP BY ?otherTrack ?otherTrackName
+ORDER BY DESC(?coPurchaseCount) ?otherTrackName
+LIMIT 10;
+
+# Notice how natural the “co-purchase in same invoice” pattern is:
+# ?inv :hasLine ?line1, ?line2 .
+# That’s exactly the “two lines on same invoice” condition that needed a self-join in SQL.

@@ -1,0 +1,39 @@
+PREFIX :   <http://example.org/chinook#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Q2 (TODO)
+# If a customer buys track "The Trooper",
+# what other tracks are most often bought in the same invoices?
+#
+# Goal:
+#   Return tracks that frequently appear on the same invoices
+#   as "The Trooper", with a co-purchase count, ordered by that count.
+#
+# Assumptions:
+#   - :Track :name ?trackName
+#   - :Invoice :hasLine :InvoiceLine
+#   - :InvoiceLine :lineTrack :Track
+#
+# Hints:
+#   1) Bind the target track:
+#        ?trackX a :Track ;
+#                :name "The Trooper" .
+#
+#   2) Find invoices that have both:
+#        - a line for the target track
+#        - another line for a different track
+#
+#      Something like:
+#        ?inv :hasLine ?line1, ?line2 .
+#        ?line1 :lineTrack ?trackX .
+#        ?line2 :lineTrack ?otherTrack .
+#
+#   3) Exclude the original track:
+#        FILTER(?otherTrack != ?trackX)
+#
+#   4) Group by ?otherTrack (and its name) and COUNT(*) as co-purchase frequency.
+#
+#   5) Order by DESC(co-purchase count) and LIMIT 10.
+#
+# Write your SPARQL query below:
+
