@@ -1,0 +1,20 @@
+-- Q2: If a customer buys track "The Trooper", what other tracks
+--     are most often bought in the same invoices?
+--     Show the top 10 "also bought" tracks.
+--
+-- Goal:
+--   Return a list of tracks that frequently appear on the same invoices
+--   as "The Trooper", with a count of how many times they co-occurred.
+--
+-- Hints:
+--   1) Find the TrackId for "The Trooper" from the Track table.
+--   2) Use InvoiceLine twice (self-join):
+--        - il1: lines where TrackId = "The Trooper"
+--        - il2: other lines on the same InvoiceId
+--   3) Exclude the original track:
+--        il2.TrackId <> (TrackId of "The Trooper")
+--   4) GROUP BY il2.TrackId and COUNT(*)
+--   5) Join back to Track to get the track name, order by count DESC, LIMIT 10.
+--
+-- Write your SQL below:
+
