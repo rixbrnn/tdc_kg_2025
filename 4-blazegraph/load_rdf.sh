@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
-RDF_FILE="../rdf/output.trig"
-ENDPOINT="http://localhost:9999/blazegraph/namespace/kb/sparql"
+RDF_FILE="../rdf/chinook.trig"
+ENDPOINT="http://localhost:8889/bigdata/sparql"
 
 curl -X POST \
-  -H "Content-Type: application/x-trig" \
+  -H "Content-Type: text/turtle" \
   --data-binary @"$RDF_FILE" \
   "$ENDPOINT"
 

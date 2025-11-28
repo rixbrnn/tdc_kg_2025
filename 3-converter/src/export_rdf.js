@@ -18,7 +18,7 @@ import {
   mapCustomer,
   mapInvoice,
   mapInvoiceLine
-} from '../solutions/mapping.js';
+} from './mapping_rdf_todo.js';
 
 // ---------- config ----------
 
