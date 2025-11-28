@@ -1,32 +1,34 @@
--- Q2: If a customer buys track "The Trooper", what other tracks
---     are most often bought in the same invoices?
---     Show the top 10 "also bought" tracks.
-
-WITH target_track AS (
-  SELECT TrackId
-  FROM Track
-  WHERE Name = 'The Trooper'
+WITH customer_genres AS (
+    SELECT DISTINCT
+        i.CustomerId,
+        t.GenreId
+    FROM Invoice i
+    JOIN InvoiceLine il ON il.InvoiceId = i.InvoiceId
+    JOIN Track t        ON t.TrackId    = il.TrackId
 ),
-co_purchases AS (
-  SELECT
-    il2.TrackId AS OtherTrackId,
-    COUNT(*) AS CoPurchaseCount
-  FROM InvoiceLine il1
-  JOIN target_track t
-    ON il1.TrackId = t.TrackId
-  JOIN InvoiceLine il2
-    ON il1.InvoiceId = il2.InvoiceId
-   AND il2.TrackId <> t.TrackId
-  GROUP BY il2.TrackId
+genre_pairs AS (
+    SELECT
+        cg1.CustomerId,
+        cg1.GenreId AS Genre1Id,
+        cg2.GenreId AS Genre2Id
+    FROM customer_genres cg1
+    JOIN customer_genres cg2
+      ON cg1.CustomerId = cg2.CustomerId
+     AND cg1.GenreId < cg2.GenreId 
 )
 SELECT
-  co.OtherTrackId,
-  tr.Name AS OtherTrackName,
-  co.CoPurchaseCount
-FROM co_purchases co
-JOIN Track tr
-  ON tr.TrackId = co.OtherTrackId
+    g1.GenreId AS Genre1Id,
+    g1.Name    AS Genre1Name,
+    g2.GenreId AS Genre2Id,
+    g2.Name    AS Genre2Name,
+    COUNT(DISTINCT gp.CustomerId) AS SharedCustomerCount
+FROM genre_pairs gp
+JOIN Genre g1 ON g1.GenreId = gp.Genre1Id
+JOIN Genre g2 ON g2.GenreId = gp.Genre2Id
+GROUP BY
+    g1.GenreId, g1.Name,
+    g2.GenreId, g2.Name
 ORDER BY
-  co.CoPurchaseCount DESC,
-  OtherTrackName
-LIMIT 10;
+    SharedCustomerCount DESC,
+    Genre1Name,
+    Genre2Name;
