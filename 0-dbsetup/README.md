@@ -24,6 +24,13 @@ This will:
 2. Start a container on port **3306**
 3. Run the SQL scripts in `/docker-entrypoint-initdb.d/` on first startup
 
+After docker compose finished, you should see 1 container running called `chinook` and 1 image pulled for `mysql`, with below similar logs:
+```
+[+] Running 2/2
+ ✔ Network chinook_default    Created
+ ✔ Container chinook-mysql-1  Started
+ ```    
+
 Check logs if you want to confirm initialization:
 
 ```bash
@@ -61,7 +68,7 @@ The container is configured with:
    * **Password:** `chinook`
 5. Click **Test Connection**, then **Finish**
 
-### If you get an auth / SSL error (common with MySQL 8+)
+### ⚠️ If you get an auth / SSL error (common with MySQL 8+)
 
 In the connection settings:
 
@@ -76,6 +83,8 @@ Or add to the JDBC URL (Driver properties / URL field):
 ```
 jdbc:mysql://localhost:3306/Chinook?allowPublicKeyRetrieval=true&useSSL=false
 ```
+
+> 💡 **Still having issues?** Check the [Common issues and workarounds](#common-issues-and-workarounds) section below for additional troubleshooting steps.
 
 ---
 
@@ -118,9 +127,9 @@ docker compose up -d
 
 ---
 
-Once you’re connected and the healthcheck passes, proceed to **Step 1 — SQL**.
+Once you’re connected and the health check passes, proceed to **Step 1 — SQL**.
 
-## Common issues and workarounds
+## ⚠️ Common issues and workarounds
 If you see the following error when checking the logs:
 ```bash
  Another process with pid 121 is using unix socket file.
