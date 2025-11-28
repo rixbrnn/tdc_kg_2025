@@ -68,7 +68,6 @@ The container is configured with:
    * **Password:** `chinook`
 5. Click **Test Connection**, then **Finish**
 
-### If you get an auth / SSL error (common with MySQL 8+)
 ### ⚠️ If you get an auth / SSL error (common with MySQL 8+)
 
 In the connection settings:
