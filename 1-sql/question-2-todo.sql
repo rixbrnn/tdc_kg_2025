@@ -1,12 +1,8 @@
--- Q1: For each customer, what is their favorite genre
+-- Q2: For each customer, what is their favorite genre
 --     (the genre where they spent the most money)?
 --
--- Goal:
---   Return one row per customer with:
---     - CustomerId
---     - CustomerName
---     - FavoriteGenre
---     - AmountSpentOnFavoriteGenre
+-- Expected Output row per customer:
+--   CustomerId | CustomerName | FavoriteGenre | AmountSpentOnFavoriteGenre
 --
 -- Hints:
 --   1) Join: Customer -> Invoice -> InvoiceLine -> Track -> Genre
@@ -26,10 +22,7 @@ WITH customer_genre_spend AS (
     -- TODO: Select Genre Name as GenreName
     -- TODO: Calculate total revenue (SUM of UnitPrice * Quantity) as GenreRevenue
   FROM Customer c
-  -- TODO: JOIN Invoice table
-  -- TODO: JOIN InvoiceLine table
-  -- TODO: JOIN Track table
-  -- TODO: JOIN Genre table
+  -- TODO: Add necessary JOINs (Invoice → InvoiceLine → Track → Genre)
   GROUP BY
     -- TODO: Add appropriate GROUP BY columns
 ),
@@ -42,11 +35,7 @@ ranked AS (
   FROM customer_genre_spend
 )
 SELECT
-  -- TODO: Select CustomerId
-  -- TODO: Select CustomerName
-  -- TODO: Select GenreName as FavoriteGenre
-  -- TODO: Select GenreRevenue as AmountSpentOnFavoriteGenre
+  -- TODO: Select final columns as expected output
 FROM ranked
--- TODO: Filter to get only the top genre per customer (rn = 1)
--- TODO: ORDER BY AmountSpentOnFavoriteGenre DESC
-
+  -- TODO: Filter the top genre per customer and order by amount spent results
+  -- TIP: Use result of ROW_NUMBER() = 1 to filter top genre as described on hint #3

@@ -1,4 +1,4 @@
--- Q1: For each customer, what is their favorite genre
+-- Q2: For each customer, what is their favorite genre
 --     (the genre where they spent the most money)?
 --
 -- Goal:
