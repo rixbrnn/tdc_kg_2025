@@ -7,7 +7,7 @@
     "start": "node src/export_rdf.js"
   },
   "dependencies": {
-    "better-sqlite3": "^11.0.0",
+    "mysql2": "^3.11.0",
     "n3": "^1.17.0"
   }
 }
