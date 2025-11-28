@@ -1,36 +1,63 @@
 PREFIX :   <http://example.org/chinook#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-# Q2 (SPARQL solution)
-# If a customer buys track "The Trooper",
-# what other tracks are most often bought in the same invoices?
-# Show the top 10 "also bought" tracks.
+# Q1 (SPARQL solution)
+# For each customer, what is their favorite genre
+# (the genre where they spent the most money)?
 
-# Assumptions:
-# - :Track :name ?trackName
-# - :Invoice :hasLine :InvoiceLine
-# - :InvoiceLine :lineTrack :Track
-
-SELECT ?otherTrack ?otherTrackName (COUNT(*) AS ?coPurchaseCount)
+SELECT ?customer ?customerName ?genreName ?genreRevenue
 WHERE {
-  # Target track
-  ?trackX a :Track ;
-          :name "The Trooper" .
+  # 1) Revenue per (customer, genre)
+  {
+    SELECT ?customer ?genre ?genreName (SUM(?lineTotal) AS ?genreRevenue)
+    WHERE {
+      ?customer a :Customer ;
+                :hasInvoice ?inv .
 
-  # Invoices that contain both the target track and some other track
-  ?inv :hasLine ?line1, ?line2 .
+      ?inv :hasLine ?line .
 
-  ?line1 :lineTrack ?trackX .
-  ?line2 :lineTrack ?otherTrack .
+      ?line :unitPrice ?price ;
+            :quantity  ?qty ;
+            :lineTrack ?track .
 
-  FILTER(?otherTrack != ?trackX)
+      ?track :hasGenre ?genre .
+      ?genre :name ?genreName .
 
-  ?otherTrack :name ?otherTrackName .
+      BIND(xsd:decimal(?price) * xsd:decimal(?qty) AS ?lineTotal)
+    }
+    GROUP BY ?customer ?genre ?genreName
+  }
+
+  # 2) Max revenue per customer (over all their genres)
+  {
+    SELECT ?customer (MAX(?genreRevenue2) AS ?maxRevenue)
+    WHERE {
+      {
+        SELECT ?customer ?genre (SUM(?lineTotal2) AS ?genreRevenue2)
+        WHERE {
+          ?customer a :Customer ;
+                    :hasInvoice ?inv2 .
+
+          ?inv2 :hasLine ?line2 .
+
+          ?line2 :unitPrice ?price2 ;
+                 :quantity  ?qty2 ;
+                 :lineTrack ?track2 .
+
+          ?track2 :hasGenre ?genre .
+
+          BIND(xsd:decimal(?price2) * xsd:decimal(?qty2) AS ?lineTotal2)
+        }
+        GROUP BY ?customer ?genre
+      }
+    }
+    GROUP BY ?customer
+  }
+
+  # 3) Attach customer name
+  ?customer :fullName ?customerName .
+
+  # Keep only the genre(s) that reach the max revenue for that customer
+  FILTER(?genreRevenue = ?maxRevenue)
 }
-GROUP BY ?otherTrack ?otherTrackName
-ORDER BY DESC(?coPurchaseCount) ?otherTrackName
-LIMIT 10;
-
-# Notice how natural the “co-purchase in same invoice” pattern is:
-# ?inv :hasLine ?line1, ?line2 .
-# That’s exactly the “two lines on same invoice” condition that needed a self-join in SQL.
+ORDER BY DESC(?genreRevenue)
