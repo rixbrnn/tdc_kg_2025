@@ -1,5 +1,12 @@
 -- Q1: For each customer, what is their favorite genre
 --     (the genre where they spent the most money)?
+--
+-- Goal:
+--   Return one row per customer with:
+--     - CustomerId
+--     - CustomerName
+--     - FavoriteGenre
+--     - AmountSpentOnFavoriteGenre
 
 WITH customer_genre_spend AS (
   SELECT

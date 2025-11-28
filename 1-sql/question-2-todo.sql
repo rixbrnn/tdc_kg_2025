@@ -1,57 +1,52 @@
--- Question 2 (TODO):
--- For each pair of music genres, find how many DISTINCT customers
--- have bought tracks in BOTH genres. Return the genre pairs with
--- the highest number of shared customers.
+-- Q1: For each customer, what is their favorite genre
+--     (the genre where they spent the most money)?
+--
+-- Goal:
+--   Return one row per customer with:
+--     - CustomerId
+--     - CustomerName
+--     - FavoriteGenre
+--     - AmountSpentOnFavoriteGenre
+--
+-- Hints:
+--   1) Join: Customer -> Invoice -> InvoiceLine -> Track -> Genre
+--   2) Compute revenue per customer & genre:
+--        SUM(InvoiceLine.UnitPrice * InvoiceLine.Quantity)
+--   3) From that result, pick the top genre per customer.
+--      In MySQL 8+ you can use:
+--        ROW_NUMBER() OVER (PARTITION BY CustomerId ORDER BY GenreRevenue DESC)
+--      and then filter rn = 1.
+--
+-- Write your SQL below:
 
-WITH customer_genres AS (
-    -- TODO: build a result set with DISTINCT (CustomerId, GenreId)
-    --       for all purchases.
-    --
-    -- Hints:
-    --  - Start from Invoice and InvoiceLine.
-    --  - Join to Track to reach GenreId.
-    --  - Use SELECT DISTINCT to avoid duplicates.
-    --
-    -- Example structure (replace ...):
-    -- SELECT DISTINCT
-    --     ...
-    -- FROM Invoice i
-    -- JOIN InvoiceLine il ON ...
-    -- JOIN Track t        ON ...
+WITH customer_genre_spend AS (
+  SELECT
+    -- TODO: Select CustomerId
+    -- TODO: Concatenate FirstName and LastName as CustomerName
+    -- TODO: Select Genre Name as GenreName
+    -- TODO: Calculate total revenue (SUM of UnitPrice * Quantity) as GenreRevenue
+  FROM Customer c
+  -- TODO: JOIN Invoice table
+  -- TODO: JOIN InvoiceLine table
+  -- TODO: JOIN Track table
+  -- TODO: JOIN Genre table
+  GROUP BY
+    -- TODO: Add appropriate GROUP BY columns
 ),
-
-genre_pairs AS (
-    -- TODO: for each customer, generate ALL ordered pairs of genres
-    --       they bought, avoiding (A,B) and (B,A) duplicates.
-    --
-    -- Hints:
-    --  - Self-join customer_genres as cg1 and cg2.
-    --  - Join on same CustomerId.
-    --  - Use a condition like cg1.GenreId < cg2.GenreId
-    --    to keep only one ordering of the pair.
-    --
-    -- Example structure (replace ...):
-    -- SELECT
-    --     ...
-    -- FROM customer_genres cg1
-    -- JOIN customer_genres cg2
-    --   ON ...
-    --  AND ...
+ranked AS (
+  SELECT
+    *,
+    -- TODO: Use ROW_NUMBER() window function
+    --       PARTITION BY CustomerId
+    --       ORDER BY GenreRevenue DESC
+  FROM customer_genre_spend
 )
-
--- TODO: aggregate by genre pair and count distinct customers
 SELECT
-    -- g1.GenreId AS Genre1Id,
-    -- g1.Name    AS Genre1Name,
-    -- g2.GenreId AS Genre2Id,
-    -- g2.Name    AS Genre2Name,
-    -- COUNT(DISTINCT gp.CustomerId) AS SharedCustomerCount
-FROM genre_pairs gp
-JOIN Genre g1 ON ...
-JOIN Genre g2 ON ...
-GROUP BY
-    -- ...
-ORDER BY
-    -- SharedCustomerCount DESC,
-    -- Genre1Name,
-    -- Genre2Name;
+  -- TODO: Select CustomerId
+  -- TODO: Select CustomerName
+  -- TODO: Select GenreName as FavoriteGenre
+  -- TODO: Select GenreRevenue as AmountSpentOnFavoriteGenre
+FROM ranked
+-- TODO: Filter to get only the top genre per customer (rn = 1)
+-- TODO: ORDER BY AmountSpentOnFavoriteGenre DESC
+
