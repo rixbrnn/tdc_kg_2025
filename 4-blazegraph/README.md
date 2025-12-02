@@ -7,7 +7,7 @@ docker run --name blazegraph -d -p 8889:8080 lyrasis/blazegraph:2.1.5
 
 Load RDF:
 ```bash
-./load_rdf.sh
+ bash load_rdf.sh
 # Windows: ./load_rdf.ps1
 ```
 
