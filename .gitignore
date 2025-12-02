@@ -1,7 +1,4 @@
 node_modules/
-rdf/output.trig
-rdf/*.ttl
-rdf/*.trig
 .DS_Store
 .idea/
 .vscode/
