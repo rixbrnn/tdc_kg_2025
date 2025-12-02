@@ -23,6 +23,4 @@ WHERE {
 ```
 
 You should be able to see this:
-```
 ![alt text](image.png)
-```
