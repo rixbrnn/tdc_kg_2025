@@ -7,12 +7,16 @@ docker run --name blazegraph -d -p 8889:8080 lyrasis/blazegraph:2.1.5
 
 Load RDF:
 ```bash
- bash load_rdf.sh
+# If you get "Permission denied", make the script executable first:
+chmod +x load_rdf.sh
+
+bash ./load_rdf.sh
 # Windows: ./load_rdf.ps1
 ```
 
 Open Blazegraph UI:
-http://localhost:9999/blazegraph/#query
+http://localhost:8889/bigdata/#query
+
 
 Now check the data is there on the QUERY section:
 ```sparql
