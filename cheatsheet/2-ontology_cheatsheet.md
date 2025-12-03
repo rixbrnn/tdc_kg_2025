@@ -1,0 +1,3 @@
+In real projects, we can generate initial ontologies or mappings from relational schemas using tools like R2RML, direct mappings, etc.
+For this workshop we’ll skip the tooling complexity and work with a small, curated ontology we modeled in Protégé, so we can focus on understanding classes, properties, and SPARQL
+There are also some tools that allow the utilization of virtual knowledge graphs, in which SPARQL queries are translated into SQL. In that case only one datasource is created instead of a duplication, but that will not be the case for this presentation.
