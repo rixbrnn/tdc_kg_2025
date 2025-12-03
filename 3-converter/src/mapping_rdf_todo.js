@@ -3,8 +3,8 @@
 //
 // In this workshop, you'll complete a couple of TODOs:
 //
-//  - In mapEmployee: link each employee to their manager using :reportsTo
-//  - In mapCustomer: link each customer to their support rep using :supportedBy
+//  - Create the mapEmployee function
+//  - Create the mapCustomer function
 //
 // Everything else is already implemented for you.
 
@@ -136,60 +136,11 @@ export function mapTrack(row, writer) {
   }
 }
 
-// Employee
-export function mapEmployee(row, writer) {
-  const subj = iri.employee(row.EmployeeId);
-  const fullName = `${row.FirstName ?? ''} ${row.LastName ?? ''}`.trim();
+// TODO: Map employee
+// Recall there is a self-relationship
 
-  writer.addQuad(subj, p.type, c.Employee);
-  writer.addQuad(subj, p.employeeId, intLit(row.EmployeeId));
-
-  if (fullName) {
-    writer.addQuad(subj, p.fullName, strLit(fullName));
-  }
-  if (row.Title != null) {
-    writer.addQuad(subj, p.title, strLit(row.Title));
-  }
-
-  // TODO: If this employee reports to another employee,
-  //       add a triple using the :reportsTo property.
-  //
-  //  - Column: row.ReportsTo
-  //  - Manager IRI: iri.employee(row.ReportsTo)
-  //
-  // Example shape of the triple:
-  //   <Employee/{EmployeeId}> :reportsTo <Employee/{ReportsTo}> .
-
-  if (row.ReportsTo != null) {
-    // Your code here
-  }
-}
-
-// Customer
-export function mapCustomer(row, writer) {
-  const subj = iri.customer(row.CustomerId);
-  const fullName = `${row.FirstName ?? ''} ${row.LastName ?? ''}`.trim();
-
-  writer.addQuad(subj, p.type, c.Customer);
-  writer.addQuad(subj, p.customerId, intLit(row.CustomerId));
-
-  if (fullName) {
-    writer.addQuad(subj, p.fullName, strLit(fullName));
-  }
-
-  // TODO: Link this customer to their support representative (employee)
-  //       using the :supportedBy property.
-  //
-  //  - Column: row.SupportRepId
-  //  - Employee IRI: iri.employee(row.SupportRepId)
-  //
-  // Example shape of the triple:
-  //   <Customer/{CustomerId}> :supportedBy <Employee/{SupportRepId}> .
-
-  if (row.SupportRepId != null) {
-    // Your code here
-  }
-}
+// TODO: Map customer
+// Recall there is a connection to the support representative (employee)
 
 // Invoice
 export function mapInvoice(row, writer) {
