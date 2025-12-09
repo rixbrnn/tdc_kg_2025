@@ -102,7 +102,7 @@ async function exportCustomers(conn, writer) {
 
 async function exportInvoices(conn, writer) {
   const [rows] = await conn.execute(`
-    SELECT InvoiceId, CustomerId, InvoiceDate, Total
+    SELECT InvoiceId, CustomerId, InvoiceDate
     FROM Invoice
   `);
   for (const row of rows) {

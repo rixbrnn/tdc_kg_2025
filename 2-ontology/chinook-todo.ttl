@@ -84,9 +84,6 @@
 #   - :reportsTo (Employee -> Employee)
 #   - :manages  (Employee -> Employee, inverse of :reportsTo)
 #
-#   Remember to:
-#   - set rdfs:domain and rdfs:range to :Employee
-#   - declare owl:inverseOf between :reportsTo and :manages
 
 ##################
 # Data properties
