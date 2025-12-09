@@ -1,12 +1,12 @@
 # Converter Step (RDB → RDF)
 
-Install deps:
+## Install dependencies
 
 ```bash
 npm install
 ```
 
-Run:
+## Run Mapping script
 ```bash
 npm start
 ```
@@ -14,5 +14,12 @@ npm start
 Output will be located in:
 `../rdf/output.trig`
 
-# TODO
+## Run Tests
+```bash
+npm test
+```
+- Passing tests confirm implemented mappings are correct.
+- Failing tests indicate TODOs in `src/mapping_rdf_todo.js` that need completion.
+
+## TODO
 Fix the TODOs located in mapping.js

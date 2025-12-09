@@ -138,9 +138,54 @@ export function mapTrack(row, writer) {
 
 // TODO: Map employee
 // Recall there is a self-relationship
+export function mapEmployee(row, writer) {
+  const subj = iri.employee(row.EmployeeId);
+  // TODO: Create full name
+  const fullName = ``.trim();
+
+  // TODO: Add triples for type and employeeId (use intLit for employeeId)
+  writer.addQuad(subj, null, null);
+  writer.addQuad(subj, null, null);
+
+  if (fullName) {
+    // TODO: Add triple for fullName
+    writer.addQuad(subj, null, strLit(fullName));
+  }
+  if (row.Title != null) {
+    // TODO: Add triple for title (use strLit)
+    writer.addQuad(subj, null, null);
+  }
+
+  // Hierarchy: reportsTo
+  if (row.ReportsTo != null) {
+    // TODO: Add triple for reportsTo
+    const manager = null;
+    writer.addQuad(subj, null, manager);
+  }
+}
 
 // TODO: Map customer
 // Recall there is a connection to the support representative (employee)
+export function mapCustomer(row, writer) {
+  const subj = iri.customer(row.CustomerId);
+  // TODO: Create full name
+  const fullName = ``.trim();
+
+  // TODO: Add triples for type and customerId (use intLit for customerId)
+  writer.addQuad(subj, null, null);
+  writer.addQuad(subj, null, null);
+
+  if (fullName) {
+    // TODO: Add triple for fullName
+    writer.addQuad(subj, null, strLit(fullName));
+  }
+
+  if (row.SupportRepId != null) {
+    // TODO: Add triple for supportedBy
+    const rep = null;
+    writer.addQuad(subj, null, rep);
+  }
+}
 
 // Invoice
 export function mapInvoice(row, writer) {

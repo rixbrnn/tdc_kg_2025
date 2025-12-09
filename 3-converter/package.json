@@ -4,10 +4,18 @@
   "type": "module",
   "main": "src/export_rdf.js",
   "scripts": {
-    "start": "node src/export_rdf.js"
+    "start": "node src/export_rdf.js",
+    "test": "node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js"
   },
   "dependencies": {
     "mysql2": "^3.11.0",
     "n3": "^1.17.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
   }
 }
