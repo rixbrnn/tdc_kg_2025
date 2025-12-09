@@ -1,0 +1,52 @@
+PREFIX : <http://example.org/chinook#>
+
+# Q: Which genres share the most customers? (Cross-selling opportunities)
+#
+# Purpose: Show natural pattern matching vs SQL's self-joins
+# Complexity: ⭐⭐ (2/5) - Declarative pattern matching
+# Expected Result: Genre pairs with shared customer counts
+#
+# Demonstrates: SPARQL's elegance with "find connections" queries
+# Advantages: Business logic is clear, no complex self-joins
+
+SELECT ?genre1Name ?genre2Name 
+       (COUNT(DISTINCT ?customer) AS ?sharedCustomers)
+WHERE {
+  # Pattern: Find customers who bought from BOTH genres
+  # This naturally expresses "customers who like X also like Y"
+  
+  ?customer :hasInvoice/:hasLine/:lineTrack ?track1 .
+  ?track1 :hasGenre ?genre1 .
+  ?genre1 :name ?genre1Name .
+  
+  ?customer :hasInvoice/:hasLine/:lineTrack ?track2 .
+  ?track2 :hasGenre ?genre2 .
+  ?genre2 :name ?genre2Name .
+  
+  # Avoid duplicates and self-matches
+  FILTER(?genre1 != ?genre2)
+  FILTER(STR(?genre1) < STR(?genre2))
+}
+GROUP BY ?genre1Name ?genre2Name
+HAVING (COUNT(DISTINCT ?customer) >= 5)
+ORDER BY DESC(?sharedCustomers)
+LIMIT 15
+
+# Notes for Presentation:
+# ✓ 20 lines vs SQL's 35+ lines
+# ✓ Business logic is clear: "customers who bought genre1 AND genre2"
+# ✓ No self-joins - just describe the pattern twice
+# ✓ Property paths (:hasInvoice/:hasLine/:lineTrack) replace 4 JOINs each
+# ✓ Reads like natural language
+#
+# SQL requires:
+# - CTE to simplify customer_genres
+# - Self-join on the CTE
+# - Non-intuitive filter (GenreId < GenreId)
+# - Business question obscured by SQL mechanics
+#
+# SPARQL: Just describe what you're looking for!
+# "Find customers who bought from genre1 and also bought from genre2"
+#
+# Real-world use: Cross-selling, product bundling, recommendation systems,
+#                 market basket analysis, playlist generation

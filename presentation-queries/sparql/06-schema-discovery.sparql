@@ -1,0 +1,77 @@
+PREFIX : <http://example.org/chinook#>
+
+# Q: What properties and relationships does a Track entity have?
+#
+# Purpose: ⭐⭐⭐ IMPOSSIBLE IN SQL ⭐⭐⭐ - Dynamic schema exploration
+# Complexity: ⭐ (1/5) - Trivial in SPARQL!
+# Expected Result: All properties of Track/1 with their values
+#
+# Demonstrates: SPARQL's schema flexibility - SQL can't do this!
+# This is PURE GRAPH MAGIC
+
+SELECT DISTINCT ?property ?value
+WHERE {
+  :Track/1 ?property ?value .
+}
+ORDER BY ?property
+LIMIT 100
+
+# Example output:
+# ?property              | ?value
+# ----------------------|---------------------------
+# rdf:type              | :Track
+# :trackName            | "For Those About To Rock"
+# :hasAlbum             | :Album/1
+# :hasGenre             | :Genre/1
+# :milliseconds         | 343719
+# :bytes                | 11170334
+# :unitPrice            | 0.99
+# :hasMediaType         | :MediaType/1
+# :composer             | "Angus Young, Malcolm Young..."
+
+# Want to explore further? Try these variations:
+
+# 1. Find all properties of ANY track:
+# SELECT DISTINCT ?property WHERE {
+#   ?track a :Track .
+#   ?track ?property ?value .
+# }
+
+# 2. Find all outgoing relationships (exclude literals):
+# SELECT DISTINCT ?property ?relatedEntity WHERE {
+#   :Track/1 ?property ?relatedEntity .
+#   FILTER(isIRI(?relatedEntity))
+# }
+
+# 3. Find all incoming relationships (who references this track):
+# SELECT DISTINCT ?source ?property WHERE {
+#   ?source ?property :Track/1 .
+# }
+
+# Notes for Presentation:
+# ✓ ONE LINE: ?entity ?property ?value
+# ✓ Discovers schema dynamically
+# ✓ No need to know table structure in advance
+# ✓ Works for ANY entity in the graph
+# ✗ SQL equivalent: IMPOSSIBLE! Would need information_schema queries
+#
+# SQL limitations:
+# - Must query information_schema (meta-database)
+# - Can't discover relationships dynamically
+# - Requires knowing table names beforehand
+# - Foreign keys don't tell you semantic meaning
+#
+# ⭐⭐⭐ THIS IS SPARQL-ONLY MAGIC! ⭐⭐⭐
+#
+# Real-world use cases:
+# - Data exploration (new dataset? Just query it!)
+# - Schema evolution (add properties without ALTER TABLE)
+# - Data integration (merge heterogeneous data sources)
+# - API discovery (what can I query about this entity?)
+# - Dynamic UIs (build forms based on available properties)
+#
+# This is WHY knowledge graphs are called "self-describing":
+# The data includes its own schema!
+#
+# Challenge to audience: "Try doing this in SQL!"
+# (Spoiler: You can't in any meaningful way)

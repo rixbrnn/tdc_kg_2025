@@ -1,0 +1,63 @@
+PREFIX : <http://example.org/chinook#>
+
+# Q: Given an artist (e.g., "Iron Maiden"), recommend similar artists
+#    based on shared customer purchases
+#
+# Purpose: ⭐⭐⭐ WOW FACTOR ⭐⭐⭐ - Show recommendation systems in SPARQL
+# Complexity: ⭐⭐ (2/5) - Natural graph traversal
+# Expected Result: Artists similar to Iron Maiden, ranked by customer overlap
+#
+# Demonstrates: "Customers who bought X also bought Y" is SIMPLE in SPARQL
+# This is how Netflix, Amazon, Spotify work!
+
+SELECT ?recommendedArtist 
+       (COUNT(DISTINCT ?customer) AS ?commonCustomers)
+       (SUM(?revenue) AS ?totalRevenue)
+WHERE {
+  # Step 1: Find customers who bought Iron Maiden
+  ?customer :hasInvoice/:hasLine/:lineTrack/:hasAlbum/:hasArtist ?targetArtist .
+  ?targetArtist :name "Iron Maiden" .
+  
+  # Step 2: What other artists did they buy?
+  ?customer :hasInvoice ?invoice .
+  ?invoice :hasLine ?line .
+  ?line :lineTrack/:hasAlbum/:hasArtist ?otherArtist .
+  ?otherArtist :name ?recommendedArtist .
+  
+  # Calculate revenue for ranking
+  ?line :unitPrice ?price ;
+        :quantity ?qty .
+  BIND(?price * ?qty AS ?revenue)
+  
+  # Exclude the original artist
+  FILTER(?otherArtist != ?targetArtist)
+}
+GROUP BY ?recommendedArtist
+ORDER BY DESC(?commonCustomers) DESC(?totalRevenue)
+LIMIT 10
+
+# Notes for Presentation:
+# ✓ 25 lines vs SQL's 60+ lines
+# ✓ No multiple CTEs - just one unified query
+# ✓ Business logic is crystal clear
+# ✓ Property path chains replace repeated 5-table joins
+# ✓ Easy to extend: want "customers who bought X OR Y"? Just add another pattern!
+#
+# SQL requires:
+# - Three CTEs (target_customers, customer_purchases, artist_scores)
+# - Repeated complex joins in each CTE
+# - Hard to debug and maintain
+# - Performance issues with large datasets
+#
+# SPARQL: Graph traversal is natural!
+# "Follow the customer → invoice → line → track → album → artist path twice"
+#
+# ⭐⭐⭐ THIS IS YOUR WOW FACTOR! ⭐⭐⭐
+# Real-world examples:
+# - Netflix: "Because you watched X, you might like Y"
+# - Amazon: "Customers who bought this also bought..."
+# - Spotify: "Fans also like" recommendations
+# - LinkedIn: "People you may know"
+#
+# Challenge for SQL: Requires denormalization or complex ETL pipelines
+# SPARQL: Native graph traversal handles this elegantly

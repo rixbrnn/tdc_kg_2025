@@ -1,0 +1,219 @@
+PREFIX : <http://example.org/chinook#>
+
+# Graph Visualization Queries for Blazegraph
+# Use these in Blazegraph's "Explore" tab to visualize the knowledge graph
+
+# ========================================
+# Visualization 1: Customer Purchase Network
+# ========================================
+# Shows connections: Customer → Invoice → Line → Track → Album → Artist
+# Use this to demonstrate the graph structure visually
+
+CONSTRUCT {
+  ?customer :hasInvoice ?invoice .
+  ?customer :customerName ?custName .
+  
+  ?invoice :hasLine ?line .
+  ?invoice :invoiceDate ?date .
+  
+  ?line :lineTrack ?track .
+  ?line :quantity ?qty .
+  
+  ?track :trackName ?trackName .
+  ?track :hasAlbum ?album .
+  
+  ?album :albumTitle ?albumTitle .
+  ?album :hasArtist ?artist .
+  
+  ?artist :name ?artistName .
+}
+WHERE {
+  # Limit to US customers for readability
+  ?customer a :Customer ;
+            :country "USA" ;
+            :customerName ?custName .
+  
+  ?customer :hasInvoice ?invoice .
+  ?invoice :invoiceDate ?date ;
+           :hasLine ?line .
+  
+  ?line :lineTrack ?track ;
+        :quantity ?qty .
+  
+  ?track :trackName ?trackName ;
+         :hasAlbum ?album .
+  
+  ?album :albumTitle ?albumTitle ;
+         :hasArtist ?artist .
+  
+  ?artist :name ?artistName .
+  
+  # Limit results for cleaner visualization
+  FILTER(?artist IN (:Artist/1, :Artist/2, :Artist/3))
+}
+LIMIT 100
+
+# ========================================
+# Visualization 2: Genre Network
+# ========================================
+# Shows which genres are connected through shared customers
+
+CONSTRUCT {
+  ?genre1 :sharedCustomersWith ?genre2 .
+  ?genre1 :name ?g1Name .
+  ?genre2 :name ?g2Name .
+  ?genre1 :customerCount ?count .
+}
+WHERE {
+  {
+    SELECT ?genre1 ?genre2 (COUNT(DISTINCT ?customer) AS ?count)
+    WHERE {
+      ?customer :hasInvoice/:hasLine/:lineTrack ?track1 .
+      ?track1 :hasGenre ?genre1 .
+      
+      ?customer :hasInvoice/:hasLine/:lineTrack ?track2 .
+      ?track2 :hasGenre ?genre2 .
+      
+      FILTER(?genre1 != ?genre2)
+    }
+    GROUP BY ?genre1 ?genre2
+    HAVING (COUNT(DISTINCT ?customer) >= 10)
+  }
+  
+  ?genre1 :name ?g1Name .
+  ?genre2 :name ?g2Name .
+}
+
+# ========================================
+# Visualization 3: Employee Hierarchy
+# ========================================
+# Shows the org chart visually
+
+CONSTRUCT {
+  ?employee :reportsTo ?manager .
+  ?employee :fullName ?empName .
+  ?employee :title ?empTitle .
+  ?manager :fullName ?mgrName .
+  ?manager :title ?mgrTitle .
+}
+WHERE {
+  ?employee a :Employee ;
+            :fullName ?empName ;
+            :title ?empTitle .
+  
+  OPTIONAL {
+    ?employee :reportsTo ?manager .
+    ?manager :fullName ?mgrName ;
+             :title ?mgrTitle .
+  }
+}
+
+# ========================================
+# Visualization 4: Artist Collaboration Network
+# ========================================
+# Shows artists connected through album collaborations
+# (if your data includes multi-artist albums)
+
+CONSTRUCT {
+  ?artist1 :collaboratesWith ?artist2 .
+  ?artist1 :name ?name1 .
+  ?artist2 :name ?name2 .
+  ?album :hasArtist ?artist1 .
+  ?album :hasArtist ?artist2 .
+  ?album :albumTitle ?title .
+}
+WHERE {
+  ?album :hasArtist ?artist1 ;
+         :hasArtist ?artist2 ;
+         :albumTitle ?title .
+  
+  ?artist1 :name ?name1 .
+  ?artist2 :name ?name2 .
+  
+  FILTER(?artist1 != ?artist2)
+}
+LIMIT 50
+
+# ========================================
+# Visualization 5: Recommendation Graph
+# ========================================
+# Shows "customers who bought X also bought Y" as a graph
+
+CONSTRUCT {
+  ?targetArtist :recommendedArtist ?otherArtist .
+  ?targetArtist :name ?targetName .
+  ?otherArtist :name ?otherName .
+  ?targetArtist :commonCustomers ?count .
+}
+WHERE {
+  BIND(:Artist/50 AS ?targetArtist)  # Change this to any artist ID
+  
+  {
+    SELECT ?targetArtist ?otherArtist (COUNT(DISTINCT ?customer) AS ?count)
+    WHERE {
+      ?customer :hasInvoice/:hasLine/:lineTrack/:hasAlbum/:hasArtist ?targetArtist .
+      ?customer :hasInvoice/:hasLine/:lineTrack/:hasAlbum/:hasArtist ?otherArtist .
+      
+      FILTER(?targetArtist != ?otherArtist)
+    }
+    GROUP BY ?targetArtist ?otherArtist
+    HAVING (COUNT(DISTINCT ?customer) >= 3)
+  }
+  
+  ?targetArtist :name ?targetName .
+  ?otherArtist :name ?otherName .
+}
+ORDER BY DESC(?count)
+LIMIT 20
+
+# ========================================
+# How to Use These Visualizations
+# ========================================
+
+# In Blazegraph UI:
+# 1. Go to http://localhost:9999/blazegraph/#query
+# 2. Paste one of the CONSTRUCT queries above
+# 3. Click "Execute"
+# 4. Switch from "Table" view to "Graph" view
+# 5. Explore the visual graph!
+
+# Tips for Better Visualizations:
+# - Use LIMIT to keep graphs readable (50-200 nodes)
+# - Filter by specific entities (countries, artists, genres)
+# - CONSTRUCT queries work better than SELECT for visualization
+# - Colors and layouts can be adjusted in Blazegraph UI
+
+# For Presentations:
+# - Pre-run queries and take screenshots
+# - Use Visualization 1 to show overall structure
+# - Use Visualization 2 to show co-occurrence patterns  
+# - Use Visualization 3 to show hierarchy (compare with SQL!)
+# - Use Visualization 5 to show recommendations
+
+# ========================================
+# Bonus: Interactive Exploration
+# ========================================
+
+# Start with a single entity and expand outward:
+CONSTRUCT {
+  ?entity ?property ?value .
+  ?value ?p2 ?v2 .
+}
+WHERE {
+  BIND(:Track/1 AS ?entity)
+  
+  ?entity ?property ?value .
+  
+  OPTIONAL {
+    ?value ?p2 ?v2 .
+    FILTER(isIRI(?value))
+  }
+}
+LIMIT 100
+
+# This shows:
+# - All properties of Track/1
+# - All entities it connects to
+# - One hop beyond those entities
+# 
+# Perfect for demonstrating graph exploration!

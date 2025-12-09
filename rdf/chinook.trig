@@ -19446,2063 +19446,1651 @@
     :supportedBy <http://example.org/chinook#Employee/3>.
 <http://example.org/chinook#Invoice/1> a :Invoice;
     :invoiceId 1;
-    :invoiceDate "2021-01-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-01-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/2> :hasInvoice <http://example.org/chinook#Invoice/1>.
 <http://example.org/chinook#Invoice/2> a :Invoice;
     :invoiceId 2;
-    :invoiceDate "2021-01-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-01-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/4> :hasInvoice <http://example.org/chinook#Invoice/2>.
 <http://example.org/chinook#Invoice/3> a :Invoice;
     :invoiceId 3;
-    :invoiceDate "2021-01-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-01-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/8> :hasInvoice <http://example.org/chinook#Invoice/3>.
 <http://example.org/chinook#Invoice/4> a :Invoice;
     :invoiceId 4;
-    :invoiceDate "2021-01-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-01-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/14> :hasInvoice <http://example.org/chinook#Invoice/4>.
 <http://example.org/chinook#Invoice/5> a :Invoice;
     :invoiceId 5;
-    :invoiceDate "2021-01-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-01-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/23> :hasInvoice <http://example.org/chinook#Invoice/5>.
 <http://example.org/chinook#Invoice/6> a :Invoice;
     :invoiceId 6;
-    :invoiceDate "2021-01-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-01-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/37> :hasInvoice <http://example.org/chinook#Invoice/6>.
 <http://example.org/chinook#Invoice/7> a :Invoice;
     :invoiceId 7;
-    :invoiceDate "2021-02-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-02-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/38> :hasInvoice <http://example.org/chinook#Invoice/7>.
 <http://example.org/chinook#Invoice/8> a :Invoice;
     :invoiceId 8;
-    :invoiceDate "2021-02-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-02-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/40> :hasInvoice <http://example.org/chinook#Invoice/8>.
 <http://example.org/chinook#Invoice/9> a :Invoice;
     :invoiceId 9;
-    :invoiceDate "2021-02-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-02-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/42> :hasInvoice <http://example.org/chinook#Invoice/9>.
 <http://example.org/chinook#Invoice/10> a :Invoice;
     :invoiceId 10;
-    :invoiceDate "2021-02-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-02-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/46> :hasInvoice <http://example.org/chinook#Invoice/10>.
 <http://example.org/chinook#Invoice/11> a :Invoice;
     :invoiceId 11;
-    :invoiceDate "2021-02-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-02-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/52> :hasInvoice <http://example.org/chinook#Invoice/11>.
 <http://example.org/chinook#Invoice/12> a :Invoice;
     :invoiceId 12;
-    :invoiceDate "2021-02-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-02-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/2> :hasInvoice <http://example.org/chinook#Invoice/12>.
 <http://example.org/chinook#Invoice/13> a :Invoice;
     :invoiceId 13;
-    :invoiceDate "2021-02-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-02-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/16> :hasInvoice <http://example.org/chinook#Invoice/13>.
 <http://example.org/chinook#Invoice/14> a :Invoice;
     :invoiceId 14;
-    :invoiceDate "2021-03-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-03-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/17> :hasInvoice <http://example.org/chinook#Invoice/14>.
 <http://example.org/chinook#Invoice/15> a :Invoice;
     :invoiceId 15;
-    :invoiceDate "2021-03-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-03-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/19> :hasInvoice <http://example.org/chinook#Invoice/15>.
 <http://example.org/chinook#Invoice/16> a :Invoice;
     :invoiceId 16;
-    :invoiceDate "2021-03-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-03-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/21> :hasInvoice <http://example.org/chinook#Invoice/16>.
 <http://example.org/chinook#Invoice/17> a :Invoice;
     :invoiceId 17;
-    :invoiceDate "2021-03-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-03-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/25> :hasInvoice <http://example.org/chinook#Invoice/17>.
 <http://example.org/chinook#Invoice/18> a :Invoice;
     :invoiceId 18;
-    :invoiceDate "2021-03-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-03-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/31> :hasInvoice <http://example.org/chinook#Invoice/18>.
 <http://example.org/chinook#Invoice/19> a :Invoice;
     :invoiceId 19;
-    :invoiceDate "2021-03-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-03-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/40> :hasInvoice <http://example.org/chinook#Invoice/19>.
 <http://example.org/chinook#Invoice/20> a :Invoice;
     :invoiceId 20;
-    :invoiceDate "2021-03-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-03-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/54> :hasInvoice <http://example.org/chinook#Invoice/20>.
 <http://example.org/chinook#Invoice/21> a :Invoice;
     :invoiceId 21;
-    :invoiceDate "2021-04-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-04-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/55> :hasInvoice <http://example.org/chinook#Invoice/21>.
 <http://example.org/chinook#Invoice/22> a :Invoice;
     :invoiceId 22;
-    :invoiceDate "2021-04-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-04-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/57> :hasInvoice <http://example.org/chinook#Invoice/22>.
 <http://example.org/chinook#Invoice/23> a :Invoice;
     :invoiceId 23;
-    :invoiceDate "2021-04-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-04-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/59> :hasInvoice <http://example.org/chinook#Invoice/23>.
 <http://example.org/chinook#Invoice/24> a :Invoice;
     :invoiceId 24;
-    :invoiceDate "2021-04-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-04-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/4> :hasInvoice <http://example.org/chinook#Invoice/24>.
 <http://example.org/chinook#Invoice/25> a :Invoice;
     :invoiceId 25;
-    :invoiceDate "2021-04-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-04-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/10> :hasInvoice <http://example.org/chinook#Invoice/25>.
 <http://example.org/chinook#Invoice/26> a :Invoice;
     :invoiceId 26;
-    :invoiceDate "2021-04-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-04-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/19> :hasInvoice <http://example.org/chinook#Invoice/26>.
 <http://example.org/chinook#Invoice/27> a :Invoice;
     :invoiceId 27;
-    :invoiceDate "2021-04-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-04-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/33> :hasInvoice <http://example.org/chinook#Invoice/27>.
 <http://example.org/chinook#Invoice/28> a :Invoice;
     :invoiceId 28;
-    :invoiceDate "2021-05-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-05-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/34> :hasInvoice <http://example.org/chinook#Invoice/28>.
 <http://example.org/chinook#Invoice/29> a :Invoice;
     :invoiceId 29;
-    :invoiceDate "2021-05-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-05-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/36> :hasInvoice <http://example.org/chinook#Invoice/29>.
 <http://example.org/chinook#Invoice/30> a :Invoice;
     :invoiceId 30;
-    :invoiceDate "2021-05-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-05-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/38> :hasInvoice <http://example.org/chinook#Invoice/30>.
 <http://example.org/chinook#Invoice/31> a :Invoice;
     :invoiceId 31;
-    :invoiceDate "2021-05-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-05-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/42> :hasInvoice <http://example.org/chinook#Invoice/31>.
 <http://example.org/chinook#Invoice/32> a :Invoice;
     :invoiceId 32;
-    :invoiceDate "2021-05-10T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-05-10T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/48> :hasInvoice <http://example.org/chinook#Invoice/32>.
 <http://example.org/chinook#Invoice/33> a :Invoice;
     :invoiceId 33;
-    :invoiceDate "2021-05-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-05-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/57> :hasInvoice <http://example.org/chinook#Invoice/33>.
 <http://example.org/chinook#Invoice/34> a :Invoice;
     :invoiceId 34;
-    :invoiceDate "2021-05-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-05-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/12> :hasInvoice <http://example.org/chinook#Invoice/34>.
 <http://example.org/chinook#Invoice/35> a :Invoice;
     :invoiceId 35;
-    :invoiceDate "2021-06-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-06-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/13> :hasInvoice <http://example.org/chinook#Invoice/35>.
 <http://example.org/chinook#Invoice/36> a :Invoice;
     :invoiceId 36;
-    :invoiceDate "2021-06-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-06-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/15> :hasInvoice <http://example.org/chinook#Invoice/36>.
 <http://example.org/chinook#Invoice/37> a :Invoice;
     :invoiceId 37;
-    :invoiceDate "2021-06-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-06-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/17> :hasInvoice <http://example.org/chinook#Invoice/37>.
 <http://example.org/chinook#Invoice/38> a :Invoice;
     :invoiceId 38;
-    :invoiceDate "2021-06-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-06-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/21> :hasInvoice <http://example.org/chinook#Invoice/38>.
 <http://example.org/chinook#Invoice/39> a :Invoice;
     :invoiceId 39;
-    :invoiceDate "2021-06-10T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-06-10T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/27> :hasInvoice <http://example.org/chinook#Invoice/39>.
 <http://example.org/chinook#Invoice/40> a :Invoice;
     :invoiceId 40;
-    :invoiceDate "2021-06-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-06-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/36> :hasInvoice <http://example.org/chinook#Invoice/40>.
 <http://example.org/chinook#Invoice/41> a :Invoice;
     :invoiceId 41;
-    :invoiceDate "2021-06-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-06-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/50> :hasInvoice <http://example.org/chinook#Invoice/41>.
 <http://example.org/chinook#Invoice/42> a :Invoice;
     :invoiceId 42;
-    :invoiceDate "2021-07-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-07-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/51> :hasInvoice <http://example.org/chinook#Invoice/42>.
 <http://example.org/chinook#Invoice/43> a :Invoice;
     :invoiceId 43;
-    :invoiceDate "2021-07-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-07-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/53> :hasInvoice <http://example.org/chinook#Invoice/43>.
 <http://example.org/chinook#Invoice/44> a :Invoice;
     :invoiceId 44;
-    :invoiceDate "2021-07-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-07-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/55> :hasInvoice <http://example.org/chinook#Invoice/44>.
 <http://example.org/chinook#Invoice/45> a :Invoice;
     :invoiceId 45;
-    :invoiceDate "2021-07-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-07-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/59> :hasInvoice <http://example.org/chinook#Invoice/45>.
 <http://example.org/chinook#Invoice/46> a :Invoice;
     :invoiceId 46;
-    :invoiceDate "2021-07-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-07-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/6> :hasInvoice <http://example.org/chinook#Invoice/46>.
 <http://example.org/chinook#Invoice/47> a :Invoice;
     :invoiceId 47;
-    :invoiceDate "2021-07-16T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-07-16T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/15> :hasInvoice <http://example.org/chinook#Invoice/47>.
 <http://example.org/chinook#Invoice/48> a :Invoice;
     :invoiceId 48;
-    :invoiceDate "2021-07-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-07-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/29> :hasInvoice <http://example.org/chinook#Invoice/48>.
 <http://example.org/chinook#Invoice/49> a :Invoice;
     :invoiceId 49;
-    :invoiceDate "2021-08-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-08-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/30> :hasInvoice <http://example.org/chinook#Invoice/49>.
 <http://example.org/chinook#Invoice/50> a :Invoice;
     :invoiceId 50;
-    :invoiceDate "2021-08-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-08-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/32> :hasInvoice <http://example.org/chinook#Invoice/50>.
 <http://example.org/chinook#Invoice/51> a :Invoice;
     :invoiceId 51;
-    :invoiceDate "2021-08-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-08-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/34> :hasInvoice <http://example.org/chinook#Invoice/51>.
 <http://example.org/chinook#Invoice/52> a :Invoice;
     :invoiceId 52;
-    :invoiceDate "2021-08-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-08-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/38> :hasInvoice <http://example.org/chinook#Invoice/52>.
 <http://example.org/chinook#Invoice/53> a :Invoice;
     :invoiceId 53;
-    :invoiceDate "2021-08-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-08-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/44> :hasInvoice <http://example.org/chinook#Invoice/53>.
 <http://example.org/chinook#Invoice/54> a :Invoice;
     :invoiceId 54;
-    :invoiceDate "2021-08-16T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-08-16T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/53> :hasInvoice <http://example.org/chinook#Invoice/54>.
 <http://example.org/chinook#Invoice/55> a :Invoice;
     :invoiceId 55;
-    :invoiceDate "2021-08-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-08-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/8> :hasInvoice <http://example.org/chinook#Invoice/55>.
 <http://example.org/chinook#Invoice/56> a :Invoice;
     :invoiceId 56;
-    :invoiceDate "2021-09-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-09-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/9> :hasInvoice <http://example.org/chinook#Invoice/56>.
 <http://example.org/chinook#Invoice/57> a :Invoice;
     :invoiceId 57;
-    :invoiceDate "2021-09-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-09-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/11> :hasInvoice <http://example.org/chinook#Invoice/57>.
 <http://example.org/chinook#Invoice/58> a :Invoice;
     :invoiceId 58;
-    :invoiceDate "2021-09-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-09-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/13> :hasInvoice <http://example.org/chinook#Invoice/58>.
 <http://example.org/chinook#Invoice/59> a :Invoice;
     :invoiceId 59;
-    :invoiceDate "2021-09-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-09-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/17> :hasInvoice <http://example.org/chinook#Invoice/59>.
 <http://example.org/chinook#Invoice/60> a :Invoice;
     :invoiceId 60;
-    :invoiceDate "2021-09-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-09-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/23> :hasInvoice <http://example.org/chinook#Invoice/60>.
 <http://example.org/chinook#Invoice/61> a :Invoice;
     :invoiceId 61;
-    :invoiceDate "2021-09-16T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-09-16T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/32> :hasInvoice <http://example.org/chinook#Invoice/61>.
 <http://example.org/chinook#Invoice/62> a :Invoice;
     :invoiceId 62;
-    :invoiceDate "2021-09-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-09-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/46> :hasInvoice <http://example.org/chinook#Invoice/62>.
 <http://example.org/chinook#Invoice/63> a :Invoice;
     :invoiceId 63;
-    :invoiceDate "2021-10-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-10-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/47> :hasInvoice <http://example.org/chinook#Invoice/63>.
 <http://example.org/chinook#Invoice/64> a :Invoice;
     :invoiceId 64;
-    :invoiceDate "2021-10-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-10-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/49> :hasInvoice <http://example.org/chinook#Invoice/64>.
 <http://example.org/chinook#Invoice/65> a :Invoice;
     :invoiceId 65;
-    :invoiceDate "2021-10-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-10-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/51> :hasInvoice <http://example.org/chinook#Invoice/65>.
 <http://example.org/chinook#Invoice/66> a :Invoice;
     :invoiceId 66;
-    :invoiceDate "2021-10-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-10-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/55> :hasInvoice <http://example.org/chinook#Invoice/66>.
 <http://example.org/chinook#Invoice/67> a :Invoice;
     :invoiceId 67;
-    :invoiceDate "2021-10-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-10-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/2> :hasInvoice <http://example.org/chinook#Invoice/67>.
 <http://example.org/chinook#Invoice/68> a :Invoice;
     :invoiceId 68;
-    :invoiceDate "2021-10-17T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-10-17T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/11> :hasInvoice <http://example.org/chinook#Invoice/68>.
 <http://example.org/chinook#Invoice/69> a :Invoice;
     :invoiceId 69;
-    :invoiceDate "2021-10-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-10-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/25> :hasInvoice <http://example.org/chinook#Invoice/69>.
 <http://example.org/chinook#Invoice/70> a :Invoice;
     :invoiceId 70;
-    :invoiceDate "2021-11-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-11-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/26> :hasInvoice <http://example.org/chinook#Invoice/70>.
 <http://example.org/chinook#Invoice/71> a :Invoice;
     :invoiceId 71;
-    :invoiceDate "2021-11-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-11-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/28> :hasInvoice <http://example.org/chinook#Invoice/71>.
 <http://example.org/chinook#Invoice/72> a :Invoice;
     :invoiceId 72;
-    :invoiceDate "2021-11-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-11-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/30> :hasInvoice <http://example.org/chinook#Invoice/72>.
 <http://example.org/chinook#Invoice/73> a :Invoice;
     :invoiceId 73;
-    :invoiceDate "2021-11-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-11-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/34> :hasInvoice <http://example.org/chinook#Invoice/73>.
 <http://example.org/chinook#Invoice/74> a :Invoice;
     :invoiceId 74;
-    :invoiceDate "2021-11-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-11-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/40> :hasInvoice <http://example.org/chinook#Invoice/74>.
 <http://example.org/chinook#Invoice/75> a :Invoice;
     :invoiceId 75;
-    :invoiceDate "2021-11-17T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-11-17T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/49> :hasInvoice <http://example.org/chinook#Invoice/75>.
 <http://example.org/chinook#Invoice/76> a :Invoice;
     :invoiceId 76;
-    :invoiceDate "2021-11-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-11-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/4> :hasInvoice <http://example.org/chinook#Invoice/76>.
 <http://example.org/chinook#Invoice/77> a :Invoice;
     :invoiceId 77;
-    :invoiceDate "2021-12-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-12-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/5> :hasInvoice <http://example.org/chinook#Invoice/77>.
 <http://example.org/chinook#Invoice/78> a :Invoice;
     :invoiceId 78;
-    :invoiceDate "2021-12-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2021-12-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/7> :hasInvoice <http://example.org/chinook#Invoice/78>.
 <http://example.org/chinook#Invoice/79> a :Invoice;
     :invoiceId 79;
-    :invoiceDate "2021-12-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2021-12-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/9> :hasInvoice <http://example.org/chinook#Invoice/79>.
 <http://example.org/chinook#Invoice/80> a :Invoice;
     :invoiceId 80;
-    :invoiceDate "2021-12-10T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2021-12-10T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/13> :hasInvoice <http://example.org/chinook#Invoice/80>.
 <http://example.org/chinook#Invoice/81> a :Invoice;
     :invoiceId 81;
-    :invoiceDate "2021-12-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2021-12-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/19> :hasInvoice <http://example.org/chinook#Invoice/81>.
 <http://example.org/chinook#Invoice/82> a :Invoice;
     :invoiceId 82;
-    :invoiceDate "2021-12-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2021-12-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/28> :hasInvoice <http://example.org/chinook#Invoice/82>.
 <http://example.org/chinook#Invoice/83> a :Invoice;
     :invoiceId 83;
-    :invoiceDate "2021-12-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2021-12-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/42> :hasInvoice <http://example.org/chinook#Invoice/83>.
 <http://example.org/chinook#Invoice/84> a :Invoice;
     :invoiceId 84;
-    :invoiceDate "2022-01-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-01-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/43> :hasInvoice <http://example.org/chinook#Invoice/84>.
 <http://example.org/chinook#Invoice/85> a :Invoice;
     :invoiceId 85;
-    :invoiceDate "2022-01-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-01-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/45> :hasInvoice <http://example.org/chinook#Invoice/85>.
 <http://example.org/chinook#Invoice/86> a :Invoice;
     :invoiceId 86;
-    :invoiceDate "2022-01-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-01-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/47> :hasInvoice <http://example.org/chinook#Invoice/86>.
 <http://example.org/chinook#Invoice/87> a :Invoice;
     :invoiceId 87;
-    :invoiceDate "2022-01-10T03:00:00.000Z"^^xsd:dateTime;
-    :total 6.94.
+    :invoiceDate "2022-01-10T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/51> :hasInvoice <http://example.org/chinook#Invoice/87>.
 <http://example.org/chinook#Invoice/88> a :Invoice;
     :invoiceId 88;
-    :invoiceDate "2022-01-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 17.91.
+    :invoiceDate "2022-01-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/57> :hasInvoice <http://example.org/chinook#Invoice/88>.
 <http://example.org/chinook#Invoice/89> a :Invoice;
     :invoiceId 89;
-    :invoiceDate "2022-01-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 18.86.
+    :invoiceDate "2022-01-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/7> :hasInvoice <http://example.org/chinook#Invoice/89>.
 <http://example.org/chinook#Invoice/90> a :Invoice;
     :invoiceId 90;
-    :invoiceDate "2022-01-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2022-01-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/21> :hasInvoice <http://example.org/chinook#Invoice/90>.
 <http://example.org/chinook#Invoice/91> a :Invoice;
     :invoiceId 91;
-    :invoiceDate "2022-02-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-02-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/22> :hasInvoice <http://example.org/chinook#Invoice/91>.
 <http://example.org/chinook#Invoice/92> a :Invoice;
     :invoiceId 92;
-    :invoiceDate "2022-02-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-02-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/24> :hasInvoice <http://example.org/chinook#Invoice/92>.
 <http://example.org/chinook#Invoice/93> a :Invoice;
     :invoiceId 93;
-    :invoiceDate "2022-02-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-02-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/26> :hasInvoice <http://example.org/chinook#Invoice/93>.
 <http://example.org/chinook#Invoice/94> a :Invoice;
     :invoiceId 94;
-    :invoiceDate "2022-02-10T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-02-10T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/30> :hasInvoice <http://example.org/chinook#Invoice/94>.
 <http://example.org/chinook#Invoice/95> a :Invoice;
     :invoiceId 95;
-    :invoiceDate "2022-02-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2022-02-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/36> :hasInvoice <http://example.org/chinook#Invoice/95>.
 <http://example.org/chinook#Invoice/96> a :Invoice;
     :invoiceId 96;
-    :invoiceDate "2022-02-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 21.86.
+    :invoiceDate "2022-02-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/45> :hasInvoice <http://example.org/chinook#Invoice/96>.
 <http://example.org/chinook#Invoice/97> a :Invoice;
     :invoiceId 97;
-    :invoiceDate "2022-02-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.99.
+    :invoiceDate "2022-02-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/59> :hasInvoice <http://example.org/chinook#Invoice/97>.
 <http://example.org/chinook#Invoice/98> a :Invoice;
     :invoiceId 98;
-    :invoiceDate "2022-03-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.98.
+    :invoiceDate "2022-03-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/1> :hasInvoice <http://example.org/chinook#Invoice/98>.
 <http://example.org/chinook#Invoice/99> a :Invoice;
     :invoiceId 99;
-    :invoiceDate "2022-03-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.98.
+    :invoiceDate "2022-03-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/3> :hasInvoice <http://example.org/chinook#Invoice/99>.
 <http://example.org/chinook#Invoice/100> a :Invoice;
     :invoiceId 100;
-    :invoiceDate "2022-03-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-03-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/5> :hasInvoice <http://example.org/chinook#Invoice/100>.
 <http://example.org/chinook#Invoice/101> a :Invoice;
     :invoiceId 101;
-    :invoiceDate "2022-03-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-03-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/9> :hasInvoice <http://example.org/chinook#Invoice/101>.
 <http://example.org/chinook#Invoice/102> a :Invoice;
     :invoiceId 102;
-    :invoiceDate "2022-03-16T03:00:00.000Z"^^xsd:dateTime;
-    :total 9.91.
+    :invoiceDate "2022-03-16T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/15> :hasInvoice <http://example.org/chinook#Invoice/102>.
 <http://example.org/chinook#Invoice/103> a :Invoice;
     :invoiceId 103;
-    :invoiceDate "2022-03-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 15.86.
+    :invoiceDate "2022-03-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/24> :hasInvoice <http://example.org/chinook#Invoice/103>.
 <http://example.org/chinook#Invoice/104> a :Invoice;
     :invoiceId 104;
-    :invoiceDate "2022-03-29T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2022-03-29T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/38> :hasInvoice <http://example.org/chinook#Invoice/104>.
 <http://example.org/chinook#Invoice/105> a :Invoice;
     :invoiceId 105;
-    :invoiceDate "2022-04-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-04-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/39> :hasInvoice <http://example.org/chinook#Invoice/105>.
 <http://example.org/chinook#Invoice/106> a :Invoice;
     :invoiceId 106;
-    :invoiceDate "2022-04-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-04-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/41> :hasInvoice <http://example.org/chinook#Invoice/106>.
 <http://example.org/chinook#Invoice/107> a :Invoice;
     :invoiceId 107;
-    :invoiceDate "2022-04-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-04-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/43> :hasInvoice <http://example.org/chinook#Invoice/107>.
 <http://example.org/chinook#Invoice/108> a :Invoice;
     :invoiceId 108;
-    :invoiceDate "2022-04-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-04-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/47> :hasInvoice <http://example.org/chinook#Invoice/108>.
 <http://example.org/chinook#Invoice/109> a :Invoice;
     :invoiceId 109;
-    :invoiceDate "2022-04-16T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2022-04-16T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/53> :hasInvoice <http://example.org/chinook#Invoice/109>.
 <http://example.org/chinook#Invoice/110> a :Invoice;
     :invoiceId 110;
-    :invoiceDate "2022-04-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2022-04-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/3> :hasInvoice <http://example.org/chinook#Invoice/110>.
 <http://example.org/chinook#Invoice/111> a :Invoice;
     :invoiceId 111;
-    :invoiceDate "2022-04-29T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2022-04-29T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/17> :hasInvoice <http://example.org/chinook#Invoice/111>.
 <http://example.org/chinook#Invoice/112> a :Invoice;
     :invoiceId 112;
-    :invoiceDate "2022-05-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-05-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/18> :hasInvoice <http://example.org/chinook#Invoice/112>.
 <http://example.org/chinook#Invoice/113> a :Invoice;
     :invoiceId 113;
-    :invoiceDate "2022-05-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-05-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/20> :hasInvoice <http://example.org/chinook#Invoice/113>.
 <http://example.org/chinook#Invoice/114> a :Invoice;
     :invoiceId 114;
-    :invoiceDate "2022-05-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-05-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/22> :hasInvoice <http://example.org/chinook#Invoice/114>.
 <http://example.org/chinook#Invoice/115> a :Invoice;
     :invoiceId 115;
-    :invoiceDate "2022-05-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-05-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/26> :hasInvoice <http://example.org/chinook#Invoice/115>.
 <http://example.org/chinook#Invoice/116> a :Invoice;
     :invoiceId 116;
-    :invoiceDate "2022-05-17T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2022-05-17T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/32> :hasInvoice <http://example.org/chinook#Invoice/116>.
 <http://example.org/chinook#Invoice/117> a :Invoice;
     :invoiceId 117;
-    :invoiceDate "2022-05-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2022-05-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/41> :hasInvoice <http://example.org/chinook#Invoice/117>.
 <http://example.org/chinook#Invoice/118> a :Invoice;
     :invoiceId 118;
-    :invoiceDate "2022-05-30T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2022-05-30T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/55> :hasInvoice <http://example.org/chinook#Invoice/118>.
 <http://example.org/chinook#Invoice/119> a :Invoice;
     :invoiceId 119;
-    :invoiceDate "2022-06-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-06-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/56> :hasInvoice <http://example.org/chinook#Invoice/119>.
 <http://example.org/chinook#Invoice/120> a :Invoice;
     :invoiceId 120;
-    :invoiceDate "2022-06-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-06-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/58> :hasInvoice <http://example.org/chinook#Invoice/120>.
 <http://example.org/chinook#Invoice/121> a :Invoice;
     :invoiceId 121;
-    :invoiceDate "2022-06-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-06-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/1> :hasInvoice <http://example.org/chinook#Invoice/121>.
 <http://example.org/chinook#Invoice/122> a :Invoice;
     :invoiceId 122;
-    :invoiceDate "2022-06-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-06-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/5> :hasInvoice <http://example.org/chinook#Invoice/122>.
 <http://example.org/chinook#Invoice/123> a :Invoice;
     :invoiceId 123;
-    :invoiceDate "2022-06-17T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2022-06-17T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/11> :hasInvoice <http://example.org/chinook#Invoice/123>.
 <http://example.org/chinook#Invoice/124> a :Invoice;
     :invoiceId 124;
-    :invoiceDate "2022-06-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2022-06-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/20> :hasInvoice <http://example.org/chinook#Invoice/124>.
 <http://example.org/chinook#Invoice/125> a :Invoice;
     :invoiceId 125;
-    :invoiceDate "2022-06-30T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2022-06-30T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/34> :hasInvoice <http://example.org/chinook#Invoice/125>.
 <http://example.org/chinook#Invoice/126> a :Invoice;
     :invoiceId 126;
-    :invoiceDate "2022-07-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-07-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/35> :hasInvoice <http://example.org/chinook#Invoice/126>.
 <http://example.org/chinook#Invoice/127> a :Invoice;
     :invoiceId 127;
-    :invoiceDate "2022-07-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-07-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/37> :hasInvoice <http://example.org/chinook#Invoice/127>.
 <http://example.org/chinook#Invoice/128> a :Invoice;
     :invoiceId 128;
-    :invoiceDate "2022-07-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-07-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/39> :hasInvoice <http://example.org/chinook#Invoice/128>.
 <http://example.org/chinook#Invoice/129> a :Invoice;
     :invoiceId 129;
-    :invoiceDate "2022-07-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-07-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/43> :hasInvoice <http://example.org/chinook#Invoice/129>.
 <http://example.org/chinook#Invoice/130> a :Invoice;
     :invoiceId 130;
-    :invoiceDate "2022-07-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2022-07-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/49> :hasInvoice <http://example.org/chinook#Invoice/130>.
 <http://example.org/chinook#Invoice/131> a :Invoice;
     :invoiceId 131;
-    :invoiceDate "2022-07-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2022-07-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/58> :hasInvoice <http://example.org/chinook#Invoice/131>.
 <http://example.org/chinook#Invoice/132> a :Invoice;
     :invoiceId 132;
-    :invoiceDate "2022-07-31T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2022-07-31T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/13> :hasInvoice <http://example.org/chinook#Invoice/132>.
 <http://example.org/chinook#Invoice/133> a :Invoice;
     :invoiceId 133;
-    :invoiceDate "2022-08-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-08-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/14> :hasInvoice <http://example.org/chinook#Invoice/133>.
 <http://example.org/chinook#Invoice/134> a :Invoice;
     :invoiceId 134;
-    :invoiceDate "2022-08-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-08-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/16> :hasInvoice <http://example.org/chinook#Invoice/134>.
 <http://example.org/chinook#Invoice/135> a :Invoice;
     :invoiceId 135;
-    :invoiceDate "2022-08-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-08-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/18> :hasInvoice <http://example.org/chinook#Invoice/135>.
 <http://example.org/chinook#Invoice/136> a :Invoice;
     :invoiceId 136;
-    :invoiceDate "2022-08-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-08-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/22> :hasInvoice <http://example.org/chinook#Invoice/136>.
 <http://example.org/chinook#Invoice/137> a :Invoice;
     :invoiceId 137;
-    :invoiceDate "2022-08-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2022-08-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/28> :hasInvoice <http://example.org/chinook#Invoice/137>.
 <http://example.org/chinook#Invoice/138> a :Invoice;
     :invoiceId 138;
-    :invoiceDate "2022-08-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2022-08-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/37> :hasInvoice <http://example.org/chinook#Invoice/138>.
 <http://example.org/chinook#Invoice/139> a :Invoice;
     :invoiceId 139;
-    :invoiceDate "2022-08-31T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2022-08-31T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/51> :hasInvoice <http://example.org/chinook#Invoice/139>.
 <http://example.org/chinook#Invoice/140> a :Invoice;
     :invoiceId 140;
-    :invoiceDate "2022-09-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-09-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/52> :hasInvoice <http://example.org/chinook#Invoice/140>.
 <http://example.org/chinook#Invoice/141> a :Invoice;
     :invoiceId 141;
-    :invoiceDate "2022-09-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-09-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/54> :hasInvoice <http://example.org/chinook#Invoice/141>.
 <http://example.org/chinook#Invoice/142> a :Invoice;
     :invoiceId 142;
-    :invoiceDate "2022-09-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-09-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/56> :hasInvoice <http://example.org/chinook#Invoice/142>.
 <http://example.org/chinook#Invoice/143> a :Invoice;
     :invoiceId 143;
-    :invoiceDate "2022-09-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-09-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/1> :hasInvoice <http://example.org/chinook#Invoice/143>.
 <http://example.org/chinook#Invoice/144> a :Invoice;
     :invoiceId 144;
-    :invoiceDate "2022-09-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2022-09-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/7> :hasInvoice <http://example.org/chinook#Invoice/144>.
 <http://example.org/chinook#Invoice/145> a :Invoice;
     :invoiceId 145;
-    :invoiceDate "2022-09-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2022-09-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/16> :hasInvoice <http://example.org/chinook#Invoice/145>.
 <http://example.org/chinook#Invoice/146> a :Invoice;
     :invoiceId 146;
-    :invoiceDate "2022-10-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2022-10-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/30> :hasInvoice <http://example.org/chinook#Invoice/146>.
 <http://example.org/chinook#Invoice/147> a :Invoice;
     :invoiceId 147;
-    :invoiceDate "2022-10-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-10-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/31> :hasInvoice <http://example.org/chinook#Invoice/147>.
 <http://example.org/chinook#Invoice/148> a :Invoice;
     :invoiceId 148;
-    :invoiceDate "2022-10-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-10-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/33> :hasInvoice <http://example.org/chinook#Invoice/148>.
 <http://example.org/chinook#Invoice/149> a :Invoice;
     :invoiceId 149;
-    :invoiceDate "2022-10-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-10-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/35> :hasInvoice <http://example.org/chinook#Invoice/149>.
 <http://example.org/chinook#Invoice/150> a :Invoice;
     :invoiceId 150;
-    :invoiceDate "2022-10-16T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-10-16T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/39> :hasInvoice <http://example.org/chinook#Invoice/150>.
 <http://example.org/chinook#Invoice/151> a :Invoice;
     :invoiceId 151;
-    :invoiceDate "2022-10-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2022-10-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/45> :hasInvoice <http://example.org/chinook#Invoice/151>.
 <http://example.org/chinook#Invoice/152> a :Invoice;
     :invoiceId 152;
-    :invoiceDate "2022-10-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2022-10-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/54> :hasInvoice <http://example.org/chinook#Invoice/152>.
 <http://example.org/chinook#Invoice/153> a :Invoice;
     :invoiceId 153;
-    :invoiceDate "2022-11-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2022-11-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/9> :hasInvoice <http://example.org/chinook#Invoice/153>.
 <http://example.org/chinook#Invoice/154> a :Invoice;
     :invoiceId 154;
-    :invoiceDate "2022-11-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-11-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/10> :hasInvoice <http://example.org/chinook#Invoice/154>.
 <http://example.org/chinook#Invoice/155> a :Invoice;
     :invoiceId 155;
-    :invoiceDate "2022-11-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-11-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/12> :hasInvoice <http://example.org/chinook#Invoice/155>.
 <http://example.org/chinook#Invoice/156> a :Invoice;
     :invoiceId 156;
-    :invoiceDate "2022-11-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-11-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/14> :hasInvoice <http://example.org/chinook#Invoice/156>.
 <http://example.org/chinook#Invoice/157> a :Invoice;
     :invoiceId 157;
-    :invoiceDate "2022-11-16T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-11-16T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/18> :hasInvoice <http://example.org/chinook#Invoice/157>.
 <http://example.org/chinook#Invoice/158> a :Invoice;
     :invoiceId 158;
-    :invoiceDate "2022-11-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2022-11-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/24> :hasInvoice <http://example.org/chinook#Invoice/158>.
 <http://example.org/chinook#Invoice/159> a :Invoice;
     :invoiceId 159;
-    :invoiceDate "2022-11-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2022-11-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/33> :hasInvoice <http://example.org/chinook#Invoice/159>.
 <http://example.org/chinook#Invoice/160> a :Invoice;
     :invoiceId 160;
-    :invoiceDate "2022-12-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2022-12-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/47> :hasInvoice <http://example.org/chinook#Invoice/160>.
 <http://example.org/chinook#Invoice/161> a :Invoice;
     :invoiceId 161;
-    :invoiceDate "2022-12-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-12-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/48> :hasInvoice <http://example.org/chinook#Invoice/161>.
 <http://example.org/chinook#Invoice/162> a :Invoice;
     :invoiceId 162;
-    :invoiceDate "2022-12-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2022-12-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/50> :hasInvoice <http://example.org/chinook#Invoice/162>.
 <http://example.org/chinook#Invoice/163> a :Invoice;
     :invoiceId 163;
-    :invoiceDate "2022-12-16T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2022-12-16T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/52> :hasInvoice <http://example.org/chinook#Invoice/163>.
 <http://example.org/chinook#Invoice/164> a :Invoice;
     :invoiceId 164;
-    :invoiceDate "2022-12-17T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2022-12-17T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/56> :hasInvoice <http://example.org/chinook#Invoice/164>.
 <http://example.org/chinook#Invoice/165> a :Invoice;
     :invoiceId 165;
-    :invoiceDate "2022-12-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2022-12-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/3> :hasInvoice <http://example.org/chinook#Invoice/165>.
 <http://example.org/chinook#Invoice/166> a :Invoice;
     :invoiceId 166;
-    :invoiceDate "2022-12-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2022-12-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/12> :hasInvoice <http://example.org/chinook#Invoice/166>.
 <http://example.org/chinook#Invoice/167> a :Invoice;
     :invoiceId 167;
-    :invoiceDate "2023-01-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-01-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/26> :hasInvoice <http://example.org/chinook#Invoice/167>.
 <http://example.org/chinook#Invoice/168> a :Invoice;
     :invoiceId 168;
-    :invoiceDate "2023-01-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-01-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/27> :hasInvoice <http://example.org/chinook#Invoice/168>.
 <http://example.org/chinook#Invoice/169> a :Invoice;
     :invoiceId 169;
-    :invoiceDate "2023-01-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-01-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/29> :hasInvoice <http://example.org/chinook#Invoice/169>.
 <http://example.org/chinook#Invoice/170> a :Invoice;
     :invoiceId 170;
-    :invoiceDate "2023-01-16T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-01-16T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/31> :hasInvoice <http://example.org/chinook#Invoice/170>.
 <http://example.org/chinook#Invoice/171> a :Invoice;
     :invoiceId 171;
-    :invoiceDate "2023-01-17T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-01-17T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/35> :hasInvoice <http://example.org/chinook#Invoice/171>.
 <http://example.org/chinook#Invoice/172> a :Invoice;
     :invoiceId 172;
-    :invoiceDate "2023-01-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-01-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/41> :hasInvoice <http://example.org/chinook#Invoice/172>.
 <http://example.org/chinook#Invoice/173> a :Invoice;
     :invoiceId 173;
-    :invoiceDate "2023-01-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2023-01-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/50> :hasInvoice <http://example.org/chinook#Invoice/173>.
 <http://example.org/chinook#Invoice/174> a :Invoice;
     :invoiceId 174;
-    :invoiceDate "2023-02-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-02-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/5> :hasInvoice <http://example.org/chinook#Invoice/174>.
 <http://example.org/chinook#Invoice/175> a :Invoice;
     :invoiceId 175;
-    :invoiceDate "2023-02-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-02-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/6> :hasInvoice <http://example.org/chinook#Invoice/175>.
 <http://example.org/chinook#Invoice/176> a :Invoice;
     :invoiceId 176;
-    :invoiceDate "2023-02-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-02-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/8> :hasInvoice <http://example.org/chinook#Invoice/176>.
 <http://example.org/chinook#Invoice/177> a :Invoice;
     :invoiceId 177;
-    :invoiceDate "2023-02-16T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-02-16T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/10> :hasInvoice <http://example.org/chinook#Invoice/177>.
 <http://example.org/chinook#Invoice/178> a :Invoice;
     :invoiceId 178;
-    :invoiceDate "2023-02-17T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-02-17T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/14> :hasInvoice <http://example.org/chinook#Invoice/178>.
 <http://example.org/chinook#Invoice/179> a :Invoice;
     :invoiceId 179;
-    :invoiceDate "2023-02-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-02-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/20> :hasInvoice <http://example.org/chinook#Invoice/179>.
 <http://example.org/chinook#Invoice/180> a :Invoice;
     :invoiceId 180;
-    :invoiceDate "2023-02-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2023-02-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/29> :hasInvoice <http://example.org/chinook#Invoice/180>.
 <http://example.org/chinook#Invoice/181> a :Invoice;
     :invoiceId 181;
-    :invoiceDate "2023-03-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-03-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/43> :hasInvoice <http://example.org/chinook#Invoice/181>.
 <http://example.org/chinook#Invoice/182> a :Invoice;
     :invoiceId 182;
-    :invoiceDate "2023-03-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-03-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/44> :hasInvoice <http://example.org/chinook#Invoice/182>.
 <http://example.org/chinook#Invoice/183> a :Invoice;
     :invoiceId 183;
-    :invoiceDate "2023-03-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-03-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/46> :hasInvoice <http://example.org/chinook#Invoice/183>.
 <http://example.org/chinook#Invoice/184> a :Invoice;
     :invoiceId 184;
-    :invoiceDate "2023-03-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-03-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/48> :hasInvoice <http://example.org/chinook#Invoice/184>.
 <http://example.org/chinook#Invoice/185> a :Invoice;
     :invoiceId 185;
-    :invoiceDate "2023-03-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-03-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/52> :hasInvoice <http://example.org/chinook#Invoice/185>.
 <http://example.org/chinook#Invoice/186> a :Invoice;
     :invoiceId 186;
-    :invoiceDate "2023-03-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-03-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/58> :hasInvoice <http://example.org/chinook#Invoice/186>.
 <http://example.org/chinook#Invoice/187> a :Invoice;
     :invoiceId 187;
-    :invoiceDate "2023-03-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2023-03-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/8> :hasInvoice <http://example.org/chinook#Invoice/187>.
 <http://example.org/chinook#Invoice/188> a :Invoice;
     :invoiceId 188;
-    :invoiceDate "2023-04-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-04-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/22> :hasInvoice <http://example.org/chinook#Invoice/188>.
 <http://example.org/chinook#Invoice/189> a :Invoice;
     :invoiceId 189;
-    :invoiceDate "2023-04-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-04-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/23> :hasInvoice <http://example.org/chinook#Invoice/189>.
 <http://example.org/chinook#Invoice/190> a :Invoice;
     :invoiceId 190;
-    :invoiceDate "2023-04-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-04-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/25> :hasInvoice <http://example.org/chinook#Invoice/190>.
 <http://example.org/chinook#Invoice/191> a :Invoice;
     :invoiceId 191;
-    :invoiceDate "2023-04-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-04-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/27> :hasInvoice <http://example.org/chinook#Invoice/191>.
 <http://example.org/chinook#Invoice/192> a :Invoice;
     :invoiceId 192;
-    :invoiceDate "2023-04-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-04-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/31> :hasInvoice <http://example.org/chinook#Invoice/192>.
 <http://example.org/chinook#Invoice/193> a :Invoice;
     :invoiceId 193;
-    :invoiceDate "2023-04-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 14.91.
+    :invoiceDate "2023-04-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/37> :hasInvoice <http://example.org/chinook#Invoice/193>.
 <http://example.org/chinook#Invoice/194> a :Invoice;
     :invoiceId 194;
-    :invoiceDate "2023-04-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 21.86.
+    :invoiceDate "2023-04-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/46> :hasInvoice <http://example.org/chinook#Invoice/194>.
 <http://example.org/chinook#Invoice/195> a :Invoice;
     :invoiceId 195;
-    :invoiceDate "2023-05-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-05-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/1> :hasInvoice <http://example.org/chinook#Invoice/195>.
 <http://example.org/chinook#Invoice/196> a :Invoice;
     :invoiceId 196;
-    :invoiceDate "2023-05-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-05-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/2> :hasInvoice <http://example.org/chinook#Invoice/196>.
 <http://example.org/chinook#Invoice/197> a :Invoice;
     :invoiceId 197;
-    :invoiceDate "2023-05-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-05-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/4> :hasInvoice <http://example.org/chinook#Invoice/197>.
 <http://example.org/chinook#Invoice/198> a :Invoice;
     :invoiceId 198;
-    :invoiceDate "2023-05-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-05-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/6> :hasInvoice <http://example.org/chinook#Invoice/198>.
 <http://example.org/chinook#Invoice/199> a :Invoice;
     :invoiceId 199;
-    :invoiceDate "2023-05-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-05-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/10> :hasInvoice <http://example.org/chinook#Invoice/199>.
 <http://example.org/chinook#Invoice/200> a :Invoice;
     :invoiceId 200;
-    :invoiceDate "2023-05-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-05-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/16> :hasInvoice <http://example.org/chinook#Invoice/200>.
 <http://example.org/chinook#Invoice/201> a :Invoice;
     :invoiceId 201;
-    :invoiceDate "2023-05-29T03:00:00.000Z"^^xsd:dateTime;
-    :total 18.86.
+    :invoiceDate "2023-05-29T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/25> :hasInvoice <http://example.org/chinook#Invoice/201>.
 <http://example.org/chinook#Invoice/202> a :Invoice;
     :invoiceId 202;
-    :invoiceDate "2023-06-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.99.
+    :invoiceDate "2023-06-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/39> :hasInvoice <http://example.org/chinook#Invoice/202>.
 <http://example.org/chinook#Invoice/203> a :Invoice;
     :invoiceId 203;
-    :invoiceDate "2023-06-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 2.98.
+    :invoiceDate "2023-06-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/40> :hasInvoice <http://example.org/chinook#Invoice/203>.
 <http://example.org/chinook#Invoice/204> a :Invoice;
     :invoiceId 204;
-    :invoiceDate "2023-06-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.98.
+    :invoiceDate "2023-06-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/42> :hasInvoice <http://example.org/chinook#Invoice/204>.
 <http://example.org/chinook#Invoice/205> a :Invoice;
     :invoiceId 205;
-    :invoiceDate "2023-06-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 7.96.
+    :invoiceDate "2023-06-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/44> :hasInvoice <http://example.org/chinook#Invoice/205>.
 <http://example.org/chinook#Invoice/206> a :Invoice;
     :invoiceId 206;
-    :invoiceDate "2023-06-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.94.
+    :invoiceDate "2023-06-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/48> :hasInvoice <http://example.org/chinook#Invoice/206>.
 <http://example.org/chinook#Invoice/207> a :Invoice;
     :invoiceId 207;
-    :invoiceDate "2023-06-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-06-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/54> :hasInvoice <http://example.org/chinook#Invoice/207>.
 <http://example.org/chinook#Invoice/208> a :Invoice;
     :invoiceId 208;
-    :invoiceDate "2023-06-29T03:00:00.000Z"^^xsd:dateTime;
-    :total 15.86.
+    :invoiceDate "2023-06-29T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/4> :hasInvoice <http://example.org/chinook#Invoice/208>.
 <http://example.org/chinook#Invoice/209> a :Invoice;
     :invoiceId 209;
-    :invoiceDate "2023-07-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-07-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/18> :hasInvoice <http://example.org/chinook#Invoice/209>.
 <http://example.org/chinook#Invoice/210> a :Invoice;
     :invoiceId 210;
-    :invoiceDate "2023-07-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-07-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/19> :hasInvoice <http://example.org/chinook#Invoice/210>.
 <http://example.org/chinook#Invoice/211> a :Invoice;
     :invoiceId 211;
-    :invoiceDate "2023-07-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-07-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/21> :hasInvoice <http://example.org/chinook#Invoice/211>.
 <http://example.org/chinook#Invoice/212> a :Invoice;
     :invoiceId 212;
-    :invoiceDate "2023-07-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-07-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/23> :hasInvoice <http://example.org/chinook#Invoice/212>.
 <http://example.org/chinook#Invoice/213> a :Invoice;
     :invoiceId 213;
-    :invoiceDate "2023-07-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-07-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/27> :hasInvoice <http://example.org/chinook#Invoice/213>.
 <http://example.org/chinook#Invoice/214> a :Invoice;
     :invoiceId 214;
-    :invoiceDate "2023-07-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-07-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/33> :hasInvoice <http://example.org/chinook#Invoice/214>.
 <http://example.org/chinook#Invoice/215> a :Invoice;
     :invoiceId 215;
-    :invoiceDate "2023-07-30T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2023-07-30T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/42> :hasInvoice <http://example.org/chinook#Invoice/215>.
 <http://example.org/chinook#Invoice/216> a :Invoice;
     :invoiceId 216;
-    :invoiceDate "2023-08-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-08-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/56> :hasInvoice <http://example.org/chinook#Invoice/216>.
 <http://example.org/chinook#Invoice/217> a :Invoice;
     :invoiceId 217;
-    :invoiceDate "2023-08-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-08-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/57> :hasInvoice <http://example.org/chinook#Invoice/217>.
 <http://example.org/chinook#Invoice/218> a :Invoice;
     :invoiceId 218;
-    :invoiceDate "2023-08-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-08-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/59> :hasInvoice <http://example.org/chinook#Invoice/218>.
 <http://example.org/chinook#Invoice/219> a :Invoice;
     :invoiceId 219;
-    :invoiceDate "2023-08-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-08-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/2> :hasInvoice <http://example.org/chinook#Invoice/219>.
 <http://example.org/chinook#Invoice/220> a :Invoice;
     :invoiceId 220;
-    :invoiceDate "2023-08-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-08-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/6> :hasInvoice <http://example.org/chinook#Invoice/220>.
 <http://example.org/chinook#Invoice/221> a :Invoice;
     :invoiceId 221;
-    :invoiceDate "2023-08-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-08-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/12> :hasInvoice <http://example.org/chinook#Invoice/221>.
 <http://example.org/chinook#Invoice/222> a :Invoice;
     :invoiceId 222;
-    :invoiceDate "2023-08-30T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2023-08-30T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/21> :hasInvoice <http://example.org/chinook#Invoice/222>.
 <http://example.org/chinook#Invoice/223> a :Invoice;
     :invoiceId 223;
-    :invoiceDate "2023-09-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-09-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/35> :hasInvoice <http://example.org/chinook#Invoice/223>.
 <http://example.org/chinook#Invoice/224> a :Invoice;
     :invoiceId 224;
-    :invoiceDate "2023-09-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-09-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/36> :hasInvoice <http://example.org/chinook#Invoice/224>.
 <http://example.org/chinook#Invoice/225> a :Invoice;
     :invoiceId 225;
-    :invoiceDate "2023-09-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-09-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/38> :hasInvoice <http://example.org/chinook#Invoice/225>.
 <http://example.org/chinook#Invoice/226> a :Invoice;
     :invoiceId 226;
-    :invoiceDate "2023-09-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-09-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/40> :hasInvoice <http://example.org/chinook#Invoice/226>.
 <http://example.org/chinook#Invoice/227> a :Invoice;
     :invoiceId 227;
-    :invoiceDate "2023-09-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-09-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/44> :hasInvoice <http://example.org/chinook#Invoice/227>.
 <http://example.org/chinook#Invoice/228> a :Invoice;
     :invoiceId 228;
-    :invoiceDate "2023-09-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-09-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/50> :hasInvoice <http://example.org/chinook#Invoice/228>.
 <http://example.org/chinook#Invoice/229> a :Invoice;
     :invoiceId 229;
-    :invoiceDate "2023-09-30T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2023-09-30T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/59> :hasInvoice <http://example.org/chinook#Invoice/229>.
 <http://example.org/chinook#Invoice/230> a :Invoice;
     :invoiceId 230;
-    :invoiceDate "2023-10-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-10-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/14> :hasInvoice <http://example.org/chinook#Invoice/230>.
 <http://example.org/chinook#Invoice/231> a :Invoice;
     :invoiceId 231;
-    :invoiceDate "2023-10-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-10-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/15> :hasInvoice <http://example.org/chinook#Invoice/231>.
 <http://example.org/chinook#Invoice/232> a :Invoice;
     :invoiceId 232;
-    :invoiceDate "2023-10-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-10-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/17> :hasInvoice <http://example.org/chinook#Invoice/232>.
 <http://example.org/chinook#Invoice/233> a :Invoice;
     :invoiceId 233;
-    :invoiceDate "2023-10-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-10-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/19> :hasInvoice <http://example.org/chinook#Invoice/233>.
 <http://example.org/chinook#Invoice/234> a :Invoice;
     :invoiceId 234;
-    :invoiceDate "2023-10-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-10-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/23> :hasInvoice <http://example.org/chinook#Invoice/234>.
 <http://example.org/chinook#Invoice/235> a :Invoice;
     :invoiceId 235;
-    :invoiceDate "2023-10-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-10-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/29> :hasInvoice <http://example.org/chinook#Invoice/235>.
 <http://example.org/chinook#Invoice/236> a :Invoice;
     :invoiceId 236;
-    :invoiceDate "2023-10-31T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2023-10-31T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/38> :hasInvoice <http://example.org/chinook#Invoice/236>.
 <http://example.org/chinook#Invoice/237> a :Invoice;
     :invoiceId 237;
-    :invoiceDate "2023-11-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-11-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/52> :hasInvoice <http://example.org/chinook#Invoice/237>.
 <http://example.org/chinook#Invoice/238> a :Invoice;
     :invoiceId 238;
-    :invoiceDate "2023-11-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-11-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/53> :hasInvoice <http://example.org/chinook#Invoice/238>.
 <http://example.org/chinook#Invoice/239> a :Invoice;
     :invoiceId 239;
-    :invoiceDate "2023-11-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-11-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/55> :hasInvoice <http://example.org/chinook#Invoice/239>.
 <http://example.org/chinook#Invoice/240> a :Invoice;
     :invoiceId 240;
-    :invoiceDate "2023-11-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-11-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/57> :hasInvoice <http://example.org/chinook#Invoice/240>.
 <http://example.org/chinook#Invoice/241> a :Invoice;
     :invoiceId 241;
-    :invoiceDate "2023-11-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-11-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/2> :hasInvoice <http://example.org/chinook#Invoice/241>.
 <http://example.org/chinook#Invoice/242> a :Invoice;
     :invoiceId 242;
-    :invoiceDate "2023-11-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-11-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/8> :hasInvoice <http://example.org/chinook#Invoice/242>.
 <http://example.org/chinook#Invoice/243> a :Invoice;
     :invoiceId 243;
-    :invoiceDate "2023-12-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2023-12-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/17> :hasInvoice <http://example.org/chinook#Invoice/243>.
 <http://example.org/chinook#Invoice/244> a :Invoice;
     :invoiceId 244;
-    :invoiceDate "2023-12-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2023-12-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/31> :hasInvoice <http://example.org/chinook#Invoice/244>.
 <http://example.org/chinook#Invoice/245> a :Invoice;
     :invoiceId 245;
-    :invoiceDate "2023-12-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-12-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/32> :hasInvoice <http://example.org/chinook#Invoice/245>.
 <http://example.org/chinook#Invoice/246> a :Invoice;
     :invoiceId 246;
-    :invoiceDate "2023-12-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2023-12-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/34> :hasInvoice <http://example.org/chinook#Invoice/246>.
 <http://example.org/chinook#Invoice/247> a :Invoice;
     :invoiceId 247;
-    :invoiceDate "2023-12-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2023-12-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/36> :hasInvoice <http://example.org/chinook#Invoice/247>.
 <http://example.org/chinook#Invoice/248> a :Invoice;
     :invoiceId 248;
-    :invoiceDate "2023-12-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2023-12-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/40> :hasInvoice <http://example.org/chinook#Invoice/248>.
 <http://example.org/chinook#Invoice/249> a :Invoice;
     :invoiceId 249;
-    :invoiceDate "2023-12-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2023-12-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/46> :hasInvoice <http://example.org/chinook#Invoice/249>.
 <http://example.org/chinook#Invoice/250> a :Invoice;
     :invoiceId 250;
-    :invoiceDate "2024-01-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2024-01-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/55> :hasInvoice <http://example.org/chinook#Invoice/250>.
 <http://example.org/chinook#Invoice/251> a :Invoice;
     :invoiceId 251;
-    :invoiceDate "2024-01-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-01-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/10> :hasInvoice <http://example.org/chinook#Invoice/251>.
 <http://example.org/chinook#Invoice/252> a :Invoice;
     :invoiceId 252;
-    :invoiceDate "2024-01-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-01-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/11> :hasInvoice <http://example.org/chinook#Invoice/252>.
 <http://example.org/chinook#Invoice/253> a :Invoice;
     :invoiceId 253;
-    :invoiceDate "2024-01-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-01-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/13> :hasInvoice <http://example.org/chinook#Invoice/253>.
 <http://example.org/chinook#Invoice/254> a :Invoice;
     :invoiceId 254;
-    :invoiceDate "2024-01-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-01-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/15> :hasInvoice <http://example.org/chinook#Invoice/254>.
 <http://example.org/chinook#Invoice/255> a :Invoice;
     :invoiceId 255;
-    :invoiceDate "2024-01-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-01-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/19> :hasInvoice <http://example.org/chinook#Invoice/255>.
 <http://example.org/chinook#Invoice/256> a :Invoice;
     :invoiceId 256;
-    :invoiceDate "2024-01-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2024-01-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/25> :hasInvoice <http://example.org/chinook#Invoice/256>.
 <http://example.org/chinook#Invoice/257> a :Invoice;
     :invoiceId 257;
-    :invoiceDate "2024-02-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2024-02-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/34> :hasInvoice <http://example.org/chinook#Invoice/257>.
 <http://example.org/chinook#Invoice/258> a :Invoice;
     :invoiceId 258;
-    :invoiceDate "2024-02-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-02-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/48> :hasInvoice <http://example.org/chinook#Invoice/258>.
 <http://example.org/chinook#Invoice/259> a :Invoice;
     :invoiceId 259;
-    :invoiceDate "2024-02-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-02-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/49> :hasInvoice <http://example.org/chinook#Invoice/259>.
 <http://example.org/chinook#Invoice/260> a :Invoice;
     :invoiceId 260;
-    :invoiceDate "2024-02-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-02-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/51> :hasInvoice <http://example.org/chinook#Invoice/260>.
 <http://example.org/chinook#Invoice/261> a :Invoice;
     :invoiceId 261;
-    :invoiceDate "2024-02-23T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-02-23T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/53> :hasInvoice <http://example.org/chinook#Invoice/261>.
 <http://example.org/chinook#Invoice/262> a :Invoice;
     :invoiceId 262;
-    :invoiceDate "2024-02-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-02-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/57> :hasInvoice <http://example.org/chinook#Invoice/262>.
 <http://example.org/chinook#Invoice/263> a :Invoice;
     :invoiceId 263;
-    :invoiceDate "2024-02-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2024-02-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/4> :hasInvoice <http://example.org/chinook#Invoice/263>.
 <http://example.org/chinook#Invoice/264> a :Invoice;
     :invoiceId 264;
-    :invoiceDate "2024-03-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2024-03-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/13> :hasInvoice <http://example.org/chinook#Invoice/264>.
 <http://example.org/chinook#Invoice/265> a :Invoice;
     :invoiceId 265;
-    :invoiceDate "2024-03-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-03-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/27> :hasInvoice <http://example.org/chinook#Invoice/265>.
 <http://example.org/chinook#Invoice/266> a :Invoice;
     :invoiceId 266;
-    :invoiceDate "2024-03-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-03-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/28> :hasInvoice <http://example.org/chinook#Invoice/266>.
 <http://example.org/chinook#Invoice/267> a :Invoice;
     :invoiceId 267;
-    :invoiceDate "2024-03-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-03-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/30> :hasInvoice <http://example.org/chinook#Invoice/267>.
 <http://example.org/chinook#Invoice/268> a :Invoice;
     :invoiceId 268;
-    :invoiceDate "2024-03-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-03-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/32> :hasInvoice <http://example.org/chinook#Invoice/268>.
 <http://example.org/chinook#Invoice/269> a :Invoice;
     :invoiceId 269;
-    :invoiceDate "2024-03-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-03-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/36> :hasInvoice <http://example.org/chinook#Invoice/269>.
 <http://example.org/chinook#Invoice/270> a :Invoice;
     :invoiceId 270;
-    :invoiceDate "2024-03-29T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2024-03-29T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/42> :hasInvoice <http://example.org/chinook#Invoice/270>.
 <http://example.org/chinook#Invoice/271> a :Invoice;
     :invoiceId 271;
-    :invoiceDate "2024-04-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2024-04-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/51> :hasInvoice <http://example.org/chinook#Invoice/271>.
 <http://example.org/chinook#Invoice/272> a :Invoice;
     :invoiceId 272;
-    :invoiceDate "2024-04-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-04-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/6> :hasInvoice <http://example.org/chinook#Invoice/272>.
 <http://example.org/chinook#Invoice/273> a :Invoice;
     :invoiceId 273;
-    :invoiceDate "2024-04-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-04-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/7> :hasInvoice <http://example.org/chinook#Invoice/273>.
 <http://example.org/chinook#Invoice/274> a :Invoice;
     :invoiceId 274;
-    :invoiceDate "2024-04-24T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-04-24T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/9> :hasInvoice <http://example.org/chinook#Invoice/274>.
 <http://example.org/chinook#Invoice/275> a :Invoice;
     :invoiceId 275;
-    :invoiceDate "2024-04-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-04-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/11> :hasInvoice <http://example.org/chinook#Invoice/275>.
 <http://example.org/chinook#Invoice/276> a :Invoice;
     :invoiceId 276;
-    :invoiceDate "2024-04-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-04-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/15> :hasInvoice <http://example.org/chinook#Invoice/276>.
 <http://example.org/chinook#Invoice/277> a :Invoice;
     :invoiceId 277;
-    :invoiceDate "2024-04-29T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2024-04-29T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/21> :hasInvoice <http://example.org/chinook#Invoice/277>.
 <http://example.org/chinook#Invoice/278> a :Invoice;
     :invoiceId 278;
-    :invoiceDate "2024-05-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2024-05-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/30> :hasInvoice <http://example.org/chinook#Invoice/278>.
 <http://example.org/chinook#Invoice/279> a :Invoice;
     :invoiceId 279;
-    :invoiceDate "2024-05-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-05-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/44> :hasInvoice <http://example.org/chinook#Invoice/279>.
 <http://example.org/chinook#Invoice/280> a :Invoice;
     :invoiceId 280;
-    :invoiceDate "2024-05-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-05-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/45> :hasInvoice <http://example.org/chinook#Invoice/280>.
 <http://example.org/chinook#Invoice/281> a :Invoice;
     :invoiceId 281;
-    :invoiceDate "2024-05-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-05-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/47> :hasInvoice <http://example.org/chinook#Invoice/281>.
 <http://example.org/chinook#Invoice/282> a :Invoice;
     :invoiceId 282;
-    :invoiceDate "2024-05-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-05-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/49> :hasInvoice <http://example.org/chinook#Invoice/282>.
 <http://example.org/chinook#Invoice/283> a :Invoice;
     :invoiceId 283;
-    :invoiceDate "2024-05-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-05-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/53> :hasInvoice <http://example.org/chinook#Invoice/283>.
 <http://example.org/chinook#Invoice/284> a :Invoice;
     :invoiceId 284;
-    :invoiceDate "2024-05-30T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2024-05-30T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/59> :hasInvoice <http://example.org/chinook#Invoice/284>.
 <http://example.org/chinook#Invoice/285> a :Invoice;
     :invoiceId 285;
-    :invoiceDate "2024-06-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2024-06-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/9> :hasInvoice <http://example.org/chinook#Invoice/285>.
 <http://example.org/chinook#Invoice/286> a :Invoice;
     :invoiceId 286;
-    :invoiceDate "2024-06-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-06-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/23> :hasInvoice <http://example.org/chinook#Invoice/286>.
 <http://example.org/chinook#Invoice/287> a :Invoice;
     :invoiceId 287;
-    :invoiceDate "2024-06-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-06-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/24> :hasInvoice <http://example.org/chinook#Invoice/287>.
 <http://example.org/chinook#Invoice/288> a :Invoice;
     :invoiceId 288;
-    :invoiceDate "2024-06-25T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-06-25T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/26> :hasInvoice <http://example.org/chinook#Invoice/288>.
 <http://example.org/chinook#Invoice/289> a :Invoice;
     :invoiceId 289;
-    :invoiceDate "2024-06-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-06-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/28> :hasInvoice <http://example.org/chinook#Invoice/289>.
 <http://example.org/chinook#Invoice/290> a :Invoice;
     :invoiceId 290;
-    :invoiceDate "2024-06-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-06-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/32> :hasInvoice <http://example.org/chinook#Invoice/290>.
 <http://example.org/chinook#Invoice/291> a :Invoice;
     :invoiceId 291;
-    :invoiceDate "2024-06-30T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2024-06-30T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/38> :hasInvoice <http://example.org/chinook#Invoice/291>.
 <http://example.org/chinook#Invoice/292> a :Invoice;
     :invoiceId 292;
-    :invoiceDate "2024-07-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2024-07-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/47> :hasInvoice <http://example.org/chinook#Invoice/292>.
 <http://example.org/chinook#Invoice/293> a :Invoice;
     :invoiceId 293;
-    :invoiceDate "2024-07-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-07-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/2> :hasInvoice <http://example.org/chinook#Invoice/293>.
 <http://example.org/chinook#Invoice/294> a :Invoice;
     :invoiceId 294;
-    :invoiceDate "2024-07-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-07-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/3> :hasInvoice <http://example.org/chinook#Invoice/294>.
 <http://example.org/chinook#Invoice/295> a :Invoice;
     :invoiceId 295;
-    :invoiceDate "2024-07-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-07-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/5> :hasInvoice <http://example.org/chinook#Invoice/295>.
 <http://example.org/chinook#Invoice/296> a :Invoice;
     :invoiceId 296;
-    :invoiceDate "2024-07-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-07-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/7> :hasInvoice <http://example.org/chinook#Invoice/296>.
 <http://example.org/chinook#Invoice/297> a :Invoice;
     :invoiceId 297;
-    :invoiceDate "2024-07-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-07-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/11> :hasInvoice <http://example.org/chinook#Invoice/297>.
 <http://example.org/chinook#Invoice/298> a :Invoice;
     :invoiceId 298;
-    :invoiceDate "2024-07-31T03:00:00.000Z"^^xsd:dateTime;
-    :total 10.91.
+    :invoiceDate "2024-07-31T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/17> :hasInvoice <http://example.org/chinook#Invoice/298>.
 <http://example.org/chinook#Invoice/299> a :Invoice;
     :invoiceId 299;
-    :invoiceDate "2024-08-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 23.86.
+    :invoiceDate "2024-08-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/26> :hasInvoice <http://example.org/chinook#Invoice/299>.
 <http://example.org/chinook#Invoice/300> a :Invoice;
     :invoiceId 300;
-    :invoiceDate "2024-08-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-08-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/40> :hasInvoice <http://example.org/chinook#Invoice/300>.
 <http://example.org/chinook#Invoice/301> a :Invoice;
     :invoiceId 301;
-    :invoiceDate "2024-08-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-08-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/41> :hasInvoice <http://example.org/chinook#Invoice/301>.
 <http://example.org/chinook#Invoice/302> a :Invoice;
     :invoiceId 302;
-    :invoiceDate "2024-08-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-08-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/43> :hasInvoice <http://example.org/chinook#Invoice/302>.
 <http://example.org/chinook#Invoice/303> a :Invoice;
     :invoiceId 303;
-    :invoiceDate "2024-08-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-08-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/45> :hasInvoice <http://example.org/chinook#Invoice/303>.
 <http://example.org/chinook#Invoice/304> a :Invoice;
     :invoiceId 304;
-    :invoiceDate "2024-08-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-08-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/49> :hasInvoice <http://example.org/chinook#Invoice/304>.
 <http://example.org/chinook#Invoice/305> a :Invoice;
     :invoiceId 305;
-    :invoiceDate "2024-08-31T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2024-08-31T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/55> :hasInvoice <http://example.org/chinook#Invoice/305>.
 <http://example.org/chinook#Invoice/306> a :Invoice;
     :invoiceId 306;
-    :invoiceDate "2024-09-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 16.86.
+    :invoiceDate "2024-09-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/5> :hasInvoice <http://example.org/chinook#Invoice/306>.
 <http://example.org/chinook#Invoice/307> a :Invoice;
     :invoiceId 307;
-    :invoiceDate "2024-09-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.99.
+    :invoiceDate "2024-09-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/19> :hasInvoice <http://example.org/chinook#Invoice/307>.
 <http://example.org/chinook#Invoice/308> a :Invoice;
     :invoiceId 308;
-    :invoiceDate "2024-09-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.98.
+    :invoiceDate "2024-09-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/20> :hasInvoice <http://example.org/chinook#Invoice/308>.
 <http://example.org/chinook#Invoice/309> a :Invoice;
     :invoiceId 309;
-    :invoiceDate "2024-09-26T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.98.
+    :invoiceDate "2024-09-26T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/22> :hasInvoice <http://example.org/chinook#Invoice/309>.
 <http://example.org/chinook#Invoice/310> a :Invoice;
     :invoiceId 310;
-    :invoiceDate "2024-09-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 7.96.
+    :invoiceDate "2024-09-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/24> :hasInvoice <http://example.org/chinook#Invoice/310>.
 <http://example.org/chinook#Invoice/311> a :Invoice;
     :invoiceId 311;
-    :invoiceDate "2024-09-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 11.94.
+    :invoiceDate "2024-09-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/28> :hasInvoice <http://example.org/chinook#Invoice/311>.
 <http://example.org/chinook#Invoice/312> a :Invoice;
     :invoiceId 312;
-    :invoiceDate "2024-10-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 10.91.
+    :invoiceDate "2024-10-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/34> :hasInvoice <http://example.org/chinook#Invoice/312>.
 <http://example.org/chinook#Invoice/313> a :Invoice;
     :invoiceId 313;
-    :invoiceDate "2024-10-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 16.86.
+    :invoiceDate "2024-10-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/43> :hasInvoice <http://example.org/chinook#Invoice/313>.
 <http://example.org/chinook#Invoice/314> a :Invoice;
     :invoiceId 314;
-    :invoiceDate "2024-10-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-10-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/57> :hasInvoice <http://example.org/chinook#Invoice/314>.
 <http://example.org/chinook#Invoice/315> a :Invoice;
     :invoiceId 315;
-    :invoiceDate "2024-10-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-10-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/58> :hasInvoice <http://example.org/chinook#Invoice/315>.
 <http://example.org/chinook#Invoice/316> a :Invoice;
     :invoiceId 316;
-    :invoiceDate "2024-10-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-10-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/1> :hasInvoice <http://example.org/chinook#Invoice/316>.
 <http://example.org/chinook#Invoice/317> a :Invoice;
     :invoiceId 317;
-    :invoiceDate "2024-10-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-10-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/3> :hasInvoice <http://example.org/chinook#Invoice/317>.
 <http://example.org/chinook#Invoice/318> a :Invoice;
     :invoiceId 318;
-    :invoiceDate "2024-10-29T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-10-29T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/7> :hasInvoice <http://example.org/chinook#Invoice/318>.
 <http://example.org/chinook#Invoice/319> a :Invoice;
     :invoiceId 319;
-    :invoiceDate "2024-11-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2024-11-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/13> :hasInvoice <http://example.org/chinook#Invoice/319>.
 <http://example.org/chinook#Invoice/320> a :Invoice;
     :invoiceId 320;
-    :invoiceDate "2024-11-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2024-11-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/22> :hasInvoice <http://example.org/chinook#Invoice/320>.
 <http://example.org/chinook#Invoice/321> a :Invoice;
     :invoiceId 321;
-    :invoiceDate "2024-11-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-11-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/36> :hasInvoice <http://example.org/chinook#Invoice/321>.
 <http://example.org/chinook#Invoice/322> a :Invoice;
     :invoiceId 322;
-    :invoiceDate "2024-11-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-11-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/37> :hasInvoice <http://example.org/chinook#Invoice/322>.
 <http://example.org/chinook#Invoice/323> a :Invoice;
     :invoiceId 323;
-    :invoiceDate "2024-11-27T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-11-27T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/39> :hasInvoice <http://example.org/chinook#Invoice/323>.
 <http://example.org/chinook#Invoice/324> a :Invoice;
     :invoiceId 324;
-    :invoiceDate "2024-11-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-11-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/41> :hasInvoice <http://example.org/chinook#Invoice/324>.
 <http://example.org/chinook#Invoice/325> a :Invoice;
     :invoiceId 325;
-    :invoiceDate "2024-11-29T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-11-29T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/45> :hasInvoice <http://example.org/chinook#Invoice/325>.
 <http://example.org/chinook#Invoice/326> a :Invoice;
     :invoiceId 326;
-    :invoiceDate "2024-12-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2024-12-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/51> :hasInvoice <http://example.org/chinook#Invoice/326>.
 <http://example.org/chinook#Invoice/327> a :Invoice;
     :invoiceId 327;
-    :invoiceDate "2024-12-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2024-12-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/1> :hasInvoice <http://example.org/chinook#Invoice/327>.
 <http://example.org/chinook#Invoice/328> a :Invoice;
     :invoiceId 328;
-    :invoiceDate "2024-12-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2024-12-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/15> :hasInvoice <http://example.org/chinook#Invoice/328>.
 <http://example.org/chinook#Invoice/329> a :Invoice;
     :invoiceId 329;
-    :invoiceDate "2024-12-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-12-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/16> :hasInvoice <http://example.org/chinook#Invoice/329>.
 <http://example.org/chinook#Invoice/330> a :Invoice;
     :invoiceId 330;
-    :invoiceDate "2024-12-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2024-12-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/18> :hasInvoice <http://example.org/chinook#Invoice/330>.
 <http://example.org/chinook#Invoice/331> a :Invoice;
     :invoiceId 331;
-    :invoiceDate "2024-12-29T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2024-12-29T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/20> :hasInvoice <http://example.org/chinook#Invoice/331>.
 <http://example.org/chinook#Invoice/332> a :Invoice;
     :invoiceId 332;
-    :invoiceDate "2024-12-30T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2024-12-30T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/24> :hasInvoice <http://example.org/chinook#Invoice/332>.
 <http://example.org/chinook#Invoice/333> a :Invoice;
     :invoiceId 333;
-    :invoiceDate "2025-01-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-01-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/30> :hasInvoice <http://example.org/chinook#Invoice/333>.
 <http://example.org/chinook#Invoice/334> a :Invoice;
     :invoiceId 334;
-    :invoiceDate "2025-01-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-01-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/39> :hasInvoice <http://example.org/chinook#Invoice/334>.
 <http://example.org/chinook#Invoice/335> a :Invoice;
     :invoiceId 335;
-    :invoiceDate "2025-01-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-01-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/53> :hasInvoice <http://example.org/chinook#Invoice/335>.
 <http://example.org/chinook#Invoice/336> a :Invoice;
     :invoiceId 336;
-    :invoiceDate "2025-01-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-01-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/54> :hasInvoice <http://example.org/chinook#Invoice/336>.
 <http://example.org/chinook#Invoice/337> a :Invoice;
     :invoiceId 337;
-    :invoiceDate "2025-01-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-01-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/56> :hasInvoice <http://example.org/chinook#Invoice/337>.
 <http://example.org/chinook#Invoice/338> a :Invoice;
     :invoiceId 338;
-    :invoiceDate "2025-01-29T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-01-29T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/58> :hasInvoice <http://example.org/chinook#Invoice/338>.
 <http://example.org/chinook#Invoice/339> a :Invoice;
     :invoiceId 339;
-    :invoiceDate "2025-01-30T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-01-30T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/3> :hasInvoice <http://example.org/chinook#Invoice/339>.
 <http://example.org/chinook#Invoice/340> a :Invoice;
     :invoiceId 340;
-    :invoiceDate "2025-02-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-02-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/9> :hasInvoice <http://example.org/chinook#Invoice/340>.
 <http://example.org/chinook#Invoice/341> a :Invoice;
     :invoiceId 341;
-    :invoiceDate "2025-02-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-02-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/18> :hasInvoice <http://example.org/chinook#Invoice/341>.
 <http://example.org/chinook#Invoice/342> a :Invoice;
     :invoiceId 342;
-    :invoiceDate "2025-02-15T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-02-15T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/32> :hasInvoice <http://example.org/chinook#Invoice/342>.
 <http://example.org/chinook#Invoice/343> a :Invoice;
     :invoiceId 343;
-    :invoiceDate "2025-02-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-02-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/33> :hasInvoice <http://example.org/chinook#Invoice/343>.
 <http://example.org/chinook#Invoice/344> a :Invoice;
     :invoiceId 344;
-    :invoiceDate "2025-02-28T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-02-28T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/35> :hasInvoice <http://example.org/chinook#Invoice/344>.
 <http://example.org/chinook#Invoice/345> a :Invoice;
     :invoiceId 345;
-    :invoiceDate "2025-03-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-03-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/37> :hasInvoice <http://example.org/chinook#Invoice/345>.
 <http://example.org/chinook#Invoice/346> a :Invoice;
     :invoiceId 346;
-    :invoiceDate "2025-03-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-03-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/41> :hasInvoice <http://example.org/chinook#Invoice/346>.
 <http://example.org/chinook#Invoice/347> a :Invoice;
     :invoiceId 347;
-    :invoiceDate "2025-03-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-03-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/47> :hasInvoice <http://example.org/chinook#Invoice/347>.
 <http://example.org/chinook#Invoice/348> a :Invoice;
     :invoiceId 348;
-    :invoiceDate "2025-03-10T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-03-10T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/56> :hasInvoice <http://example.org/chinook#Invoice/348>.
 <http://example.org/chinook#Invoice/349> a :Invoice;
     :invoiceId 349;
-    :invoiceDate "2025-03-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-03-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/11> :hasInvoice <http://example.org/chinook#Invoice/349>.
 <http://example.org/chinook#Invoice/350> a :Invoice;
     :invoiceId 350;
-    :invoiceDate "2025-03-31T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-03-31T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/12> :hasInvoice <http://example.org/chinook#Invoice/350>.
 <http://example.org/chinook#Invoice/351> a :Invoice;
     :invoiceId 351;
-    :invoiceDate "2025-03-31T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-03-31T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/14> :hasInvoice <http://example.org/chinook#Invoice/351>.
 <http://example.org/chinook#Invoice/352> a :Invoice;
     :invoiceId 352;
-    :invoiceDate "2025-04-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-04-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/16> :hasInvoice <http://example.org/chinook#Invoice/352>.
 <http://example.org/chinook#Invoice/353> a :Invoice;
     :invoiceId 353;
-    :invoiceDate "2025-04-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-04-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/20> :hasInvoice <http://example.org/chinook#Invoice/353>.
 <http://example.org/chinook#Invoice/354> a :Invoice;
     :invoiceId 354;
-    :invoiceDate "2025-04-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-04-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/26> :hasInvoice <http://example.org/chinook#Invoice/354>.
 <http://example.org/chinook#Invoice/355> a :Invoice;
     :invoiceId 355;
-    :invoiceDate "2025-04-10T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-04-10T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/35> :hasInvoice <http://example.org/chinook#Invoice/355>.
 <http://example.org/chinook#Invoice/356> a :Invoice;
     :invoiceId 356;
-    :invoiceDate "2025-04-18T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-04-18T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/49> :hasInvoice <http://example.org/chinook#Invoice/356>.
 <http://example.org/chinook#Invoice/357> a :Invoice;
     :invoiceId 357;
-    :invoiceDate "2025-05-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-05-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/50> :hasInvoice <http://example.org/chinook#Invoice/357>.
 <http://example.org/chinook#Invoice/358> a :Invoice;
     :invoiceId 358;
-    :invoiceDate "2025-05-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-05-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/52> :hasInvoice <http://example.org/chinook#Invoice/358>.
 <http://example.org/chinook#Invoice/359> a :Invoice;
     :invoiceId 359;
-    :invoiceDate "2025-05-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-05-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/54> :hasInvoice <http://example.org/chinook#Invoice/359>.
 <http://example.org/chinook#Invoice/360> a :Invoice;
     :invoiceId 360;
-    :invoiceDate "2025-05-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-05-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/58> :hasInvoice <http://example.org/chinook#Invoice/360>.
 <http://example.org/chinook#Invoice/361> a :Invoice;
     :invoiceId 361;
-    :invoiceDate "2025-05-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-05-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/5> :hasInvoice <http://example.org/chinook#Invoice/361>.
 <http://example.org/chinook#Invoice/362> a :Invoice;
     :invoiceId 362;
-    :invoiceDate "2025-05-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-05-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/14> :hasInvoice <http://example.org/chinook#Invoice/362>.
 <http://example.org/chinook#Invoice/363> a :Invoice;
     :invoiceId 363;
-    :invoiceDate "2025-05-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-05-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/28> :hasInvoice <http://example.org/chinook#Invoice/363>.
 <http://example.org/chinook#Invoice/364> a :Invoice;
     :invoiceId 364;
-    :invoiceDate "2025-06-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-06-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/29> :hasInvoice <http://example.org/chinook#Invoice/364>.
 <http://example.org/chinook#Invoice/365> a :Invoice;
     :invoiceId 365;
-    :invoiceDate "2025-06-01T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-06-01T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/31> :hasInvoice <http://example.org/chinook#Invoice/365>.
 <http://example.org/chinook#Invoice/366> a :Invoice;
     :invoiceId 366;
-    :invoiceDate "2025-06-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-06-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/33> :hasInvoice <http://example.org/chinook#Invoice/366>.
 <http://example.org/chinook#Invoice/367> a :Invoice;
     :invoiceId 367;
-    :invoiceDate "2025-06-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-06-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/37> :hasInvoice <http://example.org/chinook#Invoice/367>.
 <http://example.org/chinook#Invoice/368> a :Invoice;
     :invoiceId 368;
-    :invoiceDate "2025-06-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-06-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/43> :hasInvoice <http://example.org/chinook#Invoice/368>.
 <http://example.org/chinook#Invoice/369> a :Invoice;
     :invoiceId 369;
-    :invoiceDate "2025-06-11T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-06-11T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/52> :hasInvoice <http://example.org/chinook#Invoice/369>.
 <http://example.org/chinook#Invoice/370> a :Invoice;
     :invoiceId 370;
-    :invoiceDate "2025-06-19T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-06-19T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/7> :hasInvoice <http://example.org/chinook#Invoice/370>.
 <http://example.org/chinook#Invoice/371> a :Invoice;
     :invoiceId 371;
-    :invoiceDate "2025-07-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-07-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/8> :hasInvoice <http://example.org/chinook#Invoice/371>.
 <http://example.org/chinook#Invoice/372> a :Invoice;
     :invoiceId 372;
-    :invoiceDate "2025-07-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-07-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/10> :hasInvoice <http://example.org/chinook#Invoice/372>.
 <http://example.org/chinook#Invoice/373> a :Invoice;
     :invoiceId 373;
-    :invoiceDate "2025-07-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-07-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/12> :hasInvoice <http://example.org/chinook#Invoice/373>.
 <http://example.org/chinook#Invoice/374> a :Invoice;
     :invoiceId 374;
-    :invoiceDate "2025-07-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-07-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/16> :hasInvoice <http://example.org/chinook#Invoice/374>.
 <http://example.org/chinook#Invoice/375> a :Invoice;
     :invoiceId 375;
-    :invoiceDate "2025-07-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-07-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/22> :hasInvoice <http://example.org/chinook#Invoice/375>.
 <http://example.org/chinook#Invoice/376> a :Invoice;
     :invoiceId 376;
-    :invoiceDate "2025-07-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-07-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/31> :hasInvoice <http://example.org/chinook#Invoice/376>.
 <http://example.org/chinook#Invoice/377> a :Invoice;
     :invoiceId 377;
-    :invoiceDate "2025-07-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-07-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/45> :hasInvoice <http://example.org/chinook#Invoice/377>.
 <http://example.org/chinook#Invoice/378> a :Invoice;
     :invoiceId 378;
-    :invoiceDate "2025-08-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-08-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/46> :hasInvoice <http://example.org/chinook#Invoice/378>.
 <http://example.org/chinook#Invoice/379> a :Invoice;
     :invoiceId 379;
-    :invoiceDate "2025-08-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-08-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/48> :hasInvoice <http://example.org/chinook#Invoice/379>.
 <http://example.org/chinook#Invoice/380> a :Invoice;
     :invoiceId 380;
-    :invoiceDate "2025-08-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-08-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/50> :hasInvoice <http://example.org/chinook#Invoice/380>.
 <http://example.org/chinook#Invoice/381> a :Invoice;
     :invoiceId 381;
-    :invoiceDate "2025-08-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-08-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/54> :hasInvoice <http://example.org/chinook#Invoice/381>.
 <http://example.org/chinook#Invoice/382> a :Invoice;
     :invoiceId 382;
-    :invoiceDate "2025-08-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-08-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/1> :hasInvoice <http://example.org/chinook#Invoice/382>.
 <http://example.org/chinook#Invoice/383> a :Invoice;
     :invoiceId 383;
-    :invoiceDate "2025-08-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-08-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/10> :hasInvoice <http://example.org/chinook#Invoice/383>.
 <http://example.org/chinook#Invoice/384> a :Invoice;
     :invoiceId 384;
-    :invoiceDate "2025-08-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-08-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/24> :hasInvoice <http://example.org/chinook#Invoice/384>.
 <http://example.org/chinook#Invoice/385> a :Invoice;
     :invoiceId 385;
-    :invoiceDate "2025-09-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-09-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/25> :hasInvoice <http://example.org/chinook#Invoice/385>.
 <http://example.org/chinook#Invoice/386> a :Invoice;
     :invoiceId 386;
-    :invoiceDate "2025-09-02T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-09-02T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/27> :hasInvoice <http://example.org/chinook#Invoice/386>.
 <http://example.org/chinook#Invoice/387> a :Invoice;
     :invoiceId 387;
-    :invoiceDate "2025-09-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-09-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/29> :hasInvoice <http://example.org/chinook#Invoice/387>.
 <http://example.org/chinook#Invoice/388> a :Invoice;
     :invoiceId 388;
-    :invoiceDate "2025-09-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-09-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/33> :hasInvoice <http://example.org/chinook#Invoice/388>.
 <http://example.org/chinook#Invoice/389> a :Invoice;
     :invoiceId 389;
-    :invoiceDate "2025-09-07T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-09-07T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/39> :hasInvoice <http://example.org/chinook#Invoice/389>.
 <http://example.org/chinook#Invoice/390> a :Invoice;
     :invoiceId 390;
-    :invoiceDate "2025-09-12T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-09-12T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/48> :hasInvoice <http://example.org/chinook#Invoice/390>.
 <http://example.org/chinook#Invoice/391> a :Invoice;
     :invoiceId 391;
-    :invoiceDate "2025-09-20T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-09-20T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/3> :hasInvoice <http://example.org/chinook#Invoice/391>.
 <http://example.org/chinook#Invoice/392> a :Invoice;
     :invoiceId 392;
-    :invoiceDate "2025-10-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-10-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/4> :hasInvoice <http://example.org/chinook#Invoice/392>.
 <http://example.org/chinook#Invoice/393> a :Invoice;
     :invoiceId 393;
-    :invoiceDate "2025-10-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-10-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/6> :hasInvoice <http://example.org/chinook#Invoice/393>.
 <http://example.org/chinook#Invoice/394> a :Invoice;
     :invoiceId 394;
-    :invoiceDate "2025-10-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-10-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/8> :hasInvoice <http://example.org/chinook#Invoice/394>.
 <http://example.org/chinook#Invoice/395> a :Invoice;
     :invoiceId 395;
-    :invoiceDate "2025-10-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-10-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/12> :hasInvoice <http://example.org/chinook#Invoice/395>.
 <http://example.org/chinook#Invoice/396> a :Invoice;
     :invoiceId 396;
-    :invoiceDate "2025-10-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-10-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/18> :hasInvoice <http://example.org/chinook#Invoice/396>.
 <http://example.org/chinook#Invoice/397> a :Invoice;
     :invoiceId 397;
-    :invoiceDate "2025-10-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-10-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/27> :hasInvoice <http://example.org/chinook#Invoice/397>.
 <http://example.org/chinook#Invoice/398> a :Invoice;
     :invoiceId 398;
-    :invoiceDate "2025-10-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-10-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/41> :hasInvoice <http://example.org/chinook#Invoice/398>.
 <http://example.org/chinook#Invoice/399> a :Invoice;
     :invoiceId 399;
-    :invoiceDate "2025-11-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-11-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/42> :hasInvoice <http://example.org/chinook#Invoice/399>.
 <http://example.org/chinook#Invoice/400> a :Invoice;
     :invoiceId 400;
-    :invoiceDate "2025-11-03T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-11-03T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/44> :hasInvoice <http://example.org/chinook#Invoice/400>.
 <http://example.org/chinook#Invoice/401> a :Invoice;
     :invoiceId 401;
-    :invoiceDate "2025-11-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-11-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/46> :hasInvoice <http://example.org/chinook#Invoice/401>.
 <http://example.org/chinook#Invoice/402> a :Invoice;
     :invoiceId 402;
-    :invoiceDate "2025-11-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-11-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/50> :hasInvoice <http://example.org/chinook#Invoice/402>.
 <http://example.org/chinook#Invoice/403> a :Invoice;
     :invoiceId 403;
-    :invoiceDate "2025-11-08T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-11-08T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/56> :hasInvoice <http://example.org/chinook#Invoice/403>.
 <http://example.org/chinook#Invoice/404> a :Invoice;
     :invoiceId 404;
-    :invoiceDate "2025-11-13T03:00:00.000Z"^^xsd:dateTime;
-    :total 25.86.
+    :invoiceDate "2025-11-13T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/6> :hasInvoice <http://example.org/chinook#Invoice/404>.
 <http://example.org/chinook#Invoice/405> a :Invoice;
     :invoiceId 405;
-    :invoiceDate "2025-11-21T03:00:00.000Z"^^xsd:dateTime;
-    :total 0.99.
+    :invoiceDate "2025-11-21T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/20> :hasInvoice <http://example.org/chinook#Invoice/405>.
 <http://example.org/chinook#Invoice/406> a :Invoice;
     :invoiceId 406;
-    :invoiceDate "2025-12-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-12-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/21> :hasInvoice <http://example.org/chinook#Invoice/406>.
 <http://example.org/chinook#Invoice/407> a :Invoice;
     :invoiceId 407;
-    :invoiceDate "2025-12-04T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.98.
+    :invoiceDate "2025-12-04T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/23> :hasInvoice <http://example.org/chinook#Invoice/407>.
 <http://example.org/chinook#Invoice/408> a :Invoice;
     :invoiceId 408;
-    :invoiceDate "2025-12-05T03:00:00.000Z"^^xsd:dateTime;
-    :total 3.96.
+    :invoiceDate "2025-12-05T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/25> :hasInvoice <http://example.org/chinook#Invoice/408>.
 <http://example.org/chinook#Invoice/409> a :Invoice;
     :invoiceId 409;
-    :invoiceDate "2025-12-06T03:00:00.000Z"^^xsd:dateTime;
-    :total 5.94.
+    :invoiceDate "2025-12-06T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/29> :hasInvoice <http://example.org/chinook#Invoice/409>.
 <http://example.org/chinook#Invoice/410> a :Invoice;
     :invoiceId 410;
-    :invoiceDate "2025-12-09T03:00:00.000Z"^^xsd:dateTime;
-    :total 8.91.
+    :invoiceDate "2025-12-09T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/35> :hasInvoice <http://example.org/chinook#Invoice/410>.
 <http://example.org/chinook#Invoice/411> a :Invoice;
     :invoiceId 411;
-    :invoiceDate "2025-12-14T03:00:00.000Z"^^xsd:dateTime;
-    :total 13.86.
+    :invoiceDate "2025-12-14T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/44> :hasInvoice <http://example.org/chinook#Invoice/411>.
 <http://example.org/chinook#Invoice/412> a :Invoice;
     :invoiceId 412;
-    :invoiceDate "2025-12-22T03:00:00.000Z"^^xsd:dateTime;
-    :total 1.99.
+    :invoiceDate "2025-12-22T03:00:00.000Z"^^xsd:dateTime.
 <http://example.org/chinook#Customer/58> :hasInvoice <http://example.org/chinook#Invoice/412>.
 <http://example.org/chinook#InvoiceLine/1> a :InvoiceLine;
     :unitPrice 0.99;
