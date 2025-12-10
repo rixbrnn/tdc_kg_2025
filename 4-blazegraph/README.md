@@ -11,7 +11,6 @@ Carregar RDF atraves de command line em Linux/MacOS:
 chmod +x load_rdf.sh
 
 bash ./load_rdf.sh
-# Windows: ./load_rdf.ps1
 ```
 
 ---
