@@ -144,10 +144,10 @@
         rdfs:range  xsd:string .
 
     ########################
-    # Example restrictions
+    # Restricoes de exemplo
     ########################
 
-    # Each invoice line has exactly one track.
+    # Cada linha da fatura tem exatamente uma faixa
     :InvoiceLine rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :lineTrack ;
@@ -155,7 +155,7 @@
         owl:onClass :Track
     ] .
 
-    # Each invoice has at least one line.
+    # Cada fatura tem pelo menos uma linha
     :Invoice rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :hasLine ;

@@ -139,16 +139,22 @@
         rdfs:range  xsd:string .
 
     ########################
-    # Example restrictions
+    # Restricoes de exemplo
     ########################
 
-    # TODO 2:
-    #   Add a restriction saying that each invoice line has exactly one track.
-    #   (Hint: use owl:Restriction with owl:qualifiedCardinality = 1 on :lineTrack
-    #          and owl:onClass :Track, as a rdfs:subClassOf of :InvoiceLine.)
+    # Cada linha da fatura tem exatamente uma faixa
+    :InvoiceLine rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :lineTrack ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :Track
+    ] .
 
-    # TODO 3:
-    #   Add a restriction saying that each invoice has at least one invoice line.
-    #   (Hint: use owl:Restriction with owl:minQualifiedCardinality = 1 on :hasLine
-    #          and owl:onClass :InvoiceLine, as a rdfs:subClassOf of :Invoice.)
+    # Cada fatura tem pelo menos uma linha
+    :Invoice rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :hasLine ;
+        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :InvoiceLine
+    ] .
 }
