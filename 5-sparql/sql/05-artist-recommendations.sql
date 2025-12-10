@@ -1,15 +1,5 @@
 -- Q: Given an artist (e.g., "Iron Maiden"), recommend similar artists
 --    based on shared customer purchases
---
--- Purpose: WOW FACTOR - show recommendation system complexity in SQL
--- Complexity: ⭐⭐⭐⭐⭐ (5/5) - Multiple CTEs, complex logic
--- Expected Result: Artists similar to Iron Maiden, ranked by customer overlap
---
--- Demonstrates: "Customers who bought X also bought Y" is SQL hell
--- Pain Points: 60+ lines, multiple CTEs, hard to debug
---
--- Use Case: Netflix recommendations, Amazon "customers also bought", 
---           Spotify "similar artists", e-commerce product recommendations
 
 WITH target_customers AS (
   -- Step 1: Find all customers who bought Iron Maiden tracks
@@ -60,17 +50,3 @@ SELECT
 FROM artist_scores
 ORDER BY CommonCustomers DESC, TotalRevenue DESC
 LIMIT 10;
-
--- Notes for Presentation:
--- ✗ 60+ lines for a simple business question
--- ✗ Three CTEs required to break down the logic
--- ✗ Repeated 5-table joins in both CTEs
--- ✗ Hard to extend (what if we want "customers who bought X OR Y"?)
--- ✗ Performance degrades with large datasets
---
--- → Compare with SPARQL: 15 lines with natural graph traversal
--- → ?customer bought ironMaiden . ?customer bought ?other .
---
--- This is how Amazon, Netflix, Spotify actually work!
--- Real-world challenge: SQL requires denormalization or complex ETL
--- Graph databases handle this natively

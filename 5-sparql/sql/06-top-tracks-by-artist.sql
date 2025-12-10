@@ -1,11 +1,4 @@
 -- Q: For each artist, show their top 3 best-selling tracks
---
--- Purpose: Show SQL window functions work but require subqueries
--- Complexity: ⭐⭐⭐ (3/5) - Window functions + ranking
--- Expected Result: Top 3 tracks per artist with revenue
---
--- Demonstrates: SQL can do ranking, but it's verbose
--- Pain Points: Window functions are powerful but syntax is complex
 
 WITH track_revenue AS (
   -- Calculate revenue per track
@@ -36,17 +29,3 @@ SELECT
 FROM track_revenue
 WHERE RevenueRank <= 3
 ORDER BY ArtistName, RevenueRank;
-
--- Alternative approach without window functions (even more verbose):
--- Would require self-join to count how many tracks have higher revenue
-
--- Notes for Presentation:
--- ✓ Window functions are powerful
--- ✗ PARTITION BY + ROW_NUMBER is not intuitive for non-SQL experts
--- ✗ Requires CTE to make readable
--- ✗ Hard to modify (what if we want "top 3 per genre per artist"?)
---
--- → Compare with SPARQL: Similar complexity, but more flexible
---
--- Real-world use: E-commerce "bestsellers", music "top charts", 
---                 product catalogs "most popular items"
