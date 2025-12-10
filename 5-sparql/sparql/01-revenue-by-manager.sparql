@@ -30,4 +30,4 @@ WHERE {
   BIND(xsd:decimal(?price) * xsd:decimal(?qty) AS ?lineTotal)
 }
 GROUP BY ?manager ?managerName ?title
-ORDER BY DESC(?teamRevenue)   # <- sem ponto e vírgula aqui
+ORDER BY DESC(?teamRevenue)
