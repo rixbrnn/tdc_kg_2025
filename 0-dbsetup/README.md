@@ -1,6 +1,163 @@
+# Passo 0 — Configuração do BD MySQL Chinook (Docker)
+
+Neste workshop usaremos o banco de dados de exemplo **Chinook** rodando em **MySQL** dentro do Docker.
+Esta pasta contém:
+
+* `Chinook_MySql.sql` — schema + dados iniciais
+* `docker-compose.yml` — inicia o MySQL e carrega automaticamente o SQL inicial
+* `Chinook_MySql_AutoIncrementPKs.sql` — ajusta PKs para auto-incremento
+
+---
+
+## 1) Iniciar o banco de dados
+
+A partir da raiz do repositório:
+
+```bash
+cd 0-dbsetup
+docker compose up -d
+```
+
+Isso irá:
+
+1. Baixar uma imagem MySQL (se não estiver presente)
+2. Iniciar um container na porta **3306**
+3. Executar os scripts SQL em `/docker-entrypoint-initdb.d/` na primeira inicialização
+
+Após o docker compose finalizar, você deve ver 1 container rodando chamado `chinook` e 1 imagem baixada para `mysql`, com logs similares aos abaixo:
+```
+[+] Running 2/2
+ ✔ Network chinook_default    Created
+ ✔ Container chinook-mysql-1  Started
+ ```    
+
+Verifique os logs se quiser confirmar a inicialização:
+
+```bash
+docker compose logs -f mysql
+```
+
+Você deve ver uma mensagem similar a "ready for connections".
+
+---
+
+## 2) Detalhes de conexão
+
+O container está configurado com:
+
+* **Host:** `localhost`
+* **Porta:** `3306`
+* **Database:** `Chinook`
+* **Usuário:** `chinook`
+* **Senha:** `chinook`
+* **Senha root:** `chinook` (não necessária a menos que você prefira root)
+
+---
+
+## 3) Conectar usando DBeaver
+
+1. Abra o **DBeaver**
+2. **Database → New Database Connection**
+3. Selecione **MySQL**
+4. Preencha:
+
+   * **Server Host:** `localhost`
+   * **Port:** `3306`
+   * **Database:** `Chinook`
+   * **Username:** `chinook`
+   * **Password:** `chinook`
+5. Clique em **Test Connection**, depois **Finish**
+
+### ⚠️ Se você receber um erro de autenticação / SSL (comum com MySQL 8+)
+
+Nas configurações de conexão:
+
+* Vá para **Driver properties**
+* Configure:
+
+  * `allowPublicKeyRetrieval = true`
+  * `useSSL = false`
+
+Ou adicione à URL JDBC (campo Driver properties / URL):
+
+```
+jdbc:mysql://localhost:3306/Chinook?allowPublicKeyRetrieval=true&useSSL=false
+```
+
+> 💡 **Ainda tendo problemas?** Verifique a seção [Problemas comuns e soluções](#problemas-comuns-e-soluções) abaixo para passos adicionais de solução de problemas.
+
+---
+
+## 4) Verificação rápida de saúde
+
+Execute isso no DBeaver para confirmar que os dados foram carregados:
+
+```sql
+SHOW TABLES;
+
+SELECT COUNT(*) FROM Artist;
+SELECT COUNT(*) FROM Album;
+SELECT COUNT(*) FROM Track;
+SELECT COUNT(*) FROM Customer;
+SELECT COUNT(*) FROM Invoice;
+SELECT COUNT(*) FROM InvoiceLine;
+```
+
+Nenhuma dessas contagens deve ser `0`.
+
+Ou simplesmente compare com a seguinte UI:
+![alt text](db_properly_set.png)
+
+---
+
+## 5) Parar / resetar o BD
+
+Pare o container:
+
+```bash
+docker compose down
+```
+
+Se você quiser deletar todos os dados e recarregar do zero:
+
+```bash
+docker compose down -v
+docker compose up -d
+```
+
+---
+
+Uma vez que você esteja conectado e a verificação de saúde passe, prossiga para o **Passo 1 — SQL**.
+
+## ⚠️ Problemas comuns e soluções
+Se você ver o seguinte erro ao verificar os logs:
+```bash
+ Another process with pid 121 is using unix socket file.
+ Unable to setup unix socket lock file.
+ Aborting
+```
+Execute 
+```bash
+docker compose down -v
+docker compose up -d
+```
+
+---
+Se você ver o seguinte erro ao conectar pelo DBeaver:
+`Public Key Retrieval is not allowed`
+1. Edite a conexão,
+2. Vá para driver properties,
+3. Marque allowPublicKeyRetrieval como `TRUE`
+
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# English Version
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 # Step 0 — MySQL Chinook DB Setup (Docker)
 
-In this workshop we’ll use the **Chinook** sample database running on **MySQL** inside Docker.
+In this workshop we'll use the **Chinook** sample database running on **MySQL** inside Docker.
 This folder contains:
 
 * `Chinook_MySql.sql` — schema + data seed
@@ -37,7 +194,7 @@ Check logs if you want to confirm initialization:
 docker compose logs -f mysql
 ```
 
-You should see a message similar to “ready for connections”.
+You should see a message similar to "ready for connections".
 
 ---
 
@@ -127,7 +284,7 @@ docker compose up -d
 
 ---
 
-Once you’re connected and the health check passes, proceed to **Step 1 — SQL**.
+Once you're connected and the health check passes, proceed to **Step 1 — SQL**.
 
 ## ⚠️ Common issues and workarounds
 If you see the following error when checking the logs:
