@@ -1,479 +1,189 @@
-# Workshop de Grafos de Conhecimento (1h30) — De SQL a Ontologias e SPARQL
+# Workshop de Grafos de Conhecimento — De SQL a RDF & SPARQL
 
-Este repositório contém todos os materiais para um **workshop prático de 90 minutos** que compara consultas relacionais (SQL) com grafos de conhecimento (RDF + SPARQL), usando o mesmo conjunto de dados de vendas ao longo de todo o workshop.
+Um caminho de aprendizado prático que compara bancos de dados relacionais (SQL) com grafos de conhecimento (RDF + SPARQL) usando o banco de dados Chinook.
 
-Começamos com SQL, encontramos algumas questões que "estão ficando complicadas", depois modelamos uma ontologia, convertemos o banco de dados para RDF, carregamos no Blazegraph e respondemos as mesmas perguntas com SPARQL.
+## 📚 O que você vai aprender
 
----
+- Entender quando SQL é excelente e quando se torna complexo
+- Modelar dados como uma ontologia com classes e propriedades
+- Converter dados relacionais para formato RDF/TriG
+- Consultar grafos de conhecimento com SPARQL
+- Reconhecer padrões de grafos: hierarquias, recomendações, co-ocorrência
 
-## O que você vai aprender
+## 🗂️ Estrutura do Repositório
 
-Ao final do workshop, você será capaz de:
+Cada sessão se baseia na anterior:
 
-* Entender **quando SQL é ótimo** e quando se torna doloroso.
-* Explicar o que é um **grafo de conhecimento** e quais problemas ele resolve.
-* Criar e estender uma **ontologia** simples.
-* Converter dados relacionais em **RDF/TriG**.
-* Carregar RDF no **Blazegraph** e consultar com **SPARQL**.
-* Reconhecer padrões de grafos como **hierarquias** e **recomendações de co-compra**.
+- **[0-dbsetup](0-dbsetup/)** — Configuração do banco de dados MySQL Chinook com Docker
+- **[1-sql](1-sql/)** — Consultas SQL explorando o modelo relacional
+- **[2-ontology](2-ontology/)** — Design de ontologia em RDF/TriG
+- **[3-converter](3-converter/)** — Ferramenta Node.js para converter RDB → RDF
+- **[4-blazegraph](4-blazegraph/)** — Carregar RDF no triplestore Blazegraph
+- **[5-sparql](5-sparql/)** — Consultas SPARQL (compare com equivalentes SQL)
+- **[6-visualization](6-visualization/)** — Técnicas de visualização de grafos
+- **[7-homework_architecture_project](7-homework_architecture_project/)** — Projeto final
 
----
+Cada sessão tem seu próprio README detalhado com instruções bilíngues (Português/Inglês).
 
-## Conjunto de dados
+## 🚀 Início Rápido
 
-Usamos o banco de dados de exemplo **Chinook** SQL, que representa uma loja de mídia digital com clientes, faturas, itens de fatura, faixas, álbuns, artistas, gêneros e hierarquias de funcionários.
+### Pré-requisitos
 
-O conjunto de dados é pequeno (≈11 tabelas), mas rico o suficiente para demonstrar relacionamentos multi-hop, hierarquias e consultas de estilo recomendação.
+- **Docker** & Docker Compose
+- **DBeaver** (ou qualquer cliente MySQL)
+- **Node.js** v16+ & npm
+- **Git**
 
----
+### Começando
 
-## Fluxo do workshop (visão geral)
-
-1. **Explorar conjunto de dados em SQL (DBeaver).**
-2. Responder 3 perguntas de negócio:
-
-   * Q1: solução SQL fornecida
-   * Q2 & Q3: participantes implementam em SQL (intencionalmente não trivial)
-3. Discutir por que Q2/Q3 são desajeitadas em SQL.
-4. **Ontologia:** explicar classes/propriedades + completar parte faltante.
-5. **Conversor RDB → RDF (Node.js):** completar mapeamento(s) faltante(s).
-6. Gerar **TriG**, carregar no **Blazegraph** (Docker).
-7. Aprender fundamentos de SPARQL.
-8. Re-responder Q1–Q3 em SPARQL:
-
-   * Q1: solução SPARQL fornecida
-   * Q2 & Q3: participantes implementam
-
----
-
-## Estrutura do repositório
-
-```
-.
-├─ prerequisites.md           # lista de instalação + verificações
-├─ agenda.md                  # cronograma minuto a minuto
-├─ data/                      # chinook.db + imagem do schema
-├─ sql/                       # solução Q1 + Q2/Q3 TODOs
-├─ ontology/                  # .owl (TODO + solução)
-├─ converter/                 # Conversor Node.js RDB→RDF (TODO + solução)
-├─ blazegraph/                # Docker compose + scripts de carga
-└─ sparql/                    # solução Q1 + Q2/Q3 TODOs
-```
-
-As soluções estão disponíveis em cada pasta sob `solutions/`.
-
----
-
-## Início rápido (antes do workshop)
-
-1. Siga os **pré-requisitos**: veja [`prerequisites.md`](./prerequisites.md).
-2. Clone este repositório do workshop:
-
+1. Clone este repositório:
    ```bash
-   git clone <THIS_REPO_URL>
-   cd knowledge-graphs-workshop
+   git clone https://github.com/rixbrnn/tdc_kg_2025.git
+   cd tdc_kg_2025
    ```
 
+2. Siga as sessões em ordem, começando com **[0-dbsetup](0-dbsetup/README.md)**
+
+3. O README de cada sessão contém configuração detalhada e exercícios
+
+## 💾 Conjunto de Dados
+
+O banco de dados **Chinook** representa uma loja de mídia digital com:
+- 59 Clientes
+- 412 Faturas
+- 3.503 Faixas
+- 347 Álbuns
+- 275 Artistas
+- 25 Gêneros
+- 8 Funcionários (com hierarquia)
+
+Perfeito para demonstrar consultas simples e complexas em SQL e SPARQL.
+
+## 🎯 Caminho de Aprendizado
+
+1. **Configuração** — MySQL + Chinook rodando no Docker
+2. **Prática SQL** — Escrever consultas, experimentar complexidade
+3. **Design de Ontologia** — Modelar o domínio em RDF
+4. **Conversão** — Transformar dados relacionais em RDF
+5. **Blazegraph** — Carregar e explorar o grafo de conhecimento
+6. **SPARQL** — Consultar o grafo, comparar com SQL
+7. **Visualização** — Visualizar relacionamentos do grafo
+8. **Projeto** — Aplicar conhecimento a um cenário real
+
+## 🔧 Ferramentas Utilizadas
+
+- **MySQL** — Banco de dados relacional
+- **DBeaver** — Cliente de banco de dados
+- **Node.js** — Conversor RDB→RDF
+- **Blazegraph** — Triplestore RDF com endpoint SPARQL
+- **Docker** — Plataforma de containers
+
+## 📖 Créditos
+
+- **Banco de Dados Chinook** por Luis Rocha — [github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
+- **Blazegraph** Banco de Dados RDF — [github.com/blazegraph/database](https://github.com/blazegraph/database)
+
+## 📄 Licença
+
+O conteúdo do workshop é proprietário. O conjunto de dados Chinook está incluído sob sua licença permissiva original.
+
 ---
 
-## Durante o workshop: passo a passo
-
-### Passo 1 — Aquecimento com SQL (DBeaver)
-
-1. Abra `data/chinook.db` no DBeaver.
-2. Revise o schema (`data/schema.png`).
-3. Execute:
-
-   * `sql/question-1-solution.sql`
-4. Implemente:
-
-   * `sql/question-2-todo.sql`
-   * `sql/question-3-todo.sql`
-
+**Pronto para começar?** Vá para **[Sessão 0: Configuração do Banco de Dados](0-dbsetup/README.md)** 🚀
 
 ---
-
-### Passo 2 — Ontologia
-
-1. Abra `ontology/chinook-todo.owl`.
-2. Complete os TODOs (classe/propriedade + restrição).
-3. Salve como `chinook-seunome.owl` (opcional).
-
-
+---
 ---
 
-### Passo 3 — Converter RDB para RDF (Node.js)
+# Knowledge Graphs Workshop — From SQL to RDF & SPARQL
 
-1. Instale as dependências do conversor:
+A hands-on learning path that compares relational databases (SQL) with knowledge graphs (RDF + SPARQL) using the Chinook database.
 
+## 📚 What You'll Learn
+
+- Understand when SQL excels and when it becomes complex
+- Model data as an ontology with classes and properties
+- Convert relational data to RDF/TriG format
+- Query knowledge graphs with SPARQL
+- Recognize graph patterns: hierarchies, recommendations, co-occurrence
+
+## 🗂️ Repository Structure
+
+Each session builds on the previous one:
+
+- **[0-dbsetup](0-dbsetup/)** — MySQL Chinook database setup with Docker
+- **[1-sql](1-sql/)** — SQL queries exploring the relational model
+- **[2-ontology](2-ontology/)** — Ontology design in RDF/TriG
+- **[3-converter](3-converter/)** — Node.js tool to convert RDB → RDF
+- **[4-blazegraph](4-blazegraph/)** — Load RDF into Blazegraph triplestore
+- **[5-sparql](5-sparql/)** — SPARQL queries (compare with SQL equivalents)
+- **[6-visualization](6-visualization/)** — Graph visualization techniques
+- **[7-homework_architecture_project](7-homework_architecture_project/)** — Final project
+
+Each session has its own detailed README with bilingual instructions (Portuguese/English).
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- **Docker** & Docker Compose
+- **DBeaver** (or any MySQL client)
+- **Node.js** v16+ & npm
+- **Git**
+
+### Getting Started
+
+1. Clone this repository:
    ```bash
-   cd converter
-   npm install
-   ```
-2. Execute o conversor:
-
-   ```bash
-   npm start
-   ```
-3. Você deve obter a saída RDF em:
-
-   ```
-   rdf/output.trig
+   git clone https://github.com/rixbrnn/tdc_kg_2025.git
+   cd tdc_kg_2025
    ```
 
-O conversor está intencionalmente incompleto. Preencha os TODOs em:
+2. Follow the sessions in order, starting with **[0-dbsetup](0-dbsetup/README.md)**
 
-* `converter/src/mapping.js`
-* `converter/src/export_rdf.js`
+3. Each session's README contains detailed setup and exercises
 
+## 💾 Dataset
 
----
+The **Chinook** database represents a digital media store with:
+- 59 Customers
+- 412 Invoices
+- 3,503 Tracks
+- 347 Albums
+- 275 Artists
+- 25 Genres
+- 8 Employees (with hierarchy)
 
-### Passo 4 — Carregar RDF no Blazegraph
+Perfect for demonstrating both simple and complex queries in SQL and SPARQL.
 
-Blazegraph é um armazenamento de triplas RDF com um endpoint SPARQL e uma interface web.
+## 🎯 Learning Path
 
-1. Inicie o Blazegraph:
+1. **Setup** — Get MySQL + Chinook running in Docker
+2. **SQL Practice** — Write queries, experience complexity
+3. **Ontology Design** — Model the domain in RDF
+4. **Conversion** — Transform relational data to RDF
+5. **Blazegraph** — Load and explore the knowledge graph
+6. **SPARQL** — Query the graph, compare with SQL
+7. **Visualization** — Visualize graph relationships
+8. **Project** — Apply knowledge to a real-world scenario
 
-   ```bash
-   cd blazegraph
-   docker compose up
-   ```
-2. Em outro terminal, carregue o TriG:
+## 🔧 Tools Used
 
-   ```bash
-   ./load_rdf.sh
-   # ou no Windows:
-   ./load_rdf.ps1
-   ```
+- **MySQL** — Relational database
+- **DBeaver** — Database client
+- **Node.js** — RDB→RDF converter
+- **Blazegraph** — RDF triplestore with SPARQL endpoint
+- **Docker** — Container platform
 
-Blazegraph executa na porta **9999** por padrão.
+## 📖 Credits
 
-Endpoint SPARQL:
+- **Chinook Database** by Luis Rocha — [github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
+- **Blazegraph** RDF Database — [github.com/blazegraph/database](https://github.com/blazegraph/database)
 
-```
-http://localhost:9999/blazegraph/namespace/kb/sparql
-```
+## 📄 License
 
-Interface web:
-
-```
-http://localhost:9999/blazegraph/#query
-```
-
----
-
-### Passo 5 — SPARQL
-
-1. Execute:
-
-   * `sparql/question-1-solution.rq`
-2. Implemente:
-
-   * `sparql/question-2-todo.rq`
-   * `sparql/question-3-todo.rq`
-
-> As respostas de referência do instrutor estão em `sparql/solutions/`.
+Workshop content is proprietary. The Chinook dataset is included under its original permissive license.
 
 ---
 
-## Agenda (90 min)
-
-Um cronograma detalhado minuto a minuto está em [`agenda.md`](./agenda.md).
-Visão rápida:
-
-* 0–5 min: intro + objetivos
-* 5–15 min: verificação de configuração
-* 15–30 min: SQL Q1–Q3
-* 30–35 min: transição para KG
-* 35–50 min: ontologia
-* 50–65 min: conversor Node para RDF
-* 65–75 min: carregar no Blazegraph
-* 75–82 min: fundamentos de SPARQL
-* 82–90 min: SPARQL Q1–Q3 + encerramento
-
----
-
-## Solução de problemas
-
-**Blazegraph não inicia / porta em uso**
-
-* Certifique-se de que a porta 9999 está livre.
-* Pare containers antigos:
-
-  ```bash
-  docker ps
-  docker stop <id>
-  ```
-
-**Falha no upload do RDF**
-
-* Verifique se o Blazegraph está rodando em `http://localhost:9999/blazegraph/`.
-* Certifique-se de que `rdf/output.trig` existe e é um TriG válido.
-
-**Erros no conversor**
-
-* Execute novamente `npm install`.
-* Confirme que o Node é recente:
-
-  ```bash
-  node --version
-  ```
-
----
-
-## Créditos
-
-* **Banco de dados de exemplo Chinook** por Luis Rocha et al.
-  [https://github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
-* **Blazegraph** banco de dados RDF/SPARQL.
-  [https://github.com/blazegraph/database](https://github.com/blazegraph/database)
-
----
-
-## Licença
-
-O uso do conteúdo deste workshop, incluindo mas não limitado ao seu código, fora do workshop sem autorização explícita por escrito dos autores é proibido.
-O conjunto de dados Chinook está incluído sob sua licença permissiva original; veja `data/LICENSE-data.txt`.
-
----
----
----
-
-# Knowledge Graphs Workshop (1h30) — From SQL to Ontologies to SPARQL
-
-This repository contains all materials for a **90-minute hands-on workshop** that compares relational querying (SQL) with knowledge graphs (RDF + SPARQL), using the same sales dataset throughout.
-
-We start in SQL, hit a couple of "this is getting messy" questions, then model an ontology, convert the database to RDF, load it into Blazegraph, and answer the same questions with SPARQL.
-
----
-
-## What you will learn
-
-By the end of the workshop, you should be able to:
-
-* Understand **when SQL is great** and when it becomes painful.
-* Explain what a **knowledge graph** is and what problems it solves.
-* Create and extend a simple **ontology** in Protégé.
-* Convert relational data into **RDF/TriG**.
-* Load RDF into **Blazegraph** and query with **SPARQL**.
-* Recognize graph patterns such as **hierarchies** and **co-purchase recommendations**.
-
----
-
-## Dataset
-
-We use the **Chinook** SQL sample database, which represents a digital media store with customers, invoices, invoice lines, tracks, albums, artists, genres, and employee hierarchies.
-
-The dataset is small (≈11 tables) but rich enough to demonstrate multi-hop relationships, hierarchies, and recommendation-style queries.
-
----
-
-## Workshop flow (high level)
-
-1. **Explore dataset in SQL (DBeaver).**
-2. Answer 3 business questions:
-
-   * Q1: provided SQL solution
-   * Q2 & Q3: participants implement in SQL (intentionally non-trivial)
-3. Discuss why Q2/Q3 are awkward in SQL.
-4. **Ontology:** explains classes/properties + complete missing piece.
-5. **RDB → RDF converter (Node.js):** complete missing mapping(s).
-6. Generate **TriG**, load into **Blazegraph** (Docker).
-7. Learn SPARQL basics.
-8. Re-answer Q1–Q3 in SPARQL:
-
-   * Q1: provided SPARQL solution
-   * Q2 & Q3: participants implement
-
----
-
-## Repository structure
-
-```
-.
-├─ prerequisites.md           # install list + sanity checks
-├─ agenda.md                  # minute-by-minute schedule
-├─ data/                      # chinook.db + schema image
-├─ sql/                       # Q1 solution + Q2/Q3 TODOs
-├─ ontology/                  # .owl (TODO + solution)
-├─ converter/                 # Node.js RDB→RDF converter (TODO + solution)
-├─ blazegraph/                # Docker compose + load scripts
-└─ sparql/                    # Q1 solution + Q2/Q3 TODOs
-```
-
-Solutions are available in each folder under `solutions/`.
-
----
-
-## Quickstart (before workshop)
-
-1. Follow **prerequisites**: see [`prerequisites.md`](./prerequisites.md).
-2. Clone this workshop repo:
-
-   ```bash
-   git clone <THIS_REPO_URL>
-   cd knowledge-graphs-workshop
-   ```
-
----
-
-## During workshop: step-by-step
-
-### Step 1 — SQL warm-up (DBeaver)
-
-1. Open `data/chinook.db` in DBeaver.
-2. Review schema (`data/schema.png`).
-3. Run:
-
-   * `sql/question-1-solution.sql`
-4. Implement:
-
-   * `sql/question-2-todo.sql`
-   * `sql/question-3-todo.sql`
-
----
-
-### Step 2 — Ontology
-
-1. Open `ontology/chinook-todo.owl`.
-2. Complete the TODOs (class/property + restriction).
-3. Save as `chinook-yourname.owl` (optional).
-
-
----
-
-### Step 3 — Convert RDB to RDF (Node.js)
-
-1. Install converter dependencies:
-
-   ```bash
-   cd converter
-   npm install
-   ```
-2. Run the converter:
-
-   ```bash
-   npm start
-   ```
-3. You should get RDF output at:
-
-   ```
-   rdf/output.trig
-   ```
-
-The converter is intentionally incomplete. Fill the TODOs in:
-
-* `converter/src/mapping.js`
-* `converter/src/export_rdf.js`
-
-
----
-
-### Step 4 — Load RDF into Blazegraph
-
-Blazegraph is an RDF triple store with a SPARQL endpoint and a browser UI.
-
-1. Start Blazegraph:
-
-   ```bash
-   cd blazegraph
-   docker compose up
-   ```
-2. In another terminal, load TriG:
-
-   ```bash
-   ./load_rdf.sh
-   # or on Windows:
-   ./load_rdf.ps1
-   ```
-
-Blazegraph runs on port **9999** by default.
-
-SPARQL endpoint:
-
-```
-http://localhost:9999/blazegraph/namespace/kb/sparql
-```
-
-Browser UI:
-
-```
-http://localhost:9999/blazegraph/#query
-```
-
----
-
-### Step 5 — SPARQL
-
-1. Run:
-
-   * `sparql/question-1-solution.rq`
-2. Implement:
-
-   * `sparql/question-2-todo.rq`
-   * `sparql/question-3-todo.rq`
-
-> Instructor reference answers are in `sparql/solutions/`.
-
----
-
-## Agenda (90 min)
-
-A detailed minute-by-minute schedule is in [`agenda.md`](./agenda.md).
-Quick view:
-
-* 0–5 min: intro + goals
-* 5–15 min: setup check
-* 15–30 min: SQL Q1–Q3
-* 30–35 min: transition to KG
-* 35–50 min: ontology in Protégé
-* 50–65 min: Node converter to RDF
-* 65–75 min: load into Blazegraph
-* 75–82 min: SPARQL basics
-* 82–90 min: SPARQL Q1–Q3 + wrap-up
-
----
-
-## Troubleshooting
-
-**Blazegraph doesn't start / port in use**
-
-* Make sure port 9999 is free.
-* Stop old containers:
-
-  ```bash
-  docker ps
-  docker stop <id>
-  ```
-
-**RDF upload fails**
-
-* Check Blazegraph is up at `http://localhost:9999/blazegraph/`.
-* Ensure `rdf/output.trig` exists and is valid TriG.
-
-**Converter errors**
-
-* Re-run `npm install`.
-* Confirm Node is recent:
-
-  ```bash
-  node --version
-  ```
-
-
----
-
-## Credits
-
-* **Chinook sample database** by Luis Rocha et al.
-  [https://github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
-* **Blazegraph** RDF/SPARQL database.
-  [https://github.com/blazegraph/database](https://github.com/blazegraph/database)
-
----
-
-## License
-
-The use of the content of this workshop, including but not limited to its code, outside of the workshop without explicit written authorization from the authors is forbidden. 
-The Chinook dataset is included under its original permissive license; see `data/LICENSE-data.txt`.
+**Ready to start?** Head to **[Session 0: Database Setup](0-dbsetup/README.md)** 🚀
