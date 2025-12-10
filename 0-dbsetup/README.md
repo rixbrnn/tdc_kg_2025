@@ -108,6 +108,8 @@ Nenhuma dessas contagens deve ser `0`.
 Ou simplesmente compare com a seguinte UI:
 ![alt text](db_properly_set.png)
 
+Veja o modelo relacional de alto nível do Chinook que representa uma loja de mídia digital, incluindo tabelas para artistas, álbuns, faixas de mídia, faturas e clientes: ![Modelo RDB](rdb_model.png)
+
 ---
 
 ## 5) Parar / resetar o BD
