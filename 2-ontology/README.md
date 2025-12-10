@@ -5,10 +5,12 @@ clientes, faturas, faixas, funcionários e seus relacionamentos como uma **ontol
 
 Trabalharemos em um arquivo de ontologia parcialmente completo:
 
-* `chinook-todo.ttl` (este é o que você abre)
-* `chinook-solution.ttl` (referência do instrutor, não necessário durante o exercício)
+* `chinook-todo.trig` (este é o que você abre)
+* `chinook-solution.trig` (referência do instrutor, não necessário durante o exercício)
 
-A ontologia está escrita em Turtle (TTL). Dê uma olhada rápida!
+A ontologia está escrita em TriG (Turtle + Named Graphs). Dê uma olhada rápida!
+
+Turtle - Terse RDF Triple Language (.ttl) é a mesma representação, porém podemos criar apenas um grafo RDF.  
 
 ---
 
@@ -80,7 +82,7 @@ Em termos OWL:
 
 Quando terminar os TODOs, apenas salve seu arquivo. Você pode opcionalmente salvar uma cópia com seu nome, por exemplo:
 
-   * `chinook-seunome.ttl`
+   * `chinook-seunome.trig`
 
 Esta ontologia será usada nos próximos passos:
 
@@ -96,7 +98,7 @@ Esta ontologia será usada nos próximos passos:
 
 Se você quiser comparar, a versão do instrutor está em:
 
-* `2-ontology/chinook-solution.ttl`
+* `2-ontology/chinook-solution.trig`
 
 (Mas tente seu melhor na versão TODO antes de dar uma espiada 😉)
 
@@ -112,10 +114,12 @@ customers, invoices, tracks, employees, and their relationships as an **ontology
 
 We'll work in a partially completed ontology file:
 
-* `chinook-todo.ttl` (this is what you open)
-* `chinook-solution.ttl` (instructor reference, not needed during the exercise)
+* `chinook-todo.trig` (this is what you open)
+* `chinook-solution.trig` (instructor reference, not needed during the exercise)
 
-The ontology is written in Turtle (TTL). Take a quick look around!
+The ontology is written in TriG (Turtle + Named Graphs). Take a quick look!
+
+Turtle - Terse RDF Triple Language (.ttl) is the same RDF representation, but you can only create a single unnamed graph.
 
 ---
 
@@ -187,7 +191,7 @@ In OWL terms:
 
 When you're done with the TODOs, just save your file. You can optionally save a copy with your name, e.g.:
 
-   * `chinook-yourname.ttl`
+   * `chinook-yourname.trig`
 
 This ontology will be used in the next steps:
 
@@ -203,6 +207,6 @@ It's totally fine to be partially done — the workshop continues even if not ev
 
 If you want to compare, the instructor version is:
 
-* `2-ontology/chinook-solution.ttl`
+* `2-ontology/chinook-solution.trig`
 
 (But try your best on the TODO version before peeking 😉)
