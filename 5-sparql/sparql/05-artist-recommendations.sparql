@@ -1,28 +1,28 @@
 PREFIX : <http://example.org/chinook#>
 
-# Q: Given an artist (e.g., "Iron Maiden"), recommend similar artists
-#    based on shared customer purchases
+# Q: Dado um artista (ex: "Iron Maiden"), recomendar artistas similares
+#    baseado em compras compartilhadas de clientes
 
 SELECT ?recommendedArtist 
        (COUNT(DISTINCT ?customer) AS ?commonCustomers)
        (SUM(?revenue) AS ?totalRevenue)
 WHERE {
-  # Step 1: Find customers who bought Iron Maiden
+  # Passo 1: Encontrar clientes que compraram Iron Maiden
   ?customer :hasInvoice/:hasLine/:lineTrack/:hasAlbum/:hasArtist ?targetArtist .
   ?targetArtist :name "Iron Maiden" .
   
-  # Step 2: What other artists did they buy?
+  # Passo 2: Que outros artistas eles compraram?
   ?customer :hasInvoice ?invoice .
   ?invoice :hasLine ?line .
   ?line :lineTrack/:hasAlbum/:hasArtist ?otherArtist .
   ?otherArtist :name ?recommendedArtist .
   
-  # Calculate revenue for ranking
+  # Calcula receita para ranqueamento
   ?line :unitPrice ?price ;
         :quantity ?qty .
   BIND(?price * ?qty AS ?revenue)
   
-  # Exclude the original artist
+  # Exclui o artista original
   FILTER(?otherArtist != ?targetArtist)
 }
 GROUP BY ?recommendedArtist

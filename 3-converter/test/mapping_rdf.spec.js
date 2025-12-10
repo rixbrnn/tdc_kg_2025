@@ -164,7 +164,7 @@ describe('Mapping functions (implemented)', () => {
 describe('Mapping functions (TODOs)', () => {
   test('mapEmployee should exist and map Employee with reportsTo', async () => {
     const writer = createMockWriter();
-    // This and below will FAIL until implemented
+    // Este e os abaixo irão FALHAR até serem implementados
     expect(typeof mapEmployee).toBe('function'); 
 
     mapEmployee({ EmployeeId: 1, FirstName: 'Jane', LastName: 'Doe', Title: 'Rep', ReportsTo: 2 }, writer);
@@ -180,7 +180,7 @@ describe('Mapping functions (TODOs)', () => {
 
   test('mapCustomer should exist and link to support representative', async () => {
     const writer = createMockWriter();
-    // This and below will FAIL until implemented
+    // Este e os abaixo irão FALHAR até serem implementados
     expect(typeof mapCustomer).toBe('function');
 
     mapCustomer({ CustomerId: 42, FirstName: 'John', LastName: 'Smith', SupportRepId: 1 }, writer);

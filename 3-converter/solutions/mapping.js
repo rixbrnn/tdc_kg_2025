@@ -11,7 +11,7 @@ function classIri(localName) {
   return namedNode(NS + localName);
 }
 
-// ===== IRI helpers =====
+// ===== auxiliares de IRI =====
 
 export const iri = {
   customer:  (id) => namedNode(`${NS}Customer/${id}`),
@@ -60,14 +60,14 @@ const c = {
   MediaType:   classIri('MediaType'),
 };
 
-// ===== literal helpers =====
+// ===== auxiliares de literais =====
 
 const intLit  = (value) => literal(String(value), namedNode(XSD + 'integer'));
 const decLit  = (value) => literal(String(value), namedNode(XSD + 'decimal'));
 const strLit  = (value) => literal(String(value));
 const dateLit = (value) => literal(value.toISOString(), namedNode(XSD + 'dateTime'));
 
-// ===== mapping functions =====
+// ===== funções de mapeamento =====
 
 // Genre
 export function mapGenre(row, writer) {
@@ -142,7 +142,7 @@ export function mapEmployee(row, writer) {
     writer.addQuad(subj, p.title, strLit(row.Title));
   }
 
-  // Hierarchy: reportsTo
+  // Hierarquia: reportsTo
   if (row.ReportsTo != null) {
     const manager = iri.employee(row.ReportsTo);
     writer.addQuad(subj, p.reportsTo, manager);
@@ -176,7 +176,7 @@ export function mapInvoice(row, writer) {
   writer.addQuad(inv, p.invoiceId, intLit(row.InvoiceId));
 
   if (row.InvoiceDate != null) {
-    // row.InvoiceDate may already be a JS Date; if it's a string, new Date() is fine
+    // row.InvoiceDate pode já ser um Date JS; se for uma string, new Date() funciona
     const date = row.InvoiceDate instanceof Date ? row.InvoiceDate : new Date(row.InvoiceDate);
     writer.addQuad(inv, p.invoiceDate, dateLit(date));
   }
@@ -184,7 +184,7 @@ export function mapInvoice(row, writer) {
     writer.addQuad(inv, p.total, decLit(row.Total));
   }
 
-  // Link customer -> invoice
+  // Vincula customer -> invoice
   writer.addQuad(cust, p.hasInvoice, inv);
 }
 
@@ -201,6 +201,6 @@ export function mapInvoiceLine(row, writer) {
   // invoice hasLine line
   writer.addQuad(inv, p.hasLine, line);
 
-  // lineTrack link
+  // link lineTrack
   writer.addQuad(line, p.lineTrack, trk);
 }

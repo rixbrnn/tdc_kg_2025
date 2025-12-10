@@ -1,12 +1,12 @@
 // 3-converter/src/mapping.js
-// Mapping logic from MySQL rows to RDF triples.
+// Lógica de mapeamento de linhas MySQL para triplas RDF.
 //
-// In this workshop, you'll complete a couple of TODOs:
+// Neste workshop, você completará alguns TODOs:
 //
-//  - Create the mapEmployee function
-//  - Create the mapCustomer function
+//  - Criar a função mapEmployee
+//  - Criar a função mapCustomer
 //
-// Everything else is already implemented for you.
+// Todo o resto já está implementado para você.
 
 import { DataFactory } from 'n3';
 
@@ -20,7 +20,7 @@ function classIri(localName) {
   return namedNode(NS + localName);
 }
 
-// ===== IRI helpers =====
+// ===== auxiliares de IRI =====
 
 export const iri = {
   customer:  (id) => namedNode(`${NS}Customer/${id}`),
@@ -69,14 +69,14 @@ const c = {
   MediaType:   classIri('MediaType'),
 };
 
-// ===== literal helpers =====
+// ===== auxiliares de literais =====
 
 const intLit  = (value) => literal(String(value), namedNode(XSD + 'integer'));
 const decLit  = (value) => literal(String(value), namedNode(XSD + 'decimal'));
 const strLit  = (value) => literal(String(value));
 const dateLit = (value) => literal(value.toISOString(), namedNode(XSD + 'dateTime'));
 
-// ===== mapping functions =====
+// ===== funções de mapeamento =====
 
 // Genre
 export function mapGenre(row, writer) {
@@ -136,52 +136,52 @@ export function mapTrack(row, writer) {
   }
 }
 
-// TODO: Map employee
-// Recall there is a self-relationship
+// TODO: Mapear employee
+// Lembre-se de que há um auto-relacionamento
 export function mapEmployee(row, writer) {
   const subj = iri.employee(row.EmployeeId);
-  // TODO: Create full name
+  // TODO: Criar nome completo
   const fullName = ``.trim();
 
-  // TODO: Add triples for type and employeeId (use intLit for employeeId)
+  // TODO: Adicionar triplas para type e employeeId (use intLit para employeeId)
   writer.addQuad(subj, null, null);
   writer.addQuad(subj, null, null);
 
   if (fullName) {
-    // TODO: Add triple for fullName
+    // TODO: Adicionar tripla para fullName
     writer.addQuad(subj, null, strLit(fullName));
   }
   if (row.Title != null) {
-    // TODO: Add triple for title (use strLit)
+    // TODO: Adicionar tripla para title (use strLit)
     writer.addQuad(subj, null, null);
   }
 
-  // Hierarchy: reportsTo
+  // Hierarquia: reportsTo
   if (row.ReportsTo != null) {
-    // TODO: Add triple for reportsTo
+    // TODO: Adicionar tripla para reportsTo
     const manager = null;
     writer.addQuad(subj, null, manager);
   }
 }
 
-// TODO: Map customer
-// Recall there is a connection to the support representative (employee)
+// TODO: Mapear customer
+// Lembre-se de que há uma conexão com o representante de suporte (employee)
 export function mapCustomer(row, writer) {
   const subj = iri.customer(row.CustomerId);
-  // TODO: Create full name
+  // TODO: Criar nome completo
   const fullName = ``.trim();
 
-  // TODO: Add triples for type and customerId (use intLit for customerId)
+  // TODO: Adicionar triplas para type e customerId (use intLit para customerId)
   writer.addQuad(subj, null, null);
   writer.addQuad(subj, null, null);
 
   if (fullName) {
-    // TODO: Add triple for fullName
+    // TODO: Adicionar tripla para fullName
     writer.addQuad(subj, null, strLit(fullName));
   }
 
   if (row.SupportRepId != null) {
-    // TODO: Add triple for supportedBy
+    // TODO: Adicionar tripla para supportedBy
     const rep = null;
     writer.addQuad(subj, null, rep);
   }

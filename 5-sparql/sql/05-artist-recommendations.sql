@@ -1,8 +1,8 @@
--- Q: Given an artist (e.g., "Iron Maiden"), recommend similar artists
---    based on shared customer purchases
+-- Q: Dado um artista (ex: "Iron Maiden"), recomendar artistas similares
+--    baseado em compras compartilhadas de clientes
 
 WITH target_customers AS (
-  -- Step 1: Find all customers who bought Iron Maiden tracks
+  -- Passo 1: Encontrar todos os clientes que compraram faixas do Iron Maiden
   SELECT DISTINCT c.CustomerId
   FROM Customer c
   JOIN Invoice i ON i.CustomerId = c.CustomerId
@@ -13,7 +13,7 @@ WITH target_customers AS (
   WHERE a.Name = 'Iron Maiden'
 ),
 customer_purchases AS (
-  -- Step 2: Find all OTHER artists these customers bought
+  -- Passo 2: Encontrar todos os OUTROS artistas que esses clientes compraram
   SELECT 
     tc.CustomerId,
     a.ArtistId,
@@ -25,11 +25,11 @@ customer_purchases AS (
   JOIN Track t ON t.TrackId = il.TrackId
   JOIN Album al ON al.AlbumId = t.AlbumId
   JOIN Artist a ON a.ArtistId = al.ArtistId
-  WHERE a.Name != 'Iron Maiden'  -- Exclude the original artist
+  WHERE a.Name != 'Iron Maiden'  -- Exclui o artista original
   GROUP BY tc.CustomerId, a.ArtistId, a.Name
 ),
 artist_scores AS (
-  -- Step 3: Calculate similarity scores for each artist
+  -- Passo 3: Calcular pontuações de similaridade para cada artista
   SELECT 
     ArtistName,
     COUNT(DISTINCT CustomerId) AS CommonCustomers,

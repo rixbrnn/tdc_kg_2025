@@ -7,7 +7,7 @@
 <http://example.org/chinook>
     a owl:Ontology ;
     rdfs:label "Chinook Knowledge Graph Ontology" ;
-    rdfs:comment "Ontology for the Chinook sample database (customers, invoices, tracks, employees, etc.)." .
+    rdfs:comment "Ontologia para o banco de dados de exemplo Chinook (clientes, faturas, faixas, funcionários, etc.)." .
 
 ##########
 # Classes
@@ -26,7 +26,7 @@
 :PlaylistTrack a owl:Class ; rdfs:label "Playlist track" .
 
 ###################
-# Object properties
+# Propriedades de objetos
 ###################
 
 :hasInvoice a owl:ObjectProperty ;
@@ -91,7 +91,7 @@
     rdfs:range  :Playlist .
 
 ##################
-# Data properties
+# Propriedades de dados
 ##################
 
 :customerId a owl:DatatypeProperty ;
@@ -143,10 +143,10 @@
     rdfs:range  xsd:string .
 
 ########################
-# Example restrictions
+# Restrições de exemplo
 ########################
 
-# Each invoice line has exactly one track.
+# Cada linha de fatura tem exatamente uma faixa.
 :InvoiceLine rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty :lineTrack ;
@@ -154,7 +154,7 @@
     owl:onClass :Track
 ] .
 
-# Each invoice has at least one line.
+# Cada fatura tem pelo menos uma linha de fatura.
 :Invoice rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty :hasLine ;

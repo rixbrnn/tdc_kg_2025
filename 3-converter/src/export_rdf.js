@@ -20,7 +20,7 @@ import {
   mapInvoiceLine
 } from './mapping_rdf_todo.js';
 
-// ---------- config ----------
+// ---------- configuração ----------
 
 const dbConfig = {
   host:     process.env.DB_HOST     || 'localhost',
@@ -32,7 +32,7 @@ const dbConfig = {
 
 const OUTPUT_FILE = '../../rdf/chinook.trig';
 
-// ---------- helper for Writer.end() ----------
+// ---------- auxiliar para Writer.end() ----------
 
 function endWriter(writer) {
   return new Promise((resolve, reject) => {
@@ -40,7 +40,7 @@ function endWriter(writer) {
   });
 }
 
-// ---------- export functions ----------
+// ---------- funções de exportação ----------
 
 async function exportGenres(conn, writer) {
   const [rows] = await conn.execute('SELECT GenreId, Name FROM Genre');

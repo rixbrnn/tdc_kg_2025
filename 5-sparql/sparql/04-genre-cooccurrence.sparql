@@ -1,12 +1,12 @@
 PREFIX : <http://example.org/chinook#>
 
-# Q: Which genres share the most customers? (Cross-selling opportunities)
+# Q: Quais gêneros compartilham mais clientes? (Oportunidades de venda cruzada)
 
 SELECT ?genre1Name ?genre2Name 
        (COUNT(DISTINCT ?customer) AS ?sharedCustomers)
 WHERE {
-  # Pattern: Find customers who bought from BOTH genres
-  # This naturally expresses "customers who like X also like Y"
+  # Padrão: Encontra clientes que compraram de AMBOS os gêneros
+  # Isto naturalmente expressa "clientes que gostam de X também gostam de Y"
   
   ?customer :hasInvoice/:hasLine/:lineTrack ?track1 .
   ?track1 :hasGenre ?genre1 .
@@ -16,7 +16,7 @@ WHERE {
   ?track2 :hasGenre ?genre2 .
   ?genre2 :name ?genre2Name .
   
-  # Avoid duplicates and self-matches
+  # Evita valores duplicados e self joins
   FILTER(?genre1 != ?genre2)
   FILTER(STR(?genre1) < STR(?genre2))
 }

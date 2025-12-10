@@ -4,16 +4,16 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ###########################################
-# SPARQL Introduction: Basic Queries
+# Introdução ao SPARQL: Queries Básicas
 ###########################################
-# This file contains simple SPARQL queries to help you get started
-# with querying the Chinook Knowledge Graph.
+# Este arquivo contém queries SPARQL simples para ajudar você a começar
+# a consultar o Grafo de Conhecimento Chinook.
 
 ###########################################
-# Query 1: SELECT ALL - Get a sample of all triples
+# Query 1: SELECT ALL - Obter uma amostra de todas as triplas
 ###########################################
-# This query retrieves everything in the graph (subject, predicate, object)
-# LIMIT 100 restricts results to first 100 triples to avoid overwhelming output
+# Esta query recupera tudo no grafo (sujeito, predicado, objeto)
+# LIMIT 100 restringe os resultados às primeiras 100 triplas para evitar sobrecarga
 
 SELECT ?subject ?predicate ?object
 WHERE {
@@ -23,10 +23,10 @@ LIMIT 100
 
 
 ###########################################
-# Query 2: Count Entities by Type
+# Query 2: Contar Entidades por Tipo
 ###########################################
-# This query shows how many entities of each class exist in the graph
-# The 'a' is shorthand for 'rdf:type'
+# Esta query mostra quantas entidades de cada classe existem no grafo
+# O 'a' é uma abreviação para 'rdf:type'
 
 SELECT ?type (COUNT(?entity) AS ?count)
 WHERE {
@@ -37,9 +37,9 @@ ORDER BY DESC(?count)
 
 
 ###########################################
-# Query 3: Get All Artists
+# Query 3: Obter Todos os Artistas
 ###########################################
-# Retrieve all artists and their names
+# Recupera todos os artistas e seus nomes
 
 SELECT ?artist ?name
 WHERE {
@@ -51,10 +51,10 @@ LIMIT 20
 
 
 ###########################################
-# Query 4: Get All Properties of a Specific Subject
+# Query 4: Obter Todas as Propriedades de um Sujeito Específico
 ###########################################
-# Find everything about a specific artist (example: Artist 1)
-# This shows all predicates and objects connected to this subject
+# Encontra tudo sobre um artista específico (exemplo: Artist 1)
+# Isto mostra todos os predicados e objetos conectados a este sujeito
 
 SELECT ?property ?value
 WHERE {
@@ -63,9 +63,9 @@ WHERE {
 
 
 ###########################################
-# Query 5: Simple Filtering - Find Customers by City
+# Query 5: Filtragem Simples - Encontrar Clientes por Cidade
 ###########################################
-# Example: Find all customers in a specific city (change the city name as needed)
+# Exemplo: Encontrar todos os clientes em uma cidade específica (altere o nome da cidade conforme necessário)
 
 SELECT ?customer ?firstName ?lastName ?city
 WHERE {
@@ -74,16 +74,16 @@ WHERE {
             :lastName ?lastName ;
             :city ?city .
   
-  # Uncomment the line below to filter by a specific city
+  # Descomente a linha abaixo para filtrar por uma cidade específica
   # FILTER(?city = "São Paulo")
 }
 LIMIT 20
 
 
 ###########################################
-# Query 6: Basic Pattern - Tracks and Their Artists
+# Query 6: Padrão Básico - Faixas e Seus Artistas
 ###########################################
-# This query shows a simple join pattern:
+# Esta query mostra um padrão de join simples:
 # Track -> Album -> Artist
 
 SELECT ?trackName ?albumName ?artistName
@@ -101,9 +101,9 @@ LIMIT 20
 
 
 ###########################################
-# Query 7: Count Tracks by Genre
+# Query 7: Contar Faixas por Gênero
 ###########################################
-# Aggregate query: count how many tracks exist in each genre
+# Query agregada: conta quantas faixas existem em cada gênero
 
 SELECT ?genreName (COUNT(?track) AS ?trackCount)
 WHERE {
@@ -117,9 +117,9 @@ ORDER BY DESC(?trackCount)
 
 
 ###########################################
-# Query 8: Find Tracks with Price Information
+# Query 8: Encontrar Faixas com Informações de Preço
 ###########################################
-# Get tracks that appear on invoice lines with their prices
+# Obtém faixas que aparecem em linhas de fatura com seus preços
 
 SELECT DISTINCT ?trackName ?price
 WHERE {
@@ -133,10 +133,10 @@ LIMIT 20
 
 
 ###########################################
-# Query 9: Optional Properties
+# Query 9: Propriedades Opcionais
 ###########################################
-# Show how to use OPTIONAL to get properties that might not exist
-# Example: Employees with optional manager information
+# Mostra como usar OPTIONAL para obter propriedades que podem não existir
+# Exemplo: Funcionários com informações opcionais de gerente
 
 SELECT ?employeeName ?title ?managerName
 WHERE {
@@ -144,7 +144,7 @@ WHERE {
             :fullName ?employeeName ;
             :title ?title .
   
-  # OPTIONAL means this pattern doesn't have to match
+  # OPTIONAL significa que este padrão não precisa corresponder
   OPTIONAL {
     ?employee :reportsTo ?manager .
     ?manager :fullName ?managerName .
@@ -154,9 +154,9 @@ ORDER BY ?employeeName
 
 
 ###########################################
-# Query 10: Schema Discovery - Find All Predicates
+# Query 10: Descoberta de Schema - Encontrar Todos os Predicados
 ###########################################
-# Discover what predicates (relationships/properties) exist in the graph
+# Descobre quais predicados (relacionamentos/propriedades) existem no grafo
 
 SELECT DISTINCT ?predicate
 WHERE {
@@ -166,24 +166,24 @@ ORDER BY ?predicate
 
 
 ###########################################
-# Tips for Writing SPARQL Queries:
+# Dicas para Escrever Queries SPARQL:
 ###########################################
-# 1. Use prefixes (PREFIX) to abbreviate long URIs
-# 2. The dot (.) ends a triple pattern
-# 3. The semicolon (;) lets you reuse the same subject
-# 4. The comma (,) lets you reuse subject and predicate
-# 5. Use ?variable for things you want to find/bind
-# 6. Use FILTER for conditions on values
-# 7. Use OPTIONAL for patterns that might not match
-# 8. Use GROUP BY with COUNT, SUM, AVG for aggregations
-# 9. Use ORDER BY to sort results
-# 10. Use LIMIT to restrict number of results
+# 1. Use prefixos (PREFIX) para abreviar URIs longas
+# 2. O ponto (.) termina um padrão de tripla
+# 3. O ponto e vírgula (;) permite reutilizar o mesmo sujeito
+# 4. A vírgula (,) permite reutilizar sujeito e predicado
+# 5. Use ?variável para coisas que você quer encontrar/vincular
+# 6. Use FILTER para condições sobre valores
+# 7. Use OPTIONAL para padrões que podem não corresponder
+# 8. Use GROUP BY com COUNT, SUM, AVG para agregações
+# 9. Use ORDER BY para ordenar resultados
+# 10. Use LIMIT para restringir o número de resultados
 
 ###########################################
-# Next Steps:
+# Próximos Passos:
 ###########################################
-# After mastering these basics, explore:
-# - 01-revenue-by-manager.sparql (hierarchical queries with *)
-# - 02-simple-join.sparql (more complex joins)
-# - 03-hierarchy-revenue.sparql (property paths)
-# - And more complex queries in the sparql/ directory!
+# Depois de dominar estes conceitos básicos, explore:
+# - 01-revenue-by-manager.sparql (queries hierárquicas com *)
+# - 02-simple-join.sparql (joins mais complexos)
+# - 03-hierarchy-revenue.sparql (caminhos de propriedades)
+# - E queries mais complexas no diretório sparql/!

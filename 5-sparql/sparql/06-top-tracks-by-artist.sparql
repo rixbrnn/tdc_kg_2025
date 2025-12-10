@@ -1,11 +1,11 @@
 PREFIX : <http://example.org/chinook#>
 
-# Q: For each artist, show their top 3 best-selling tracks
+# Q: Para cada artista, mostrar suas 3 faixas mais vendidas
 
 SELECT ?artistName ?trackName ?revenue
 WHERE {
   {
-    # Subquery: Calculate revenue per track
+    # Subquery: Calcular receita por faixa
     SELECT ?artist ?artistName ?track ?trackName (SUM(?lineTotal) AS ?revenue)
     WHERE {
       ?artist a :Artist ;
@@ -24,8 +24,8 @@ WHERE {
     GROUP BY ?artist ?artistName ?track ?trackName
   }
   
-  # Filter to top 3 per artist
-  # Count how many tracks in same artist have higher revenue
+  # Filtrar para as 3 melhores por artista
+  # Contar quantas faixas do mesmo artista têm receita maior
   {
     SELECT ?artist ?track (COUNT(?higherTrack) AS ?rank)
     WHERE {

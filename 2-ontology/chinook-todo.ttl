@@ -7,7 +7,7 @@
 <http://example.org/chinook>
     a owl:Ontology ;
     rdfs:label "Chinook Knowledge Graph Ontology" ;
-    rdfs:comment "Ontology for the Chinook sample database (customers, invoices, tracks, employees, etc.)." .
+    rdfs:comment "Ontologia para o banco de dados de exemplo Chinook (clientes, faturas, faixas, funcionários, etc.)." .
 
 ##########
 # Classes
@@ -26,7 +26,7 @@
 :PlaylistTrack a owl:Class ; rdfs:label "Playlist track" .
 
 ###################
-# Object properties
+# Propriedades de objetos
 ###################
 
 :hasInvoice a owl:ObjectProperty ;
@@ -80,13 +80,13 @@
     rdfs:range  :Playlist .
 
 # TODO 1:
-#   Add two object properties for the employee hierarchy:
+#   Adicione duas propriedades de objetos para a hierarquia de funcionários:
 #   - :reportsTo (Employee -> Employee)
-#   - :manages  (Employee -> Employee, inverse of :reportsTo)
+#   - :manages  (Employee -> Employee, inverso de :reportsTo)
 #
 
 ##################
-# Data properties
+# Propriedades de dados
 ##################
 
 :customerId a owl:DatatypeProperty ;
@@ -138,15 +138,15 @@
     rdfs:range  xsd:string .
 
 ########################
-# Example restrictions
+# Restrições de exemplo
 ########################
 
 # TODO 2:
-#   Add a restriction saying that each invoice line has exactly one track.
-#   (Hint: use owl:Restriction with owl:qualifiedCardinality = 1 on :lineTrack
-#          and owl:onClass :Track, as a rdfs:subClassOf of :InvoiceLine.)
+#   Adicione uma restrição dizendo que cada linha de fatura tem exatamente uma faixa.
+#   (Dica: use owl:Restriction com owl:qualifiedCardinality = 1 em :lineTrack
+#          e owl:onClass :Track, como um rdfs:subClassOf de :InvoiceLine.)
 
 # TODO 3:
-#   Add a restriction saying that each invoice has at least one invoice line.
-#   (Hint: use owl:Restriction with owl:minQualifiedCardinality = 1 on :hasLine
-#          and owl:onClass :InvoiceLine, as a rdfs:subClassOf of :Invoice.)
+#   Adicione uma restrição dizendo que cada fatura tem pelo menos uma linha de fatura.
+#   (Dica: use owl:Restriction com owl:minQualifiedCardinality = 1 em :hasLine
+#          e owl:onClass :InvoiceLine, como um rdfs:subClassOf de :Invoice.)

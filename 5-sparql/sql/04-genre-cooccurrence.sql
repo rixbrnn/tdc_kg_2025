@@ -1,7 +1,7 @@
--- Q: Which genres share the most customers? (Cross-selling opportunities)
+-- Q: Quais gêneros compartilham mais clientes? (Oportunidades de venda cruzada)
 
 WITH customer_genres AS (
-  -- First, get all genre purchases per customer
+  -- Primeiro, obter todas as compras de gênero por cliente
   SELECT DISTINCT
     c.CustomerId,
     g.GenreId,
@@ -24,9 +24,8 @@ SELECT
 FROM customer_genres cg1
 JOIN customer_genres cg2 
   ON cg1.CustomerId = cg2.CustomerId
-  AND cg1.GenreId < cg2.GenreId  -- Avoid duplicate pairs (Rock-Metal vs Metal-Rock)
+  AND cg1.GenreId < cg2.GenreId  -- Evita pares duplicados (Rock-Metal vs Metal-Rock)
 GROUP BY cg1.GenreName, cg2.GenreName
-HAVING COUNT(DISTINCT cg1.CustomerId) >= 5  -- Only show significant overlaps
+HAVING COUNT(DISTINCT cg1.CustomerId) >= 5  -- Mostra apenas sobreposições significativas
 ORDER BY SharedCustomers DESC
 LIMIT 15;
-

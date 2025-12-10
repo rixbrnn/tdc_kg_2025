@@ -1,7 +1,7 @@
--- Q: For each artist, show their top 3 best-selling tracks
+-- Q: Para cada artista, mostrar suas 3 faixas mais vendidas
 
 WITH track_revenue AS (
-  -- Calculate revenue per track
+  -- Calcular receita por faixa
   SELECT 
     a.ArtistId,
     a.Name AS ArtistName,
