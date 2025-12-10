@@ -56,8 +56,8 @@ function createMockWriter() {
   };
 }
 
-describe('Mapping functions (implemented)', () => {
-  test('mapGenre writes type and name', () => {
+describe('Funções de mapeamento (implementadas)', () => {
+  test('mapGenre escreve tipo e nome', () => {
     const writer = createMockWriter();
     mapGenre({ GenreId: 1, Name: 'Rock' }, writer);
 
@@ -70,7 +70,7 @@ describe('Mapping functions (implemented)', () => {
     );
   });
 
-  test('mapMediaType writes type and name', () => {
+  test('mapMediaType escreve tipo e nome', () => {
     const writer = createMockWriter();
     mapMediaType({ MediaTypeId: 1, Name: 'MPEG' }, writer);
     const quads = writer.getQuads();
@@ -83,7 +83,7 @@ describe('Mapping functions (implemented)', () => {
     );
   });
 
-  test('mapArtist writes type and name', () => {
+  test('mapArtist escreve tipo e nome', () => {
     const writer = createMockWriter();
     mapArtist({ ArtistId: 9, Name: 'NIN' }, writer);
     const quads = writer.getQuads();
@@ -96,7 +96,7 @@ describe('Mapping functions (implemented)', () => {
     );
   });
 
-  test('mapAlbum writes type, title and hasArtist', () => {
+  test('mapAlbum escreve tipo, título e hasArtist', () => {
     const writer = createMockWriter();
     mapAlbum({ AlbumId: 2, Title: 'The Wall', ArtistId: 7 }, writer);
     const quads = writer.getQuads();
@@ -110,7 +110,7 @@ describe('Mapping functions (implemented)', () => {
     );
   });
 
-  test('mapTrack writes links to album/genre/mediaType', () => {
+  test('mapTrack escreve links para album/genre/mediaType', () => {
     const writer = createMockWriter();
     mapTrack({ TrackId: 3, Name: 'Track 3', AlbumId: 2, GenreId: 1, MediaTypeId: 5 }, writer);
     const quads = writer.getQuads();
@@ -126,7 +126,7 @@ describe('Mapping functions (implemented)', () => {
     );
   });
 
-  test('mapInvoice writes invoice fields and customer->hasInvoice', () => {
+  test('mapInvoice escreve campos da fatura e customer->hasInvoice', () => {
     const writer = createMockWriter();
     const date = new Date('2020-01-01T10:00:00Z');
 
@@ -144,7 +144,7 @@ describe('Mapping functions (implemented)', () => {
     );
   });
 
-  test('mapInvoiceLine writes unitPrice/quantity and links', () => {
+  test('mapInvoiceLine escreve unitPrice/quantity e links', () => {
     const writer = createMockWriter();
     mapInvoiceLine({ InvoiceLineId: 7, InvoiceId: 10, TrackId: 3, UnitPrice: 0.99, Quantity: 2 }, writer);
     const quads = writer.getQuads();
@@ -161,8 +161,8 @@ describe('Mapping functions (implemented)', () => {
   });
 });
 
-describe('Mapping functions (TODOs)', () => {
-  test('mapEmployee should exist and map Employee with reportsTo', async () => {
+describe('Funções de mapeamento (TODOs)', () => {
+  test('mapEmployee deve existir e mapear Employee com reportsTo', async () => {
     const writer = createMockWriter();
     // Este e os abaixo irão FALHAR até serem implementados
     expect(typeof mapEmployee).toBe('function'); 
@@ -178,7 +178,7 @@ describe('Mapping functions (TODOs)', () => {
     ]));
   });
 
-  test('mapCustomer should exist and link to support representative', async () => {
+  test('mapCustomer deve existir e linkar para o suporte (representante)', async () => {
     const writer = createMockWriter();
     // Este e os abaixo irão FALHAR até serem implementados
     expect(typeof mapCustomer).toBe('function');
@@ -191,5 +191,78 @@ describe('Mapping functions (TODOs)', () => {
       [iri.customer(42), namedNode(NS + 'fullName'), literal('John Smith')],
       [iri.customer(42), namedNode(NS + 'supportedBy'), iri.employee(1)]
     ]));
+  });
+});
+
+describe('Casos extras (validações adicionais)', () => {
+  test('Employee: fullName compõe corretamente e omite quando vazio', () => {
+    const w1 = createMockWriter();
+    mapEmployee({ EmployeeId: 2, FirstName: 'Ana', LastName: 'Silva' }, w1);
+    expect(w1.getQuads()).toEqual(
+      expect.arrayContaining([
+        [iri.employee(2), namedNode(NS + 'fullName'), literal('Ana Silva')]
+      ])
+    );
+
+    const w2 = createMockWriter();
+    mapEmployee({ EmployeeId: 3, FirstName: '', LastName: '' }, w2);
+    // Não deve ter fullName quando vazio
+    expect(w2.getQuads()).not.toEqual(
+      expect.arrayContaining([[iri.employee(3), namedNode(NS + 'fullName'), expect.anything()]])
+    );
+  });
+
+  test('Employee: reportsTo é emitido apenas quando presente', () => {
+    const w1 = createMockWriter();
+    mapEmployee({ EmployeeId: 4, ReportsTo: 1 }, w1);
+    expect(w1.getQuads()).toEqual(
+      expect.arrayContaining([[iri.employee(4), namedNode(NS + 'reportsTo'), iri.employee(1)]])
+    );
+
+    const w2 = createMockWriter();
+    mapEmployee({ EmployeeId: 5 }, w2);
+    expect(w2.getQuads()).not.toEqual(
+      expect.arrayContaining([[iri.employee(5), namedNode(NS + 'reportsTo'), expect.anything()]])
+    );
+  });
+
+  test('Customer: supportedBy aparece apenas com SupportRepId', () => {
+    const w1 = createMockWriter();
+    mapCustomer({ CustomerId: 10, FirstName: 'João', LastName: 'Pereira', SupportRepId: 2 }, w1);
+    expect(w1.getQuads()).toEqual(
+      expect.arrayContaining([[iri.customer(10), namedNode(NS + 'supportedBy'), iri.employee(2)]])
+    );
+
+    const w2 = createMockWriter();
+    mapCustomer({ CustomerId: 11, FirstName: 'Maria', LastName: 'Oliveira' }, w2);
+    expect(w2.getQuads()).not.toEqual(
+      expect.arrayContaining([[iri.customer(11), namedNode(NS + 'supportedBy'), expect.anything()]])
+    );
+  });
+
+  test('Invoice: aceita Date e string para invoiceDate', () => {
+    const invoiceDate1 = new Date('2020-02-02T12:00:00Z');
+    const w1 = createMockWriter();
+    mapInvoice({ InvoiceId: 20, CustomerId: 99, InvoiceDate: invoiceDate1, Total: 1.23 }, w1);
+    expect(w1.getQuads()).toEqual(
+      expect.arrayContaining([[iri.invoice(20), namedNode(NS + 'invoiceDate'), literal(invoiceDate1.toISOString(), namedNode(XSD + 'dateTime'))]])
+    );
+
+    const w2 = createMockWriter();
+    const invoiceDate2 = '2020-03-03T08:00:00Z';
+    mapInvoice({ InvoiceId: 21, CustomerId: 98, InvoiceDate: invoiceDate2, Total: 4.56 }, w2);
+    expect(w2.getQuads()).toEqual(
+      expect.arrayContaining([[iri.invoice(21), namedNode(NS + 'invoiceDate'), literal(new Date(invoiceDate2).toISOString(), namedNode(XSD + 'dateTime'))]])
+    );
+  });
+
+  test('Track: omite links opcionais quando null/undefined', () => {
+    const w = createMockWriter();
+    mapTrack({ TrackId: 30, Name: 'Sem vínculos' }, w);
+    const quads = w.getQuads();
+    expect(quads).toEqual(expect.arrayContaining([[iri.track(30), p.type, c.Track]]));
+    expect(quads).not.toEqual(expect.arrayContaining([[iri.track(30), p.hasAlbum, expect.anything()]]));
+    expect(quads).not.toEqual(expect.arrayContaining([[iri.track(30), p.hasGenre, expect.anything()]]));
+    expect(quads).not.toEqual(expect.arrayContaining([[iri.track(30), p.hasMediaType, expect.anything()]]));
   });
 });
