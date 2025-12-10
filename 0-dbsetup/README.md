@@ -108,6 +108,8 @@ None of these counts should be `0`.
 Or simply compare with the following UI:
 ![alt text](db_properly_set.png)
 
+See the high-level Chinook relational database model that represents a digital media store, including tables for artists, albums, media tracks, invoices and customers: ![RDB Model](rdb_model.png)
+
 ---
 
 ## 5) Stopping / resetting the DB
