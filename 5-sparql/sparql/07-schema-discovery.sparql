@@ -1,0 +1,29 @@
+PREFIX : <http://example.org/chinook#>
+
+# Q: What properties and relationships does a Track entity have?
+
+SELECT DISTINCT ?property ?value
+WHERE {
+  :Track/1 ?property ?value .
+}
+ORDER BY ?property
+LIMIT 100
+
+# Want to explore further? Try these variations:
+
+# 1. Find all properties of ANY track:
+SELECT DISTINCT ?property WHERE {
+  ?track a :Track .
+  ?track ?property ?value .
+}
+
+# 2. Find all outgoing relationships (exclude literals):
+SELECT DISTINCT ?property ?relatedEntity WHERE {
+  :Track/1 ?property ?relatedEntity .
+  FILTER(isIRI(?relatedEntity))
+}
+
+# 3. Find all incoming relationships (who references this track):
+SELECT DISTINCT ?source ?property WHERE {
+  ?source ?property :Track/1 .
+}

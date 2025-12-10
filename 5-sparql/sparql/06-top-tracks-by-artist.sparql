@@ -1,13 +1,6 @@
 PREFIX : <http://example.org/chinook#>
 
 # Q: For each artist, show their top 3 best-selling tracks
-#
-# Purpose: Show SPARQL handles ranking with subqueries
-# Complexity: ⭐⭐⭐ (3/5) - Requires subquery for ranking
-# Expected Result: Top 3 tracks per artist with revenue
-#
-# Demonstrates: SPARQL can do ranking, similar complexity to SQL
-# Note: This is one area where SQL and SPARQL are comparable
 
 SELECT ?artistName ?trackName ?revenue
 WHERE {
@@ -56,21 +49,3 @@ WHERE {
   FILTER(?rank < 3)
 }
 ORDER BY ?artistName ?rank
-
-# Notes for Presentation:
-# ✓ Similar complexity to SQL (both need subqueries)
-# ✓ SPARQL's subqueries are more flexible
-# ✗ Ranking in SPARQL 1.1 is not as elegant as SQL window functions
-#
-# SQL advantages here:
-# - ROW_NUMBER() OVER (PARTITION BY ...) is cleaner
-# - Window functions are SQL's strength
-#
-# SPARQL advantages:
-# - More flexible subquery composition
-# - Can easily extend to complex conditions
-#
-# Real-world use: Bestseller lists, top charts, product rankings
-#
-# Verdict: This is one case where SQL's window functions shine!
-# But SPARQL's flexibility makes up for it in complex scenarios.

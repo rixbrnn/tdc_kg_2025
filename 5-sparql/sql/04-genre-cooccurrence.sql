@@ -1,13 +1,4 @@
 -- Q: Which genres share the most customers? (Cross-selling opportunities)
---
--- Purpose: Show how SQL struggles with "find connections" queries
--- Complexity: ⭐⭐⭐⭐ (4/5) - Self-joins and complex filtering
--- Expected Result: Genre pairs with shared customer counts
---
--- Demonstrates: SQL's awkwardness with graph-like patterns
--- Pain Points: Self-joins, CTEs needed, hard to read business logic
---
--- Use Case: "Customers who like Rock also like Metal" → cross-selling insights
 
 WITH customer_genres AS (
   -- First, get all genre purchases per customer
@@ -39,14 +30,3 @@ HAVING COUNT(DISTINCT cg1.CustomerId) >= 5  -- Only show significant overlaps
 ORDER BY SharedCustomers DESC
 LIMIT 15;
 
--- Notes for Presentation:
--- ✗ Self-join on customer_genres makes logic hard to follow
--- ✗ CTE required just to simplify the main query
--- ✗ Filter logic (GenreId < GenreId) is non-obvious
--- ✗ Business question "which genres go together?" obscured by SQL mechanics
---
--- → Compare with SPARQL: Natural pattern matching
--- → ?customer bought genre1 . ?customer bought genre2 . 
---
--- This query answers: "If a customer likes X, what else do they like?"
--- Real-world use: Recommendation systems, product bundling, playlist generation

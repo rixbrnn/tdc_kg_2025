@@ -1,0 +1,26 @@
+PREFIX : <http://example.org/chinook#>
+
+# Q: Which genres share the most customers? (Cross-selling opportunities)
+
+SELECT ?genre1Name ?genre2Name 
+       (COUNT(DISTINCT ?customer) AS ?sharedCustomers)
+WHERE {
+  # Pattern: Find customers who bought from BOTH genres
+  # This naturally expresses "customers who like X also like Y"
+  
+  ?customer :hasInvoice/:hasLine/:lineTrack ?track1 .
+  ?track1 :hasGenre ?genre1 .
+  ?genre1 :name ?genre1Name .
+  
+  ?customer :hasInvoice/:hasLine/:lineTrack ?track2 .
+  ?track2 :hasGenre ?genre2 .
+  ?genre2 :name ?genre2Name .
+  
+  # Avoid duplicates and self-matches
+  FILTER(?genre1 != ?genre2)
+  FILTER(STR(?genre1) < STR(?genre2))
+}
+GROUP BY ?genre1Name ?genre2Name
+HAVING (COUNT(DISTINCT ?customer) >= 5)
+ORDER BY DESC(?sharedCustomers)
+LIMIT 15

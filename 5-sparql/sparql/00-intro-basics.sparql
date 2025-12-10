@@ -1,0 +1,189 @@
+PREFIX :   <http://example.org/chinook#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+###########################################
+# SPARQL Introduction: Basic Queries
+###########################################
+# This file contains simple SPARQL queries to help you get started
+# with querying the Chinook Knowledge Graph.
+
+###########################################
+# Query 1: SELECT ALL - Get a sample of all triples
+###########################################
+# This query retrieves everything in the graph (subject, predicate, object)
+# LIMIT 100 restricts results to first 100 triples to avoid overwhelming output
+
+SELECT ?subject ?predicate ?object
+WHERE {
+  ?subject ?predicate ?object .
+}
+LIMIT 100
+
+
+###########################################
+# Query 2: Count Entities by Type
+###########################################
+# This query shows how many entities of each class exist in the graph
+# The 'a' is shorthand for 'rdf:type'
+
+SELECT ?type (COUNT(?entity) AS ?count)
+WHERE {
+  ?entity a ?type .
+}
+GROUP BY ?type
+ORDER BY DESC(?count)
+
+
+###########################################
+# Query 3: Get All Artists
+###########################################
+# Retrieve all artists and their names
+
+SELECT ?artist ?name
+WHERE {
+  ?artist a :Artist ;
+          :name ?name .
+}
+ORDER BY ?name
+LIMIT 20
+
+
+###########################################
+# Query 4: Get All Properties of a Specific Subject
+###########################################
+# Find everything about a specific artist (example: Artist 1)
+# This shows all predicates and objects connected to this subject
+
+SELECT ?property ?value
+WHERE {
+  :Artist_1 ?property ?value .
+}
+
+
+###########################################
+# Query 5: Simple Filtering - Find Customers by City
+###########################################
+# Example: Find all customers in a specific city (change the city name as needed)
+
+SELECT ?customer ?firstName ?lastName ?city
+WHERE {
+  ?customer a :Customer ;
+            :firstName ?firstName ;
+            :lastName ?lastName ;
+            :city ?city .
+  
+  # Uncomment the line below to filter by a specific city
+  # FILTER(?city = "São Paulo")
+}
+LIMIT 20
+
+
+###########################################
+# Query 6: Basic Pattern - Tracks and Their Artists
+###########################################
+# This query shows a simple join pattern:
+# Track -> Album -> Artist
+
+SELECT ?trackName ?albumName ?artistName
+WHERE {
+  ?track a :Track ;
+         :name ?trackName ;
+         :hasAlbum ?album .
+  
+  ?album :name ?albumName ;
+         :hasArtist ?artist .
+  
+  ?artist :name ?artistName .
+}
+LIMIT 20
+
+
+###########################################
+# Query 7: Count Tracks by Genre
+###########################################
+# Aggregate query: count how many tracks exist in each genre
+
+SELECT ?genreName (COUNT(?track) AS ?trackCount)
+WHERE {
+  ?track a :Track ;
+         :hasGenre ?genre .
+  
+  ?genre :name ?genreName .
+}
+GROUP BY ?genreName
+ORDER BY DESC(?trackCount)
+
+
+###########################################
+# Query 8: Find Tracks with Price Information
+###########################################
+# Get tracks that appear on invoice lines with their prices
+
+SELECT DISTINCT ?trackName ?price
+WHERE {
+  ?invoiceLine :lineTrack ?track ;
+               :unitPrice ?price .
+  
+  ?track :name ?trackName .
+}
+ORDER BY DESC(?price)
+LIMIT 20
+
+
+###########################################
+# Query 9: Optional Properties
+###########################################
+# Show how to use OPTIONAL to get properties that might not exist
+# Example: Employees with optional manager information
+
+SELECT ?employeeName ?title ?managerName
+WHERE {
+  ?employee a :Employee ;
+            :fullName ?employeeName ;
+            :title ?title .
+  
+  # OPTIONAL means this pattern doesn't have to match
+  OPTIONAL {
+    ?employee :reportsTo ?manager .
+    ?manager :fullName ?managerName .
+  }
+}
+ORDER BY ?employeeName
+
+
+###########################################
+# Query 10: Schema Discovery - Find All Predicates
+###########################################
+# Discover what predicates (relationships/properties) exist in the graph
+
+SELECT DISTINCT ?predicate
+WHERE {
+  ?subject ?predicate ?object .
+}
+ORDER BY ?predicate
+
+
+###########################################
+# Tips for Writing SPARQL Queries:
+###########################################
+# 1. Use prefixes (PREFIX) to abbreviate long URIs
+# 2. The dot (.) ends a triple pattern
+# 3. The semicolon (;) lets you reuse the same subject
+# 4. The comma (,) lets you reuse subject and predicate
+# 5. Use ?variable for things you want to find/bind
+# 6. Use FILTER for conditions on values
+# 7. Use OPTIONAL for patterns that might not match
+# 8. Use GROUP BY with COUNT, SUM, AVG for aggregations
+# 9. Use ORDER BY to sort results
+# 10. Use LIMIT to restrict number of results
+
+###########################################
+# Next Steps:
+###########################################
+# After mastering these basics, explore:
+# - 01-revenue-by-manager.sparql (hierarchical queries with *)
+# - 02-simple-join.sparql (more complex joins)
+# - 03-hierarchy-revenue.sparql (property paths)
+# - And more complex queries in the sparql/ directory!
