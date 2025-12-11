@@ -1,0 +1,101 @@
+PREFIX :       <http://example.org/chinook#>
+PREFIX wd:     <http://www.wikidata.org/entity/>
+PREFIX wdt:    <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT
+  ?artistName
+  ?totalRevenue
+  ?trackCount
+  ?wdItem
+  ?wdLabel
+  ?countryLabel
+  ?formationYear
+  ?formationDecade
+  ?genreLabel
+  ?website
+  ?image
+  ?description
+WHERE {
+  # ----- 1) Mapeia artistas locais para IDs do Wikidata -----
+  VALUES (?artist ?wdItem) {
+    (<http://example.org/chinook#Artist/1>  wd:Q27593)   # AC/DC
+    (<http://example.org/chinook#Artist/3>  wd:Q126826)  # Aerosmith
+    (<http://example.org/chinook#Artist/4>  wd:Q130742)  # Alanis Morissette
+    (<http://example.org/chinook#Artist/5>  wd:Q484255)  # Alice In Chains
+  }
+
+  # ----- 2) LOCAL: nome do artista + receita do Chinook -----
+  ?artist a :Artist ;
+          :name ?artistName .
+
+  {
+    SELECT
+      ?artist
+      (SUM(?lineTotal) AS ?totalRevenue)
+      (COUNT(DISTINCT ?track) AS ?trackCount)
+    WHERE {
+      ?track a :Track ;
+             :hasAlbum ?album .
+      ?album :hasArtist ?artist .
+
+      OPTIONAL {
+        ?invoice :hasLine ?line .
+        ?line :lineTrack ?track ;
+              :unitPrice ?price ;
+              :quantity  ?qty .
+        BIND( xsd:decimal(?price) * xsd:integer(?qty) AS ?lineTotal )
+      }
+    }
+    GROUP BY ?artist
+  }
+
+  # ----- 3) REMOTO: enriquece com informações do Wikidata -----
+  SERVICE <https://query.wikidata.org/sparql> {
+    # Rótulo do artista
+    ?wdItem rdfs:label ?wdLabel .
+    FILTER(LANG(?wdLabel) = "en")
+
+    # País de origem
+    OPTIONAL {
+      ?wdItem wdt:P495 ?country .
+      ?country rdfs:label ?countryLabel .
+      FILTER(LANG(?countryLabel) = "en")
+    }
+
+    # Data de formação -> ano + string da década (ex: "1970s")
+    OPTIONAL {
+      ?wdItem wdt:P571 ?formationDate .
+      BIND( YEAR(?formationDate) AS ?formationYear )
+      BIND( xsd:integer(?formationYear / 10) * 10 AS ?formationDecadeStart )
+      BIND( CONCAT(STR(?formationDecadeStart), "s") AS ?formationDecade )
+    }
+
+    # Gênero(s)
+    OPTIONAL {
+      ?wdItem wdt:P136 ?genre .
+      ?genre rdfs:label ?genreLabel .
+      FILTER(LANG(?genreLabel) = "en")
+    }
+
+    # Site oficial
+    OPTIONAL {
+      ?wdItem wdt:P856 ?website .
+    }
+
+    # Imagem (capa / foto da banda)
+    OPTIONAL {
+      ?wdItem wdt:P18 ?image .
+    }
+
+    # Descrição curta
+    OPTIONAL {
+      ?wdItem schema:description ?description .
+      FILTER(LANG(?description) = "en")
+    }
+  }
+}
+ORDER BY DESC(?totalRevenue) ?artistName
+LIMIT 20
