@@ -10,9 +10,7 @@
         rdfs:label "Chinook Knowledge Graph Ontology" ;
         rdfs:comment "Ontology for the Chinook sample database (customers, invoices, tracks, employees, etc.)." .
 
-    ##########
     # Classes
-    ##########
 
     :Customer      a owl:Class ; rdfs:label "Customer" .
     :Invoice       a owl:Class ; rdfs:label "Invoice" .
@@ -26,9 +24,7 @@
     :Playlist      a owl:Class ; rdfs:label "Playlist" .
     :PlaylistTrack a owl:Class ; rdfs:label "Playlist track" .
 
-    ###################
     # Object properties
-    ###################
 
     :hasInvoice a owl:ObjectProperty ;
         rdfs:label "has invoice" ;
@@ -86,9 +82,7 @@
     #   - :manages  (Employee -> Employee, inverse of :reportsTo)
     #
 
-    ##################
     # Data properties
-    ##################
 
     :customerId a owl:DatatypeProperty ;
         rdfs:label "customer id" ;
@@ -138,9 +132,7 @@
         rdfs:label "name" ;
         rdfs:range  xsd:string .
 
-    ########################
     # Restricoes de exemplo
-    ########################
 
     # Cada linha da fatura tem exatamente uma faixa
     :InvoiceLine rdfs:subClassOf [

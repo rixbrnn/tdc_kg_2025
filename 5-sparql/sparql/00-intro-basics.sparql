@@ -3,15 +3,13 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-###########################################
+
 # Introdução ao SPARQL: Queries Básicas
-###########################################
 # Este arquivo contém queries SPARQL simples para ajudar você a começar
 # a consultar o Grafo de Conhecimento Chinook.
 
-###########################################
+
 # Query 1: SELECT ALL - Obter uma amostra de todas as triplas
-###########################################
 # Esta query recupera tudo no grafo (sujeito, predicado, objeto)
 # LIMIT 100 restringe os resultados às primeiras 100 triplas para evitar sobrecarga
 
@@ -22,9 +20,8 @@ WHERE {
 LIMIT 100
 
 
-###########################################
+
 # Query 2: Contar Entidades por Tipo
-###########################################
 # Esta query mostra quantas entidades de cada classe existem no grafo
 # O 'a' é uma abreviação para 'rdf:type'
 
@@ -36,9 +33,8 @@ GROUP BY ?type
 ORDER BY DESC(?count)
 
 
-###########################################
+
 # Query 3: Obter Todos os Artistas
-###########################################
 # Recupera todos os artistas e seus nomes
 
 SELECT ?artist ?name
@@ -50,9 +46,8 @@ ORDER BY ?name
 LIMIT 20
 
 
-###########################################
+
 # Query 4: Obter Todas as Propriedades de um Sujeito Específico
-###########################################
 # Encontra tudo sobre um artista específico (exemplo: Artist 1)
 # Isto mostra todos os predicados e objetos conectados a este sujeito
 
@@ -62,9 +57,8 @@ WHERE {
 }
 
 
-###########################################
+
 # Query 5: Filtragem Simples - Encontrar Clientes por Cidade
-###########################################
 # Exemplo: Encontrar todos os clientes em uma cidade específica (altere o nome da cidade conforme necessário)
 
 SELECT ?customer ?firstName ?lastName ?city
@@ -80,9 +74,8 @@ WHERE {
 LIMIT 20
 
 
-###########################################
+
 # Query 6: Padrão Básico - Faixas e Seus Artistas
-###########################################
 # Esta query mostra um padrão de join simples:
 # Track -> Album -> Artist
 
@@ -100,9 +93,8 @@ WHERE {
 LIMIT 20
 
 
-###########################################
+
 # Query 7: Contar Faixas por Gênero
-###########################################
 # Query agregada: conta quantas faixas existem em cada gênero
 
 SELECT ?genreName (COUNT(?track) AS ?trackCount)
@@ -116,9 +108,8 @@ GROUP BY ?genreName
 ORDER BY DESC(?trackCount)
 
 
-###########################################
+
 # Query 8: Encontrar Faixas com Informações de Preço
-###########################################
 # Obtém faixas que aparecem em linhas de fatura com seus preços
 
 SELECT DISTINCT ?trackName ?price
@@ -132,9 +123,8 @@ ORDER BY DESC(?price)
 LIMIT 20
 
 
-###########################################
+
 # Query 9: Propriedades Opcionais
-###########################################
 # Mostra como usar OPTIONAL para obter propriedades que podem não existir
 # Exemplo: Funcionários com informações opcionais de gerente
 
@@ -153,9 +143,8 @@ WHERE {
 ORDER BY ?employeeName
 
 
-###########################################
+
 # Query 10: Descoberta de Schema - Encontrar Todos os Predicados
-###########################################
 # Descobre quais predicados (relacionamentos/propriedades) existem no grafo
 
 SELECT DISTINCT ?predicate
@@ -165,9 +154,9 @@ WHERE {
 ORDER BY ?predicate
 
 
-###########################################
+
 # Dicas para Escrever Queries SPARQL:
-###########################################
+
 # 1. Use prefixos (PREFIX) para abreviar URIs longas
 # 2. O ponto (.) termina um padrão de tripla
 # 3. O ponto e vírgula (;) permite reutilizar o mesmo sujeito
@@ -179,11 +168,10 @@ ORDER BY ?predicate
 # 9. Use ORDER BY para ordenar resultados
 # 10. Use LIMIT para restringir o número de resultados
 
-###########################################
+
 # Próximos Passos:
-###########################################
+
 # Depois de dominar estes conceitos básicos, explore:
 # - 01-revenue-by-manager.sparql (queries hierárquicas com *)
 # - 02-simple-join.sparql (joins mais complexos)
-# - 03-hierarchy-revenue.sparql (caminhos de propriedades)
 # - E queries mais complexas no diretório sparql/!
