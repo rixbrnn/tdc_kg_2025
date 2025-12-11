@@ -75,9 +75,8 @@ CustomerId | CustomerName       | FavoriteGenre | AmountSpentOnFavoriteGenre
 **Tarefas TODO em `question-2-todo.sql`:**
 - ✍️ Complete as instruções SELECT
 - ✍️ Adicione cláusulas JOIN apropriadas
-- ✍️ Implemente colunas GROUP BY
-- ✍️ Adicione função de janela ROW_NUMBER() se necessário
-- ✍️ Complete as cláusulas finais SELECT e WHERE
+- ✍️ Implemente colunas GROUP BY (se necessário)
+- ✍️ Complete as cláusulas finais SELECT e WHERE (se necessário)
 
 
 ---
@@ -225,9 +224,8 @@ CustomerId | CustomerName       | FavoriteGenre | AmountSpentOnFavoriteGenre
 **TODO Tasks in `question-2-todo.sql`:**
 - ✍️ Complete the SELECT statements
 - ✍️ Add proper JOIN clauses 
-- ✍️ Implement GROUP BY columns
-- ✍️ Add ROW_NUMBER() window function if necessary
-- ✍️ Complete the final SELECT and WHERE clauses
+- ✍️ Implement GROUP BY columns (if necessary)
+- ✍️ Complete the final SELECT and WHERE clauses (if necessary)
 
 
 ---
