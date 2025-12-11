@@ -13,7 +13,7 @@ function classIri(localName) {
 
 // ===== auxiliares de IRI =====
 
-export const iri = {
+export const subjectIri = {
   customer:  (id) => namedNode(`${NS}Customer/${id}`),
   employee:  (id) => namedNode(`${NS}Employee/${id}`),
   invoice:   (id) => namedNode(`${NS}Invoice/${id}`),
@@ -25,7 +25,7 @@ export const iri = {
   mediaType: (id) => namedNode(`${NS}MediaType/${id}`),
 };
 
-const p = {
+const predicate = {
   type:         namedNode(RDF + 'type'),
   customerId:   namedNode(NS + 'customerId'),
   employeeId:   namedNode(NS + 'employeeId'),
@@ -48,7 +48,7 @@ const p = {
   reportsTo:    namedNode(NS + 'reportsTo')
 };
 
-const c = {
+const class_ = {
   Customer:    classIri('Customer'),
   Employee:    classIri('Employee'),
   Invoice:     classIri('Invoice'),
@@ -71,136 +71,136 @@ const dateLit = (value) => literal(value.toISOString(), namedNode(XSD + 'dateTim
 
 // Genre
 export function mapGenre(row, writer) {
-  const subj = iri.genre(row.GenreId);
-  writer.addQuad(subj, p.type, c.Genre);
+  const subj = subjectIri.genre(row.GenreId);
+  writer.addQuad(subj, predicate.type, class_.Genre);
   if (row.Name != null) {
-    writer.addQuad(subj, p.name, strLit(row.Name));
+    writer.addQuad(subj, predicate.name, strLit(row.Name));
   }
 }
 
 // MediaType
 export function mapMediaType(row, writer) {
-  const subj = iri.mediaType(row.MediaTypeId);
-  writer.addQuad(subj, p.type, c.MediaType);
+  const subj = subjectIri.mediaType(row.MediaTypeId);
+  writer.addQuad(subj, predicate.type, class_.MediaType);
   if (row.Name != null) {
-    writer.addQuad(subj, p.name, strLit(row.Name));
+    writer.addQuad(subj, predicate.name, strLit(row.Name));
   }
 }
 
 // Artist
 export function mapArtist(row, writer) {
-  const subj = iri.artist(row.ArtistId);
-  writer.addQuad(subj, p.type, c.Artist);
+  const subj = subjectIri.artist(row.ArtistId);
+  writer.addQuad(subj, predicate.type, class_.Artist);
   if (row.Name != null) {
-    writer.addQuad(subj, p.name, strLit(row.Name));
+    writer.addQuad(subj, predicate.name, strLit(row.Name));
   }
 }
 
 // Album
 export function mapAlbum(row, writer) {
-  const subj = iri.album(row.AlbumId);
-  writer.addQuad(subj, p.type, c.Album);
+  const subj = subjectIri.album(row.AlbumId);
+  writer.addQuad(subj, predicate.type, class_.Album);
   if (row.Title != null) {
-    writer.addQuad(subj, p.name, strLit(row.Title));
+    writer.addQuad(subj, predicate.name, strLit(row.Title));
   }
   if (row.ArtistId != null) {
-    const artist = iri.artist(row.ArtistId);
-    writer.addQuad(subj, p.hasArtist, artist);
+    const artist = subjectIri.artist(row.ArtistId);
+    writer.addQuad(subj, predicate.hasArtist, artist);
   }
 }
 
 // Track
 export function mapTrack(row, writer) {
-  const subj = iri.track(row.TrackId);
-  writer.addQuad(subj, p.type, c.Track);
+  const subj = subjectIri.track(row.TrackId);
+  writer.addQuad(subj, predicate.type, class_.Track);
   if (row.Name != null) {
-    writer.addQuad(subj, p.name, strLit(row.Name));
+    writer.addQuad(subj, predicate.name, strLit(row.Name));
   }
   if (row.AlbumId != null) {
-    writer.addQuad(subj, p.hasAlbum, iri.album(row.AlbumId));
+    writer.addQuad(subj, predicate.hasAlbum, subjectIri.album(row.AlbumId));
   }
   if (row.GenreId != null) {
-    writer.addQuad(subj, p.hasGenre, iri.genre(row.GenreId));
+    writer.addQuad(subj, predicate.hasGenre, subjectIri.genre(row.GenreId));
   }
   if (row.MediaTypeId != null) {
-    writer.addQuad(subj, p.hasMediaType, iri.mediaType(row.MediaTypeId));
+    writer.addQuad(subj, predicate.hasMediaType, subjectIri.mediaType(row.MediaTypeId));
   }
 }
 
 // Employee
 export function mapEmployee(row, writer) {
-  const subj = iri.employee(row.EmployeeId);
+  const subj = subjectIri.employee(row.EmployeeId);
   const fullName = `${row.FirstName ?? ''} ${row.LastName ?? ''}`.trim();
 
-  writer.addQuad(subj, p.type, c.Employee);
-  writer.addQuad(subj, p.employeeId, intLit(row.EmployeeId));
+  writer.addQuad(subj, predicate.type, class_.Employee);
+  writer.addQuad(subj, predicate.employeeId, intLit(row.EmployeeId));
 
   if (fullName) {
-    writer.addQuad(subj, p.fullName, strLit(fullName));
+    writer.addQuad(subj, predicate.fullName, strLit(fullName));
   }
   if (row.Title != null) {
-    writer.addQuad(subj, p.title, strLit(row.Title));
+    writer.addQuad(subj, predicate.title, strLit(row.Title));
   }
 
   // Hierarquia: reportsTo
   if (row.ReportsTo != null) {
-    const manager = iri.employee(row.ReportsTo);
-    writer.addQuad(subj, p.reportsTo, manager);
+    const manager = subjectIri.employee(row.ReportsTo);
+    writer.addQuad(subj, predicate.reportsTo, manager);
   }
 }
 
 // Customer
 export function mapCustomer(row, writer) {
-  const subj = iri.customer(row.CustomerId);
+  const subj = subjectIri.customer(row.CustomerId);
   const fullName = `${row.FirstName ?? ''} ${row.LastName ?? ''}`.trim();
 
-  writer.addQuad(subj, p.type, c.Customer);
-  writer.addQuad(subj, p.customerId, intLit(row.CustomerId));
+  writer.addQuad(subj, predicate.type, class_.Customer);
+  writer.addQuad(subj, predicate.customerId, intLit(row.CustomerId));
 
   if (fullName) {
-    writer.addQuad(subj, p.fullName, strLit(fullName));
+    writer.addQuad(subj, predicate.fullName, strLit(fullName));
   }
 
   if (row.SupportRepId != null) {
-    const rep = iri.employee(row.SupportRepId);
-    writer.addQuad(subj, p.supportedBy, rep);
+    const rep = subjectIri.employee(row.SupportRepId);
+    writer.addQuad(subj, predicate.supportedBy, rep);
   }
 }
 
 // Invoice
 export function mapInvoice(row, writer) {
-  const inv = iri.invoice(row.InvoiceId);
-  const cust = iri.customer(row.CustomerId);
+  const inv = subjectIri.invoice(row.InvoiceId);
+  const cust = subjectIri.customer(row.CustomerId);
 
-  writer.addQuad(inv, p.type, c.Invoice);
-  writer.addQuad(inv, p.invoiceId, intLit(row.InvoiceId));
+  writer.addQuad(inv, predicate.type, class_.Invoice);
+  writer.addQuad(inv, predicate.invoiceId, intLit(row.InvoiceId));
 
   if (row.InvoiceDate != null) {
     // row.InvoiceDate pode já ser um Date JS; se for uma string, new Date() funciona
     const date = row.InvoiceDate instanceof Date ? row.InvoiceDate : new Date(row.InvoiceDate);
-    writer.addQuad(inv, p.invoiceDate, dateLit(date));
+    writer.addQuad(inv, predicate.invoiceDate, dateLit(date));
   }
   if (row.Total != null) {
-    writer.addQuad(inv, p.total, decLit(row.Total));
+    writer.addQuad(inv, predicate.total, decLit(row.Total));
   }
 
   // Vincula customer -> invoice
-  writer.addQuad(cust, p.hasInvoice, inv);
+  writer.addQuad(cust, predicate.hasInvoice, inv);
 }
 
 // InvoiceLine
 export function mapInvoiceLine(row, writer) {
-  const line = iri.line(row.InvoiceLineId);
-  const inv  = iri.invoice(row.InvoiceId);
-  const trk  = iri.track(row.TrackId);
+  const line = subjectIri.line(row.InvoiceLineId);
+  const inv  = subjectIri.invoice(row.InvoiceId);
+  const trk  = subjectIri.track(row.TrackId);
 
-  writer.addQuad(line, p.type, c.InvoiceLine);
-  writer.addQuad(line, p.unitPrice, decLit(row.UnitPrice));
-  writer.addQuad(line, p.quantity, intLit(row.Quantity));
+  writer.addQuad(line, predicate.type, class_.InvoiceLine);
+  writer.addQuad(line, predicate.unitPrice, decLit(row.UnitPrice));
+  writer.addQuad(line, predicate.quantity, intLit(row.Quantity));
 
   // invoice hasLine line
-  writer.addQuad(inv, p.hasLine, line);
+  writer.addQuad(inv, predicate.hasLine, line);
 
   // link lineTrack
-  writer.addQuad(line, p.lineTrack, trk);
+  writer.addQuad(line, predicate.lineTrack, trk);
 }
