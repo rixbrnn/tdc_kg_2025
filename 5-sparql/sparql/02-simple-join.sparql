@@ -9,8 +9,13 @@ SELECT ?artistName
 WHERE {
   # Navega do artista para as faixas via álbuns
   ?artist a :Artist ;
-          :name ?artistName ;
-          :hasAlbum/:hasTrack ?track .
+          :name ?artistName .
+  
+  # Álbuns deste artista
+  ?album :hasArtist ?artist .
+  
+  # Faixas desses álbuns
+  ?track :hasAlbum ?album .
   
   # Encontra linhas de fatura que referenciam essas faixas
   ?line :lineTrack ?track ;
