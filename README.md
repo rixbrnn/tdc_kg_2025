@@ -91,6 +91,12 @@ O conteúdo do workshop é proprietário. O conjunto de dados Chinook está incl
 
 **Pronto para começar?** Vá para **[Sessão 0: Configuração do Banco de Dados](0-dbsetup/README.md)** 🚀
 
+## 📬 Contatos
+
+- Nickolas Werckmeister — 📧 nickolas.werckmeister@sap.com — 🔗 https://www.linkedin.com/in/nwerck/
+- Richard Bringmann — 📧 richard.bringmann@sap.com — 🔗 https://www.linkedin.com/in/richard-bringmann-347031170/
+- Leonardo Sessegolo — 📧 leonardo.sessegolo@sap.com — 🔗 https://www.linkedin.com/in/leonardosessegolo/
+
 ---
 ---
 ---
@@ -187,3 +193,9 @@ Workshop content is proprietary. The Chinook dataset is included under its origi
 ---
 
 **Ready to start?** Head to **[Session 0: Database Setup](0-dbsetup/README.md)** 🚀
+
+## 📬 Contacts
+
+- Nickolas Werckmeister — 📧 nickolas.werckmeister@sap.com — 🔗 https://www.linkedin.com/in/nwerck/
+- Richard Bringmann — 📧 richard.bringmann@sap.com — 🔗 https://www.linkedin.com/in/richard-bringmann-347031170/
+- Leonardo Sessegolo — 📧 leonardo.sessegolo@sap.com — 🔗 https://www.linkedin.com/in/leonardosessegolo/

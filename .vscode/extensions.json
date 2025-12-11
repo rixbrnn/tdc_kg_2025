@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "stardog-union.stardog-rdf-grammars",
+    "inferrinizzard.prettier-sql-vscode",
+    "cweijan.vscode-mysql-client2"
+  ],
+  "unwantedRecommendations": []
+}

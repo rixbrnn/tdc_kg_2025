@@ -5,7 +5,7 @@
   "main": "src/export_rdf.js",
   "scripts": {
     "start": "node src/export_rdf.js",
-    "test": "node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+    "test": "node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage"
   },
   "dependencies": {
     "mysql2": "^3.11.0",
