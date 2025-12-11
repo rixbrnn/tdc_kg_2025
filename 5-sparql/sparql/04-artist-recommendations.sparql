@@ -3,28 +3,50 @@ PREFIX : <http://example.org/chinook#>
 # Q: Dado um artista (ex: "Iron Maiden"), recomendar artistas similares
 #    baseado em compras compartilhadas de clientes
 
-SELECT ?recommendedArtist 
-       (COUNT(DISTINCT ?customer) AS ?commonCustomers)
-       (SUM(?revenue) AS ?totalRevenue)
+SELECT ?recommendedArtist
+       ?commonCustomers
+       ?totalRevenue
+       (?totalRevenue / ?commonCustomers AS ?avgPerCustomer)
+       (?commonCustomers * 100.0 / ?totalTargetCustomers AS ?percentageOverlap)
 WHERE {
-  # Passo 1: Encontrar clientes que compraram Iron Maiden
-  ?customer :hasInvoice/:hasLine/:lineTrack/:hasAlbum/:hasArtist ?targetArtist .
-  ?targetArtist :name "Iron Maiden" .
-  
-  # Passo 2: Que outros artistas eles compraram?
-  ?customer :hasInvoice ?invoice .
-  ?invoice :hasLine ?line .
-  ?line :lineTrack/:hasAlbum/:hasArtist ?otherArtist .
-  ?otherArtist :name ?recommendedArtist .
-  
-  # Calcula receita para ranqueamento
-  ?line :unitPrice ?price ;
-        :quantity ?qty .
-  BIND(?price * ?qty AS ?revenue)
-  
-  # Exclui o artista original
-  FILTER(?otherArtist != ?targetArtist)
+  # Subquery para obter a contagem total de clientes do artista alvo
+  {
+    SELECT (COUNT(DISTINCT ?customer) AS ?totalTargetCustomers) WHERE {
+      ?customer :hasInvoice/:hasLine/:lineTrack/:hasAlbum/:hasArtist ?targetArtist .
+      ?targetArtist :name "Iron Maiden" .
+    }
+  }
+
+  # Query principal para encontrar as recomendações
+  {
+    SELECT ?recommendedArtist
+           (COUNT(DISTINCT ?customer) AS ?commonCustomers)
+           (SUM(?revenue) AS ?totalRevenue)
+    WHERE {
+      # Passo 1: Encontrar clientes (distintos) que compraram Iron Maiden
+      {
+        SELECT DISTINCT ?customer WHERE {
+          ?customer :hasInvoice/:hasLine/:lineTrack/:hasAlbum/:hasArtist ?targetArtist .
+          ?targetArtist :name "Iron Maiden" .
+        }
+      }
+      
+      # Passo 2: Que outros artistas eles compraram?
+      ?customer :hasInvoice ?invoice .
+      ?invoice :hasLine ?line .
+      ?line :lineTrack/:hasAlbum/:hasArtist ?otherArtist .
+      ?otherArtist :name ?recommendedArtist .
+      
+      # Calcula receita para ranqueamento
+      ?line :unitPrice ?price ;
+            :quantity ?qty .
+      BIND(?price * ?qty AS ?revenue)
+      
+      # Exclui o artista original
+      FILTER(?recommendedArtist != "Iron Maiden")
+    }
+    GROUP BY ?recommendedArtist
+  }
 }
-GROUP BY ?recommendedArtist
 ORDER BY DESC(?commonCustomers) DESC(?totalRevenue)
 LIMIT 10
