@@ -143,7 +143,7 @@ export function mapEmployee(row, writer) {
   // TODO: Criar nome completo
   const fullName = ``.trim();
 
-  // TODO: Adicionar triplas para type e employeeId (use intLit para employeeId)
+  // TODO: Adicionar triplas para type (use class_) e employeeId (use intLit para employeeId)
   writer.addQuad(subj, null, null);
   writer.addQuad(subj, null, null);
 
@@ -171,7 +171,7 @@ export function mapCustomer(row, writer) {
   // TODO: Criar nome completo
   const fullName = ``.trim();
 
-  // TODO: Adicionar triplas para type e customerId (use intLit para customerId)
+  // TODO: Adicionar triplas para type (use class_) e customerId (use intLit para customerId)
   writer.addQuad(subj, null, null);
   writer.addQuad(subj, null, null);
 
