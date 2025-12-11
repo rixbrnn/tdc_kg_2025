@@ -1,0 +1,29 @@
+PREFIX : <http://example.org/chinook#>
+
+# Q: Quais propriedades e relacionamentos uma entidade Track possui?
+
+SELECT DISTINCT ?property ?value
+WHERE {
+  :Track/1 ?property ?value .
+}
+ORDER BY ?property
+LIMIT 100
+
+# Quer explorar mais? Tente estas variações:
+
+# 1. Encontrar todas as propriedades de QUALQUER faixa:
+SELECT DISTINCT ?property WHERE {
+  ?track a :Track .
+  ?track ?property ?value .
+}
+
+# 2. Encontrar todos os relacionamentos de saída (excluir literais):
+SELECT DISTINCT ?property ?relatedEntity WHERE {
+  :Track/1 ?property ?relatedEntity .
+  FILTER(isIRI(?relatedEntity))
+}
+
+# 3. Encontrar todos os relacionamentos de entrada (quem referencia esta faixa):
+SELECT DISTINCT ?source ?property WHERE {
+  ?source ?property :Track/1 .
+}
