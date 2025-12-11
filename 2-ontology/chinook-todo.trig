@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
-{
+<http://example.org/chinook> {
     <http://example.org/chinook>
         a owl:Ontology ;
         rdfs:label "Chinook Knowledge Graph Ontology" ;
@@ -12,6 +12,10 @@
 
     # Classes
 
+    # Internamente os dados em RDF sao representados assim:
+    #
+    # <http://example.org/chinook#Customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> ;
+    #     <http://www.w3.org/2000/01/rdf-schema#label> "Customer" .
     :Customer      a owl:Class ; rdfs:label "Customer" .
     :Invoice       a owl:Class ; rdfs:label "Invoice" .
     :InvoiceLine   a owl:Class ; rdfs:label "Invoice line" .
@@ -77,9 +81,9 @@
         rdfs:range  :Playlist .
 
     # TODO 1:
-    #   Add two object properties for the employee hierarchy:
+    #   Adicione duas propriedades de objeto para a hierarquia de funcionários:
     #   - :reportsTo (Employee -> Employee)
-    #   - :manages  (Employee -> Employee, inverse of :reportsTo)
+    #   - :manages  (Employee -> Employee, inversa de :reportsTo)
     #
 
     # Data properties

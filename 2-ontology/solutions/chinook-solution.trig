@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
-{
+<http://example.org/chinook> {
     <http://example.org/chinook>
         a owl:Ontology ;
         rdfs:label "Chinook Knowledge Graph Ontology" ;
