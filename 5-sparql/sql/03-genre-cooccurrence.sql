@@ -15,12 +15,7 @@ WITH customer_genres AS (
 SELECT 
   cg1.GenreName AS Genre1,
   cg2.GenreName AS Genre2,
-  COUNT(DISTINCT cg1.CustomerId) AS SharedCustomers,
-  ROUND(
-    COUNT(DISTINCT cg1.CustomerId) * 100.0 / 
-    (SELECT COUNT(DISTINCT CustomerId) FROM Customer), 
-    2
-  ) AS PercentageOfAllCustomers
+  COUNT(DISTINCT cg1.CustomerId) AS SharedCustomers
 FROM customer_genres cg1
 JOIN customer_genres cg2 
   ON cg1.CustomerId = cg2.CustomerId
